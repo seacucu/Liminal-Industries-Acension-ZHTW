@@ -25,11 +25,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
-SKELETON = os.path.join(ROOT, "build", "skeleton", "config", "ftbquests", "quests", "chapters")
-RPO = os.path.join(ROOT, "build", "patch", "config", "resourcepackoverrides.json")
+SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
+RPO = os.path.join(ROOT, "_workspace", "build", "patch", "config", "resourcepackoverrides.json")
 META = os.path.join(ROOT, "source", "meta.json")
 LICENSE = os.path.join(ROOT, "LICENSE")
-DIST = os.path.join(ROOT, "build", "dist")
+DIST = os.path.join(ROOT, "_workspace", "build", "dist")
 
 PACK_FORMAT = 15          # MC 1.20.1
 VERSION = "1.0.0"

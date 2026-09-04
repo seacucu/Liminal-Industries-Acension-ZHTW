@@ -8,7 +8,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INST = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
                     "Liminal Industries Acension", "minecraft")
-MANIFEST = os.path.join(ROOT, "build", "install_manifest.json")
+MANIFEST = os.path.join(ROOT, "_workspace", "build", "install_manifest.json")
 SUFFIX = ".pre-lia-zhtw"
 
 

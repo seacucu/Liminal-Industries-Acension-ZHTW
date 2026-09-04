@@ -18,8 +18,8 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VANILLA_TW = os.path.join(ROOT, "build", "verify", "vanilla_zh_tw.json")
-OUT = os.path.join(ROOT, "build", "verify", "vanilla_terms.json")
+VANILLA_TW = os.path.join(ROOT, "_workspace", "build", "verify", "vanilla_zh_tw.json")
+OUT = os.path.join(ROOT, "_workspace", "build", "verify", "vanilla_terms.json")
 
 CLIENT_JAR = os.path.join(
     os.environ.get("APPDATA", ""), "PrismLauncher", "libraries",
@@ -71,7 +71,7 @@ def main():
     # 英文基準
     en_ref = json.load(open(os.path.join(ROOT, "source", "kubejs_names.json"), encoding="utf-8"))
     en_ref = {k: v["en"] for k, v in en_ref.items()}
-    names = os.path.join(ROOT, "build", "botania", "names.json")
+    names = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
     if os.path.exists(names):
         en_ref.update({k: v["en"] for k, v in json.load(open(names, encoding="utf-8")).items()})
 

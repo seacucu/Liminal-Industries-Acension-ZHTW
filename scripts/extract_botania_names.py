@@ -13,7 +13,7 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "build", "botania", "names.json")
+OUT = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
 MODS = os.path.join(os.environ.get("APPDATA", ""), "PrismLauncher", "instances",
                     "Liminal Industries Acension", "minecraft", "mods")
 

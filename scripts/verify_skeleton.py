@@ -14,9 +14,9 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "source", "config", "ftbquests", "quests", "chapters")
-SKEL = os.path.join(ROOT, "build", "skeleton", "config", "ftbquests", "quests", "chapters")
+SKEL = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
 EN = os.path.join(ROOT, "source", "quest_en_us.json")
-BASELINE = os.path.join(ROOT, "build", "verify", "vm_key_names.json")
+BASELINE = os.path.join(ROOT, "_workspace", "build", "verify", "vm_key_names.json")
 
 KEYED = re.compile(r'^"?\{ftbquests\.[^}]+\}"?$')
 TEXT_FIELDS = re.compile(r'^(\t+)(title|subtitle): (".*")\s*$')

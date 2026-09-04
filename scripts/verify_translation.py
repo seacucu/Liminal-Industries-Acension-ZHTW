@@ -198,7 +198,7 @@ def main(argv):
     # 清單自我校正：凡出現在原版 zh_tw 的字，必定不是「簡體專用」，予以剔除
     simp = set(SIMPLIFIED)
     corpus = set()
-    _vp = os.path.join(ROOT, "build", "verify", "vanilla_zh_tw.json")
+    _vp = os.path.join(ROOT, "_workspace", "build", "verify", "vanilla_zh_tw.json")
     if os.path.exists(_vp):
         corpus |= set("".join(json.load(open(_vp, encoding="utf-8")).values()))
     # MTP 是釘宮翻譯組維護的正體語料，用它擴大校正基礎。
@@ -233,7 +233,7 @@ def main(argv):
         print(f"        {k}: {''.join(chars)}")
 
     print("\n3b. 簡中「用詞」（字元檢查抓不到的）")
-    vanilla = os.path.join(ROOT, "build", "verify", "vanilla_zh_tw.json")
+    vanilla = os.path.join(ROOT, "_workspace", "build", "verify", "vanilla_zh_tw.json")
     if os.path.exists(vanilla):
         vals = "\n".join(json.load(open(vanilla, encoding="utf-8")).values())
         # 自我驗證：右欄必須真的出現在原版 zh_tw，左欄必須不出現

@@ -1,6 +1,6 @@
 """產生 Botania 名稱譯文的查驗頁（自包含 HTML，可搜尋／篩選）。
 
-輸出：reference/botania-name-review.html
+輸出：_workspace/reference/botania-name-review.html（工作區，不進版控）
 """
 
 import html
@@ -8,9 +8,9 @@ import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAMES = os.path.join(ROOT, "build", "botania", "names.json")
+NAMES = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
 LANG = os.path.join(ROOT, "translation", "lang", "botania.json")
-OUT = os.path.join(ROOT, "reference", "botania-name-review.html")
+OUT = os.path.join(ROOT, "_workspace", "reference", "botania-name-review.html")
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-Hant">

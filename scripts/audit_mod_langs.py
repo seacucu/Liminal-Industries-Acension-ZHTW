@@ -22,7 +22,7 @@ from verify_translation import SIMPLIFIED, CN_TERMS
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODS = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
                     "Liminal Industries Acension", "minecraft", "mods")
-OUT = os.path.join(ROOT, "build", "verify", "mod_lang_audit.json")
+OUT = os.path.join(ROOT, "_workspace", "build", "verify", "mod_lang_audit.json")
 
 HAN = re.compile(r"[一-鿿]")
 HALF = re.compile(r"[,.!?;:]")

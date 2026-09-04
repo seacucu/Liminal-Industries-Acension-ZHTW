@@ -14,7 +14,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NAMES = os.path.join(ROOT, "build", "botania", "names.json")
+NAMES = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
 ROOTS = os.path.join(ROOT, "translation", "botania-roots.json")
 OUT = os.path.join(ROOT, "translation", "lang", "botania.json")
 

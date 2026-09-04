@@ -83,7 +83,7 @@ FTB Quests 的任務檔由**伺服器**提供。只裝客戶端補丁的話，�
 ```bash
 python scripts/build_all.py    # 重新產生所有譯文與檢查（順序有意義，見檔頭）
 python scripts/merge_rpo.py    # 合併 resourcepackoverrides.json
-python scripts/build.py        # 打包出三個交付物到 build/dist/
+python scripts/build.py        # 打包出三個交付物到 _workspace/build/dist/
 ```
 
 | 文件 | 內容 |
@@ -93,8 +93,9 @@ python scripts/build.py        # 打包出三個交付物到 build/dist/
 | [`docs/glossary-botania.md`](docs/glossary-botania.md) | Botania 專用術語與構詞規則 |
 | [`docs/known-issues.md`](docs/known-issues.md) | 已知未翻與結構性限制 |
 
-Botania 1,060 條名稱的逐條查驗頁可用 `python scripts/botania_review.py` 產生
-（輸出至 `reference/`，未納入版控）。
+Botania 1,060 條名稱的逐條查驗頁可用 `python scripts/botania_review.py` 產生。
+
+建置產物、分析用隨附檔與過程文件都放在 `_workspace/`（不納入版控）。
 
 譯文全部經 `scripts/verify_translation.py` 檢查：key 對應、章節完整度、簡體字、
 簡中用詞、非預期文字系統、`%%` 轉義、顏色碼保留、殘留英文。

@@ -26,7 +26,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "source", "config", "ftbquests", "quests", "chapters")
-OUT_SNBT = os.path.join(ROOT, "build", "skeleton", "config", "ftbquests", "quests", "chapters")
+OUT_SNBT = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
 OUT_JSON = os.path.join(ROOT, "source", "quest_en_us.json")
 
 QUEST_ID = re.compile(r'^\t\t\tid: "([0-9A-Fa-f]{16})"')

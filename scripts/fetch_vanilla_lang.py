@@ -12,7 +12,7 @@ import os
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "build", "verify", "vanilla_zh_tw.json")
+OUT = os.path.join(ROOT, "_workspace", "build", "verify", "vanilla_zh_tw.json")
 
 ASSET_ROOTS = [
     os.path.join(os.environ.get("APPDATA", ""), "PrismLauncher", "assets"),

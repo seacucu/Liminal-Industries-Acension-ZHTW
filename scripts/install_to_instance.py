@@ -15,10 +15,10 @@ import sys
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIST = os.path.join(ROOT, "build", "dist")
+DIST = os.path.join(ROOT, "_workspace", "build", "dist")
 INST = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
                     "Liminal Industries Acension", "minecraft")
-MANIFEST = os.path.join(ROOT, "build", "install_manifest.json")
+MANIFEST = os.path.join(ROOT, "_workspace", "build", "install_manifest.json")
 SUFFIX = ".pre-lia-zhtw"
 
 

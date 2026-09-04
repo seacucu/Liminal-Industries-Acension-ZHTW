@@ -16,7 +16,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "source", "config", "resourcepackoverrides.json")
-OUT = os.path.join(ROOT, "build", "patch", "config", "resourcepackoverrides.json")
+OUT = os.path.join(ROOT, "_workspace", "build", "patch", "config", "resourcepackoverrides.json")
 
 PACK = "file/LIA-zhTW.zip"
 MTP = "file/ModsTranslationPack-1.20.x.zip"   # 官方 release 檔名，含 .x
