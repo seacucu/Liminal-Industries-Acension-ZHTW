@@ -2,7 +2,8 @@
 
 順序有意義，不可任意調換：
 
-  0. fetch_vanilla_lang  原版 zh_tw → build/verify/（術語檢查的基準語料）
+  0. fetch_vanilla_lang  原版 zh_tw/zh_cn → build/verify/（術語檢查的基準語料）
+  0b. build_cn_terms     由官方兩體語系檔產生簡中術語黑名單
   1. keyify              上游 snbt → key 化骨架 + quest_en_us.json
   2. extract_kubejs      level.dat 註冊表 + init.js → kubejs_names.json
   3. extract_renames     rename.js → rename_targets.json（含資源命名空間）
@@ -28,7 +29,8 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STEPS = [
-    ("原版 zh_tw 基準", ["fetch_vanilla_lang.py"]),
+    ("原版 zh_tw/zh_cn 基準", ["fetch_vanilla_lang.py"]),
+    ("簡中術語黑名單", ["build_cn_terms.py"]),
     ("骨架與英文抽出", ["keyify.py"]),
     ("KubeJS 註冊表", ["extract_kubejs.py"]),
     ("改名目標解析", ["extract_renames.py"]),
@@ -37,6 +39,10 @@ STEPS = [
     ("Botania 名稱組合", ["botania_compose.py"]),
     ("Botania 術語代換", ["botania_substitute.py"]),
     ("分派整合包改名", ["distribute_renames.py"]),
+    ("分派補充物品名", ["distribute_extras.py"]),
+    ("名稱缺口盤點", ["extract_gaps.py"]),
+    ("補譯缺口名稱", ["compose_all_names.py"]),
+    ("補譯說明文字", ["apply_all_text.py"]),
     ("Patchouli 書籍", ["patchouli.py", "build"]),
     ("Botania 查驗頁", ["botania_review.py"]),
     ("譯文檢查", ["verify_translation.py"]),
