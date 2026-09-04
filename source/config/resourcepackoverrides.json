@@ -1,0 +1,27 @@
+
+{
+  "schema_version": 2,
+  "failed_reloads_per_session": 5,
+
+  "default_packs": [
+	"file/FreshAnimations_v1.9.2.zip",
+	"vanilla",
+	"mod_resources",
+	"Moonlight Mods Dynamic Assets",
+	"file/Flintl0cks_v1.2.zip",
+	"file/Liminal Resources"
+  ],
+  "default_overrides": {
+    "force_compatible": true
+  },
+
+  "pack_overrides": {
+    "file/Liminal Resources": {
+      "default_position": "TOP",
+	  "required": true,
+      "force_compatible": true,
+	  "hidden": true,
+      "fixed_position": true
+    }
+  }
+}

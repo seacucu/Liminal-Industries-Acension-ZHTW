@@ -1,0 +1,278 @@
+{
+  "block.antiblocksrechiseled.bright_black": {
+    "asset_namespace": "antiblocksrechiseled",
+    "id": "antiblocksrechiseled:bright_black",
+    "mod_name": "Bright Black AntiBlock",
+    "pack_name": "Black Hole"
+  },
+  "block.createaddition.tesla_coil": {
+    "asset_namespace": "createaddition",
+    "id": "createaddition:tesla_coil",
+    "mod_name": "Tesla Coil",
+    "pack_name": "Tesla Charger"
+  },
+  "block.enderchests.chest.private": {
+    "asset_namespace": "enderchests",
+    "id": "enderchests:ender_chest",
+    "mod_name": "Ender Chest",
+    "pack_name": "Interplanar Chest"
+  },
+  "block.enderchests.chest.public": {
+    "asset_namespace": "enderchests",
+    "id": "enderchests:ender_chest",
+    "mod_name": "Ender Chest",
+    "pack_name": "Interplanar Chest"
+  },
+  "block.enderchests.chest.team": {
+    "asset_namespace": "enderchests",
+    "id": "enderchests:ender_chest",
+    "mod_name": "Ender Chest",
+    "pack_name": "Interplanar Chest"
+  },
+  "block.immersiveengineering.sawdust": {
+    "asset_namespace": "immersiveengineering",
+    "id": "immersiveengineering:sawdust",
+    "mod_name": "Sawdust Flooring",
+    "pack_name": "Sawdust Pile"
+  },
+  "block.immersiveengineering.tesla_coil": {
+    "asset_namespace": "immersiveengineering",
+    "id": "immersiveengineering:tesla_coil",
+    "mod_name": "Tesla Coil",
+    "pack_name": "Tesla Tower"
+  },
+  "block.tconstruct.blood_slime_tall_grass": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:blood_slime_tall_grass",
+    "mod_name": "Tall Bloody Grass",
+    "pack_name": "Blood Slime Grass"
+  },
+  "block.tconstruct.cheese_block": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:cheese_block",
+    "mod_name": "Cheese Block",
+    "pack_name": "Hard Cheese Block"
+  },
+  "block.tconstruct.earth_slime_tall_grass": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:earth_slime_tall_grass",
+    "mod_name": "Tall Slimy Grass",
+    "pack_name": "Earth Slime Grass"
+  },
+  "block.tconstruct.ender_slime_tall_grass": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:ender_slime_tall_grass",
+    "mod_name": "Tall Slimy Grass",
+    "pack_name": "Ender Slime Grass"
+  },
+  "block.tconstruct.sky_slime_tall_grass": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:sky_slime_tall_grass",
+    "mod_name": "Tall Slimy Grass",
+    "pack_name": "Sky Slime Grass"
+  },
+  "block.thermal.cured_rubber_block": {
+    "asset_namespace": "thermal",
+    "id": "thermal:cured_rubber_block",
+    "mod_name": "（模組未提供）",
+    "pack_name": "Block of Cured Glue"
+  },
+  "block.thermal.rubber_block": {
+    "asset_namespace": "thermal",
+    "id": "thermal:rubber_block",
+    "mod_name": "（模組未提供）",
+    "pack_name": "Block of Glue"
+  },
+  "item.actuallyadditions.advanced_coil": {
+    "asset_namespace": "actuallyadditions",
+    "id": "actuallyadditions:advanced_coil",
+    "mod_name": "Advanced Coil",
+    "pack_name": "Advanced Digital Coil"
+  },
+  "item.actuallyadditions.basic_coil": {
+    "asset_namespace": "actuallyadditions",
+    "id": "actuallyadditions:basic_coil",
+    "mod_name": "Basic Coil",
+    "pack_name": "Basic Digital Coil"
+  },
+  "item.botania.ender_air_bottle": {
+    "asset_namespace": "botania",
+    "id": "botania:ender_air_bottle",
+    "mod_name": "Ender Air Bottle",
+    "pack_name": "Liminal Air Bottle"
+  },
+  "item.brewinandchewin.sweet_berry_jam": {
+    "asset_namespace": "brewinandchewin",
+    "id": "brewinandchewin:sweet_berry_jam",
+    "mod_name": "Sweet Berry Jam",
+    "pack_name": "Liminal Jam"
+  },
+  "item.create.bar_of_chocolate": {
+    "asset_namespace": "create",
+    "id": "create:bar_of_chocolate",
+    "mod_name": "Bar of Chocolate",
+    "pack_name": "Rich Chocolate"
+  },
+  "item.create.cardboard": {
+    "asset_namespace": "create",
+    "id": "create:cardboard",
+    "mod_name": "Cardboard",
+    "pack_name": "Sturdy Cardboard"
+  },
+  "item.create.chocolate_glazed_berries": {
+    "asset_namespace": "create",
+    "id": "create:chocolate_glazed_berries",
+    "mod_name": "Chocolate Glazed Berries",
+    "pack_name": "Rich Chocolate Glazed Berries"
+  },
+  "item.dustrial_decor.cardboard": {
+    "asset_namespace": "dustrial_decor",
+    "id": "dustrial_decor:cardboard",
+    "mod_name": "Cardboard",
+    "pack_name": "Thin Cardboard"
+  },
+  "item.dustrial_decor.cardboard_boots": {
+    "asset_namespace": "dustrial_decor",
+    "id": "dustrial_decor:cardboard_boots",
+    "mod_name": "Cardboard Boots",
+    "pack_name": "Thin Cardboard Boots"
+  },
+  "item.dustrial_decor.cardboard_chestplate": {
+    "asset_namespace": "dustrial_decor",
+    "id": "dustrial_decor:cardboard_chestplate",
+    "mod_name": "Cardboard Chestplate",
+    "pack_name": "Thin Cardboard Chestplate"
+  },
+  "item.dustrial_decor.cardboard_helmet": {
+    "asset_namespace": "dustrial_decor",
+    "id": "dustrial_decor:cardboard_helmet",
+    "mod_name": "Cardboard Helmet",
+    "pack_name": "Thin Cardboard Helmet"
+  },
+  "item.dustrial_decor.cardboard_leggings": {
+    "asset_namespace": "dustrial_decor",
+    "id": "dustrial_decor:cardboard_leggings",
+    "mod_name": "Cardboard Leggings",
+    "pack_name": "Thin Cardboard Leggings"
+  },
+  "item.enderio.silicon": {
+    "asset_namespace": "enderio",
+    "id": "enderio:silicon",
+    "mod_name": "Silicon",
+    "pack_name": "Thick Clay"
+  },
+  "item.farmersdelight.flint_knife": {
+    "asset_namespace": "farmersdelight",
+    "id": "farmersdelight:flint_knife",
+    "mod_name": "Flint Knife",
+    "pack_name": "Wooden Knife"
+  },
+  "item.immersiveengineering.dust_wood": {
+    "asset_namespace": "immersiveengineering",
+    "id": "immersiveengineering:dust_wood",
+    "mod_name": "Sawdust",
+    "pack_name": "Fine Sawdust"
+  },
+  "item.immersiveengineering.slag": {
+    "asset_namespace": "immersiveengineering",
+    "id": "immersiveengineering:slag",
+    "mod_name": "Slag",
+    "pack_name": "Dull Slag"
+  },
+  "item.mekanism.sawdust": {
+    "asset_namespace": "mekanism",
+    "id": "mekanism:sawdust",
+    "mod_name": "Sawdust",
+    "pack_name": "Rough Sawdust"
+  },
+  "item.minecraft.bread": {
+    "asset_namespace": "minecraft",
+    "id": "minecraft:bread",
+    "mod_name": "Bread",
+    "pack_name": "Bread Loaf"
+  },
+  "item.minecraft.enchanted_golden_apple": {
+    "asset_namespace": "minecraft",
+    "id": "minecraft:enchanted_golden_apple",
+    "mod_name": "Enchanted Golden Apple",
+    "pack_name": "Notch Apple"
+  },
+  "item.minecraft.flint_and_steel": {
+    "asset_namespace": "minecraft",
+    "id": "minecraft:flint_and_steel",
+    "mod_name": "Flint and Steel",
+    "pack_name": "Flint and Flint"
+  },
+  "item.minecraft.quartz": {
+    "asset_namespace": "minecraft",
+    "id": "minecraft:quartz",
+    "mod_name": "Nether Quartz",
+    "pack_name": "White Quartz"
+  },
+  "item.neapolitan.white_strawberries": {
+    "asset_namespace": "neapolitan",
+    "id": "neapolitan:white_strawberries",
+    "mod_name": "White Strawberries",
+    "pack_name": "Pale Strawberries"
+  },
+  "item.refurbished_furniture.knife": {
+    "asset_namespace": "refurbished_furniture",
+    "id": "refurbished_furniture:knife",
+    "mod_name": "Knife",
+    "pack_name": "Cutting Knife"
+  },
+  "item.refurbished_furniture.raw_vegetable_pizza": {
+    "asset_namespace": "refurbished_furniture",
+    "id": "refurbished_furniture:raw_vegetable_pizza",
+    "mod_name": "Raw Vegetable Pizza",
+    "pack_name": "Raw Pizza"
+  },
+  "item.simpleradio.copper_wire": {
+    "asset_namespace": "simpleradio",
+    "id": "simpleradio:copper_wire",
+    "mod_name": "Copper Wire",
+    "pack_name": "Copper Cable"
+  },
+  "item.storagedrawers.diamond_storage_upgrade": {
+    "asset_namespace": "storagedrawers",
+    "id": "storagedrawers:diamond_storage_upgrade",
+    "mod_name": "Storage Upgrade (VI)",
+    "pack_name": "Storage Upgrade (V)"
+  },
+  "item.storagedrawers.emerald_storage_upgrade": {
+    "asset_namespace": "storagedrawers",
+    "id": "storagedrawers:emerald_storage_upgrade",
+    "mod_name": "Storage Upgrade (V)",
+    "pack_name": "Storage Upgrade (VI)"
+  },
+  "item.supplementaries.slice_map": {
+    "asset_namespace": "supplementaries",
+    "id": "supplementaries:slice_map",
+    "mod_name": "Slice Map",
+    "pack_name": "Waterproof Map"
+  },
+  "item.tconstruct.cheese_ingot": {
+    "asset_namespace": "tconstruct",
+    "id": "tconstruct:cheese_ingot",
+    "mod_name": "Cheese",
+    "pack_name": "Hard Cheese Ingot"
+  },
+  "item.thermal.cured_rubber": {
+    "asset_namespace": "thermal",
+    "id": "thermal:cured_rubber",
+    "mod_name": "（模組未提供）",
+    "pack_name": "Cured Glue"
+  },
+  "item.thermal.rubber": {
+    "asset_namespace": "thermal",
+    "id": "thermal:rubber",
+    "mod_name": "（模組未提供）",
+    "pack_name": "Glue"
+  },
+  "item.thermal.sawdust": {
+    "asset_namespace": "thermal",
+    "id": "thermal:sawdust",
+    "mod_name": "（模組未提供）",
+    "pack_name": "Heavy Sawdust"
+  }
+}

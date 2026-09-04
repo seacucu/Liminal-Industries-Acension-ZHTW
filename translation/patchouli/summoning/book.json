@@ -1,0 +1,8 @@
+{
+    "name": "召喚入門",
+    "landing_text": "這是一本教你如何把各種生物召喚進後室的指南。",
+    "version": 1,
+    "creative_tab": "minecraft:tools_and_utilities",
+    "use_resource_pack": false,
+    "model": "patchouli:book_red"
+}

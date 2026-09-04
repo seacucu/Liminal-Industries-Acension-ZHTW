@@ -1,0 +1,850 @@
+{
+  "block.kubejs.arrow1_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.arrow2_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.ball_pit": {
+    "en": "Ball Pit",
+    "source": "auto"
+  },
+  "block.kubejs.batteries": {
+    "en": "Batteries",
+    "source": "auto"
+  },
+  "block.kubejs.box_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.carpet": {
+    "en": "Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.carpet_fake": {
+    "en": "Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.carpet_grass": {
+    "en": "Carpet Grass",
+    "source": "auto"
+  },
+  "block.kubejs.carpet_slab": {
+    "en": "Carpet Slab",
+    "source": "auto"
+  },
+  "block.kubejs.carpet_soft": {
+    "en": "Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.carpet_stairs": {
+    "en": "Carpet Stairs",
+    "source": "auto"
+  },
+  "block.kubejs.carpeted_drain_dry": {
+    "en": "Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.carpeted_drain_soggy": {
+    "en": "Soggy Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling": {
+    "en": "Ceiling",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling2": {
+    "en": "Ceiling",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_edge": {
+    "en": "Ceiling",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_frame": {
+    "en": "Ceiling Frame",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_lamp": {
+    "en": "Ceiling Lamp",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_lamp2": {
+    "en": "Ceiling Lamp",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_lamp_off": {
+    "en": "Ceiling Lamp",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_slab": {
+    "en": "Ceiling Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.ceilling_stairs": {
+    "en": "Ceiling Stairs",
+    "source": "displayName"
+  },
+  "block.kubejs.cross_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.drain": {
+    "en": "Drain",
+    "source": "displayName"
+  },
+  "block.kubejs.error": {
+    "en": "Divided by Zero",
+    "source": "displayName"
+  },
+  "block.kubejs.error_carpet": {
+    "en": "Divided by Zero",
+    "source": "displayName"
+  },
+  "block.kubejs.error_wallpaper": {
+    "en": "Divided by Zero",
+    "source": "displayName"
+  },
+  "block.kubejs.exit_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.exit_sign2": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.exotic_eye": {
+    "en": "Exotic Eye",
+    "source": "displayName"
+  },
+  "block.kubejs.explantion1_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.explantion2_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles": {
+    "en": "Floor Tiles",
+    "source": "auto"
+  },
+  "block.kubejs.floor_tiles_full": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles_green": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles_green_full": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles_infinite": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles_red": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.floor_tiles_red_full": {
+    "en": "Floor Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.green_carpet": {
+    "en": "Green Carpet",
+    "source": "auto"
+  },
+  "block.kubejs.green_carpet_fake": {
+    "en": "Green Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.half_frame_bottom": {
+    "en": "Bottom of a Machine Frame",
+    "source": "displayName"
+  },
+  "block.kubejs.half_frame_top": {
+    "en": "Top of a Machine Frame",
+    "source": "displayName"
+  },
+  "block.kubejs.heavy_engineering_empty": {
+    "en": "Heavy Engineering Frame",
+    "source": "displayName"
+  },
+  "block.kubejs.hyper_experience_block": {
+    "en": "Block of Living Experience",
+    "source": "displayName"
+  },
+  "block.kubejs.infinity_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.inkblod_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.left_arrow_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.light_engineering_empty": {
+    "en": "Light Engineering Frame",
+    "source": "displayName"
+  },
+  "block.kubejs.liminal_warning": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.liminal_warning2": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.long_pool_tiles": {
+    "en": "Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.long_pool_tiles_slab": {
+    "en": "Pool Tiles Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.long_pool_tiles_soft": {
+    "en": "Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.long_pool_tiles_stairs": {
+    "en": "Pool Tiles Stairs",
+    "source": "displayName"
+  },
+  "block.kubejs.lost_eye": {
+    "en": "Lost Eye",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_empty": {
+    "en": "Missing Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_golden_half": {
+    "en": "Missing Golden Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_half": {
+    "en": "Missing Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_half_cracked": {
+    "en": "Missing Cracked Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_half_cracked_wet": {
+    "en": "Missing Wet Cracked Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_half_golden": {
+    "en": "Missing Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.missing_tiles_half_wet": {
+    "en": "Missing Wet Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.monolith_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.nowhere_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.oil_carpet": {
+    "en": "Crude Oil Soaked Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_locker_double": {
+    "en": "Pool Locker",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_locker_single": {
+    "en": "Pool Locker",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles": {
+    "en": "Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_cracked": {
+    "en": "Cracked Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_cracked_wet": {
+    "en": "Wet Cracked Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_fake": {
+    "en": "Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_golden": {
+    "en": "Golden Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_golden_fake": {
+    "en": "Golden Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_golden_half": {
+    "en": "Golden Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_slab": {
+    "en": "Pool Tiles Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_soft": {
+    "en": "Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_stairs": {
+    "en": "Pool Tiles Stairs",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_wet": {
+    "en": "Wet Pool Tiles",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_wet_slab": {
+    "en": "Wet Pool Tiles Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.pool_tiles_wet_stairs": {
+    "en": "Wet Pool Tiles Stairs",
+    "source": "displayName"
+  },
+  "block.kubejs.porous_stone": {
+    "en": "Porous Stone",
+    "source": "auto"
+  },
+  "block.kubejs.power_house": {
+    "en": "Power House",
+    "source": "auto"
+  },
+  "block.kubejs.reality_charge": {
+    "en": "Reality Charge",
+    "source": "auto"
+  },
+  "block.kubejs.reality_charge_empty": {
+    "en": "Empty Reality Charge",
+    "source": "displayName"
+  },
+  "block.kubejs.reality_controller": {
+    "en": "Reality Controller",
+    "source": "auto"
+  },
+  "block.kubejs.reality_controller_running": {
+    "en": "Reality Controller",
+    "source": "displayName"
+  },
+  "block.kubejs.reality_frame": {
+    "en": "Reality Frame",
+    "source": "auto"
+  },
+  "block.kubejs.red_carpet": {
+    "en": "Red Carpet",
+    "source": "auto"
+  },
+  "block.kubejs.red_carpet_fake": {
+    "en": "Red Carpet",
+    "source": "displayName"
+  },
+  "block.kubejs.red_carpet_slab": {
+    "en": "Red Carpet Slab",
+    "source": "auto"
+  },
+  "block.kubejs.red_carpet_stairs": {
+    "en": "Red Carpet Stairs",
+    "source": "auto"
+  },
+  "block.kubejs.red_tape": {
+    "en": "Red Tape",
+    "source": "auto"
+  },
+  "block.kubejs.right_arrow_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.sculk_carapace": {
+    "en": "Sculk Carapace",
+    "source": "auto"
+  },
+  "block.kubejs.sculk_scrubber": {
+    "en": "Sculk Scrubber",
+    "source": "auto"
+  },
+  "block.kubejs.sculk_shroom": {
+    "en": "Sculk Shroom",
+    "source": "auto"
+  },
+  "block.kubejs.sculk_slab": {
+    "en": "Sculk Slab",
+    "source": "auto"
+  },
+  "block.kubejs.sculk_stairs": {
+    "en": "Sculk Stairs",
+    "source": "auto"
+  },
+  "block.kubejs.sculk_tendrils": {
+    "en": "Sculk Tendrils",
+    "source": "auto"
+  },
+  "block.kubejs.sculked_sculk_scrubber": {
+    "en": "Sculked Sculk Scrubber",
+    "source": "auto"
+  },
+  "block.kubejs.skull_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.soggy_carpet": {
+    "en": "Soggy Carpet",
+    "source": "auto"
+  },
+  "block.kubejs.soggy_carpet_slab": {
+    "en": "Soggy Carpet Slab",
+    "source": "auto"
+  },
+  "block.kubejs.soggy_carpet_stairs": {
+    "en": "Soggy Carpet Stairs",
+    "source": "auto"
+  },
+  "block.kubejs.stop_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper2": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper3": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper5": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper6": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper7": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.stripped_wallpaper8": {
+    "en": "Stripped Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.traffic_pole": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.tripple_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.turn_back_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.unknown1": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "block.kubejs.wall_destroyer": {
+    "en": "Wall Piercer",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper1": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper1_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper2": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper2_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper2_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper3": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper3_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper3_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper4": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper4_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper4_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper5": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper5_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper5_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper6": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper6_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper6_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper7": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper7_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper7_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper8": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper8_slab": {
+    "en": "Wallpaper Slab",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper8_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper_fake": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper_pink_fake": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper_soft": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.wallpaper_white_fake": {
+    "en": "Wallpaper",
+    "source": "displayName"
+  },
+  "block.kubejs.witahdigroi_sign": {
+    "en": "sign",
+    "source": "displayName"
+  },
+  "fluid.kubejs.ball_pit": {
+    "en": "Ball Pit",
+    "source": "auto"
+  },
+  "fluid.kubejs.flowing_ball_pit": {
+    "en": "Flowing Ball Pit",
+    "source": "auto"
+  },
+  "fluid.kubejs.flowing_liquid_time": {
+    "en": "Flowing Liquid Time",
+    "source": "auto"
+  },
+  "fluid.kubejs.liquid_time": {
+    "en": "The Flow of Time",
+    "source": "displayName"
+  },
+  "item.kubejs.ai": {
+    "en": "Artificial Intelligence",
+    "source": "displayName"
+  },
+  "item.kubejs.asbestos_dust": {
+    "en": "Asbestos Dust",
+    "source": "auto"
+  },
+  "item.kubejs.battery": {
+    "en": "Battery",
+    "source": "auto"
+  },
+  "item.kubejs.carpet_dust": {
+    "en": "Carpet Dust",
+    "source": "auto"
+  },
+  "item.kubejs.cobblestone_bucket": {
+    "en": "Bucket of Packed Cobblestone",
+    "source": "displayName"
+  },
+  "item.kubejs.concrete_brick": {
+    "en": "Concrete Brick",
+    "source": "auto"
+  },
+  "item.kubejs.concrete_piece": {
+    "en": "Concrete Chunk",
+    "source": "displayName"
+  },
+  "item.kubejs.cooked_pale_cod": {
+    "en": "Cooked Pale Cod",
+    "source": "auto"
+  },
+  "item.kubejs.cooked_pale_salmon": {
+    "en": "Cooked Pale Salmon",
+    "source": "auto"
+  },
+  "item.kubejs.cracked_steel": {
+    "en": "Cracked Steel",
+    "source": "auto"
+  },
+  "item.kubejs.crowbar": {
+    "en": "Crowbar",
+    "source": "auto"
+  },
+  "item.kubejs.cut_carpet": {
+    "en": "Cut Carpet",
+    "source": "auto"
+  },
+  "item.kubejs.cut_carpet_green": {
+    "en": "Cut Green Carpet",
+    "source": "displayName"
+  },
+  "item.kubejs.cut_carpet_red": {
+    "en": "Cut Red Carpet",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip1": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip10": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip11": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip12": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip13": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip14": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip15": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip2": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip3": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip4": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip5": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip6": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip7": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip8": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip9": {
+    "en": "Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip_blank": {
+    "en": "Blank Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip_error": {
+    "en": "Corrupted Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip_infinity": {
+    "en": "Modified Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.data_chip_infinity_error": {
+    "en": "Corrupted Modified Data Chip",
+    "source": "displayName"
+  },
+  "item.kubejs.diamond_brush": {
+    "en": "Diamond Brush",
+    "source": "auto"
+  },
+  "item.kubejs.empty_fuse": {
+    "en": "Empty Fuse",
+    "source": "auto"
+  },
+  "item.kubejs.error_item": {
+    "en": "Error",
+    "source": "displayName"
+  },
+  "item.kubejs.fluorescent_tube": {
+    "en": "Fluorescent Tube",
+    "source": "auto"
+  },
+  "item.kubejs.heated_concrete": {
+    "en": "Heated Concrete",
+    "source": "auto"
+  },
+  "item.kubejs.hot_steel": {
+    "en": "Hot Steel",
+    "source": "auto"
+  },
+  "item.kubejs.incomplete_component_electronic": {
+    "en": "Incomplete Electronic Component",
+    "source": "displayName"
+  },
+  "item.kubejs.incomplete_component_electronic_adv": {
+    "en": "Incomplete Advanced Electronic Component",
+    "source": "displayName"
+  },
+  "item.kubejs.moderate_soul_gem": {
+    "en": "Moderate Soul Gem",
+    "source": "auto"
+  },
+  "item.kubejs.overclocked_clock": {
+    "en": "Overclocked Clock",
+    "source": "auto"
+  },
+  "item.kubejs.pale_cod": {
+    "en": "Pale Cod",
+    "source": "auto"
+  },
+  "item.kubejs.pale_salmon": {
+    "en": "Pale Salmon",
+    "source": "auto"
+  },
+  "item.kubejs.pale_squid": {
+    "en": "Pale Squid",
+    "source": "auto"
+  },
+  "item.kubejs.party_popper": {
+    "en": "Party Popper",
+    "source": "auto"
+  },
+  "item.kubejs.pool_tile": {
+    "en": "Pool Tile",
+    "source": "auto"
+  },
+  "item.kubejs.pool_tile_golden": {
+    "en": "Gold Pool Tile",
+    "source": "displayName"
+  },
+  "item.kubejs.putty_knife": {
+    "en": "Putty Knife",
+    "source": "auto"
+  },
+  "item.kubejs.quantum_string": {
+    "en": "Quantum String",
+    "source": "auto"
+  },
+  "item.kubejs.reality_alloy": {
+    "en": "Reality Alloy",
+    "source": "auto"
+  },
+  "item.kubejs.reality_storage_cell1": {
+    "en": "Reality Storage Cell",
+    "source": "displayName"
+  },
+  "item.kubejs.reality_storage_empty": {
+    "en": "Empty Reality Storage Cell",
+    "source": "displayName"
+  },
+  "item.kubejs.scrap": {
+    "en": "Metal Scrap",
+    "source": "displayName"
+  },
+  "item.kubejs.sculk_clump": {
+    "en": "Sculk Clump",
+    "source": "auto"
+  },
+  "item.kubejs.sentimental_ash_alloy": {
+    "en": "Sentimental Ash Alloy",
+    "source": "auto"
+  },
+  "item.kubejs.sentimental_thaumium": {
+    "en": "Sentimental Thaumium",
+    "source": "auto"
+  },
+  "item.kubejs.soul_fuse": {
+    "en": "Soul Fuse",
+    "source": "auto"
+  },
+  "item.kubejs.wallpaper": {
+    "en": "Wallpaper",
+    "source": "auto"
+  },
+  "item.kubejs.wallpaper_pink": {
+    "en": "Pink Wallpaper",
+    "source": "displayName"
+  },
+  "item.kubejs.wallpaper_white": {
+    "en": "White Wallpaper",
+    "source": "displayName"
+  }
+}

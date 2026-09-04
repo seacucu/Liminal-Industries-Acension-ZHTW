@@ -1,0 +1,62 @@
+{
+  "_comment": "整合包 rename.js 的 45 條改名。上游只註冊 en_us，繁中語系下全數失效，由本包補上。譯名以模組既有譯法為基礎加上整合包的修飾語（例：爐渣→暗淡爐渣）。key 與所屬資源命名空間見 source/rename_targets.json。",
+
+  "item.minecraft.bread": "長條麵包",
+  "item.minecraft.quartz": "白石英",
+  "item.minecraft.flint_and_steel": "打火石與打火石",
+  "item.minecraft.enchanted_golden_apple": "諾奇蘋果",
+
+  "item.brewinandchewin.sweet_berry_jam": "閾限果醬",
+  "item.botania.ender_air_bottle": "閾限空氣瓶",
+  "block.antiblocksrechiseled.bright_black": "黑洞",
+  "item.neapolitan.white_strawberries": "蒼白草莓",
+
+  "item.farmersdelight.flint_knife": "木刀",
+  "item.refurbished_furniture.knife": "切菜刀",
+  "item.refurbished_furniture.raw_vegetable_pizza": "生披薩",
+
+  "item.storagedrawers.diamond_storage_upgrade": "儲存升級（V）",
+  "item.storagedrawers.emerald_storage_upgrade": "儲存升級（VI）",
+
+  "block.tconstruct.cheese_block": "硬起司方塊",
+  "item.tconstruct.cheese_ingot": "硬起司",
+  "block.tconstruct.earth_slime_tall_grass": "大地史萊姆草叢",
+  "block.tconstruct.sky_slime_tall_grass": "天空史萊姆草叢",
+  "block.tconstruct.blood_slime_tall_grass": "血液史萊姆草叢",
+  "block.tconstruct.ender_slime_tall_grass": "終界史萊姆草叢",
+
+  "item.actuallyadditions.basic_coil": "基礎數位線圈",
+  "item.actuallyadditions.advanced_coil": "進階數位線圈",
+
+  "block.enderchests.chest.private": "跨界箱",
+  "block.enderchests.chest.public": "跨界箱",
+  "block.enderchests.chest.team": "跨界箱",
+
+  "item.supplementaries.slice_map": "防水地圖",
+  "item.simpleradio.copper_wire": "銅纜線",
+  "item.immersiveengineering.slag": "暗淡爐渣",
+  "item.enderio.silicon": "濃稠黏土",
+
+  "block.immersiveengineering.tesla_coil": "特斯拉塔",
+  "block.createaddition.tesla_coil": "特斯拉充能器",
+
+  "item.thermal.rubber": "膠水",
+  "item.thermal.cured_rubber": "固化膠水",
+  "block.thermal.rubber_block": "膠水方塊",
+  "block.thermal.cured_rubber_block": "固化膠水方塊",
+
+  "item.dustrial_decor.cardboard": "薄紙板",
+  "item.create.cardboard": "硬紙板",
+  "item.dustrial_decor.cardboard_helmet": "薄紙板頭盔",
+  "item.dustrial_decor.cardboard_chestplate": "薄紙板胸甲",
+  "item.dustrial_decor.cardboard_leggings": "薄紙板護腿",
+  "item.dustrial_decor.cardboard_boots": "薄紙板靴子",
+
+  "item.immersiveengineering.dust_wood": "細鋸屑",
+  "item.mekanism.sawdust": "粗鋸屑",
+  "item.thermal.sawdust": "重鋸屑",
+  "block.immersiveengineering.sawdust": "鋸屑堆",
+
+  "item.create.bar_of_chocolate": "濃郁巧克力棒",
+  "item.create.chocolate_glazed_berries": "濃郁巧克力甜莓"
+}

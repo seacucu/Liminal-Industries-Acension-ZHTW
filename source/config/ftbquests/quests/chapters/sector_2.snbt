@@ -1,0 +1,1003 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "sector_2"
+	group: ""
+	icon: "create:steam_engine"
+	id: "63270855244ED0BB"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["541234B688B98E86"]
+			description: [
+				"Ashes can be obtained by lighting anything that can catch fire. After the block burns up, it will make ash that can be picked up using a shovel."
+				""
+				"What to burn is entirely up to you. Wood is not super easy to come by in large quantities and the carpet and wallpaper are somehow resistant to the flames. But perhaps you can find something made out of cardboard..."
+			]
+			icon: "supplementaries:ash"
+			id: "22FF287969C58B70"
+			rewards: [{
+				count: 10
+				id: "0F48B1CD708333BF"
+				item: "supplementaries:ash"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "Dust to Dust"
+			tasks: [
+				{
+					id: "4560621272125845"
+					item: {
+						Count: 1
+						id: "minecraft:flint_and_steel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "09BE5840BA51E445"
+					item: {
+						Count: 1
+						id: "minecraft:stone_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "2A98592022F3D424"
+					item: { Count: 5, id: "supplementaries:ash" }
+					type: "item"
+				}
+			]
+			title: "Ashes to Ashes"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"22FF287969C58B70"
+				"541234B688B98E86"
+			]
+			id: "14AF78F1E790FC36"
+			rewards: [{
+				id: "61B8EB29939587CB"
+				item: {
+					Count: 1
+					id: "supplementaries:wrench"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "Be reborn from the ashes"
+			tasks: [{
+				id: "08A7B6A04AE342A6"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["594A42AEFA0A83BA"]
+			icon: "create:crushing_wheel"
+			id: "1A5679134A610FF2"
+			shape: "gear"
+			tasks: [
+				{
+					count: 2L
+					id: "64279A17589CDD10"
+					item: "create:crushing_wheel"
+					type: "item"
+				}
+				{
+					id: "15D4A57CED9E7327"
+					item: "create:belt_connector"
+					type: "item"
+				}
+			]
+			title: "Become Dust"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"1BFE1926B47FD92D"
+				"06DADC2BB0854FB1"
+			]
+			description: [
+				"It is time to construct your first steam engine!"
+				""
+				"All it needs is some fuel in the basic burners and a good supply of water."
+				""
+				"Water can be pumped out of an infinite water source, as shown in the image below."
+				""
+				"The steam engine will need to pump its own water; you just need to kickstart it with a Hand Crank."
+				""
+				"You will need to use one or more basic burners to heat it. Campfires do not produce enough heat to power the engine, and for some odd reason, lava does not seem to either..."
+				""
+				"{image:kubejs:textures/quests/steam_engine.png width:200 height:100 align:center}"
+			]
+			icon: "create:steam_engine"
+			id: "594A42AEFA0A83BA"
+			rewards: [
+				{
+					id: "7B9FF4CD15F22D1F"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+				{
+					id: "528BBD2E556BE484"
+					item: "create:goggles"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "Under Pressure"
+			tasks: [
+				{
+					id: "0D13D3BFC3429D9F"
+					item: "create:steam_engine"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "55E3F0676C10222E"
+					item: { Count: 4, id: "create:fluid_tank" }
+					type: "item"
+				}
+				{
+					id: "73D70B8AE2F77131"
+					item: "createlowheated:basic_burner"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "549465DA939C6347"
+					item: { Count: 3, id: "create:fluid_pipe" }
+					type: "item"
+				}
+				{
+					id: "19DAB05B45BD6463"
+					item: "create:mechanical_pump"
+					type: "item"
+				}
+				{
+					id: "596D8CE6FF67748D"
+					item: "create:hand_crank"
+					type: "item"
+				}
+			]
+			title: "Entering the Steam Age"
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"0D014F9EC35B1333"
+				"06DADC2BB0854FB1"
+			]
+			icon: "create:copper_nugget"
+			id: "1BFE1926B47FD92D"
+			tasks: [
+				{
+					count: 3L
+					id: "6715118D2D6FBD2F"
+					item: "create:fluid_pipe"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "43E74BE23E369443"
+					item: { Count: 5, id: "create:copper_nugget" }
+					type: "item"
+				}
+			]
+			title: "Getting Copper"
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["14AF78F1E790FC36"]
+			icon: "create:mechanical_press"
+			id: "0D014F9EC35B1333"
+			rewards: [{
+				count: 3
+				id: "61B2C6D2D4F2269B"
+				item: "supplementaries:pancake"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.0d
+			subtitle: "Squish!"
+			tasks: [
+				{
+					id: "2EBC0F856411C837"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "3CB05BDB2BF3E53A"
+					item: "create:basin"
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["14AF78F1E790FC36"]
+			id: "06DADC2BB0854FB1"
+			rewards: [{
+				id: "62470CB9E64072BC"
+				item: "woodenhopper:wooden_hopper"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3933B16D8B5B8473"
+				item: "createlowheated:basic_burner"
+				type: "item"
+			}]
+			title: "Burner without Blaze"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["14AF78F1E790FC36"]
+			icon: "immersiveengineering:coke_oven"
+			id: "5782203B2280911B"
+			rewards: [
+				{
+					id: "62D66E5C5A3009C5"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+				{
+					id: "2C6E8E5EA8F9254E"
+					item: "ceramicbucket:ceramic_bucket"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "Endless Charcoal"
+			tasks: [
+				{
+					count: 27L
+					id: "5542F176D47F2C41"
+					item: "immersiveengineering:cokebrick"
+					type: "item"
+				}
+				{
+					id: "15B8F415ACA758A5"
+					item: "immersiveengineering:coke_oven"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Big Furnace"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5782203B2280911B"]
+			description: [
+				"A lot of furniture can be turned into Blocks of Charcoal."
+				""
+				"That should be a good source of fuel for the upcoming steam age."
+			]
+			icon: "thermal:charcoal_block"
+			id: "2301997FBD95F04C"
+			tasks: [{
+				id: "72317B15FCD063EC"
+				item: "thermal:charcoal_block"
+				type: "item"
+			}]
+			title: "Making Better Fuel"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			description: [
+				"You can cast a portal with ten buckets of lava and water."
+				""
+				"The nether can be used as a shortcut to diffrent places in the backrooms. Do note that a portal must always be constructed from the Backrooms to the Nether."
+			]
+			id: "021C50BEE88E0B07"
+			rewards: [
+				{
+					id: "36AFB541A92C8E45"
+					item: "minecraft:music_disc_pigstep"
+					type: "item"
+				}
+				{
+					id: "375270AFB42E4609"
+					item: "plushie_buddies:plushie_ghast"
+					type: "item"
+				}
+			]
+			shape: "square"
+			subtitle: "Expected Something Else?"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "29B5E3BFD5FBF7D5"
+				title: "Visit the Nether"
+				type: "dimension"
+			}]
+			x: 10.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["021C50BEE88E0B07"]
+			icon: "supplementaries:checker_block"
+			id: "780450B76916CDB7"
+			rewards: [{
+				id: "4A625113C256BB24"
+				item: {
+					Count: 1
+					id: "table_top_craft:oak_chess"
+					tag: {
+						BlockEntityTag: {
+							ChessValues: {
+								AttackMoveColor: "255/1/1/100"
+								BlackCheckMate: 0b
+								BlackPiecesColor: "51/51/51/255"
+								BlackTilesColor: "139/86/57/255"
+								BoardFEN: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 0"
+								CastleMoveColor: "125/1/255/100"
+								DisplayParticles: 1
+								FirstMoves: "0/1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/48/49/50/51/52/53/54/55/56/57/58/59/60/61/62/63"
+								HumanMovedPiece: -1
+								InvalidMoveColor: "255/255/1/100"
+								IsBlackCastled: 0b
+								IsWhiteCastled: 0b
+								LegalMoveColor: "1/255/1/100"
+								MoveLog: [ ]
+								PieceSet: 1
+								PlayPieceAnimations: 1
+								PreviousMoveColor: "1/150/125/100"
+								PromotionCoordinate: -1b
+								ShowAvailableMoves: 0
+								ShowPreviousMove: 0
+								ShowTileInfo: 0
+								SourceTile: -1
+								TileInfoColor: "255/255/255/255"
+								UseCustomPlate: 0
+								WaitingForPromotion: 0
+								WhiteCheckMate: 0b
+								WhitePiecesColor: "210/188/161/255"
+								WhiteTilesColor: "208/177/141/255"
+							}
+							ForgeCaps: { }
+							id: "table_top_craft:chess"
+						}
+						display: {
+							Lore: ["\"(+NBT)\""]
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "square"
+			subtitle: "Time for Chess"
+			tasks: [
+				{
+					id: "2936C3ED16FB1828"
+					item: "supplementaries:checker_block"
+					type: "item"
+				}
+				{
+					id: "29EF2A8D122D178C"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "3AA0551231908748"
+					item: "actuallyadditions:black_quartz"
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"780450B76916CDB7"
+				"571118233A7F0DA3"
+				"1A5679134A610FF2"
+			]
+			id: "5A988566BC220234"
+			tasks: [{
+				id: "16C2A7EC029D4146"
+				item: "immersiveengineering:component_electronic"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 13.0d
+		}
+		{
+			dependencies: ["203FC15B09EAA27F"]
+			id: "541234B688B98E86"
+			size: 3.0d
+			tasks: [{
+				id: "55DF6C1569B150BA"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			title: "Cobblestone Generator"
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			dependencies: [
+				"5A988566BC220234"
+				"1A5679134A610FF2"
+			]
+			description: ["Using the smeltery, metal appliances can be melted down and repurposed."]
+			icon: "tconstruct:smeltery_controller"
+			id: "60DCFFC671BBD126"
+			rewards: [
+				{
+					id: "30C8C255AB9470AB"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+				{
+					id: "61BCAF221BCCC746"
+					item: "minecraft:music_disc_otherside"
+					type: "item"
+				}
+				{
+					id: "3CA71AF2DF9FE03B"
+					item: "refurbished_furniture:light_fridge"
+					type: "item"
+				}
+				{
+					id: "236EAA963388D69D"
+					item: "plushie_buddies:plushie_iron_golem"
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 3.0d
+			subtitle: "Metallurgy"
+			tasks: [
+				{
+					id: "18D0C2E2D411293A"
+					item: "tconstruct:smeltery_controller"
+					type: "item"
+				}
+				{
+					id: "5D1A844F35BC20F7"
+					item: "tconstruct:seared_drain"
+					type: "item"
+				}
+				{
+					id: "139972A5FE7888B0"
+					item: "tconstruct:seared_faucet"
+					type: "item"
+				}
+				{
+					id: "1D1994D0F7461108"
+					item: "tconstruct:seared_table"
+					type: "item"
+				}
+				{
+					id: "7D740EBC95632C6F"
+					item: "tconstruct:seared_fuel_tank"
+					type: "item"
+				}
+				{
+					id: "73E04A0B58EEDCB0"
+					item: "tconstruct:mighty_smelting"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "Building a Smeltery"
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			dependencies: ["541234B688B98E86"]
+			description: [""]
+			id: "1773F3D3ECBC4923"
+			rewards: [{
+				id: "04F52658209EF665"
+				item: "botania:lexicon"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			subtitle: "Time to bring some more life to this place"
+			tasks: [{
+				id: "0E093878C6AA093A"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["495E194ACEFD9CD7"]
+			id: "2B462CBD198F53F7"
+			tasks: [{
+				id: "0BE20FD7C74DA1E5"
+				item: "botania:pure_daisy"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"3220EA10BF1E5F2E"
+				"2B462CBD198F53F7"
+			]
+			description: ["You can convert treated wood into Livingwood by placing it next to a pure daisy."]
+			icon: "botania:livingwood"
+			id: "4EFCB9F8F9EDC5EB"
+			tasks: [{
+				count: 8L
+				id: "1CC0DB91848B0BFC"
+				item: "botania:livingwood"
+				type: "item"
+			}]
+			title: "Reviving wood"
+			x: 5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["4EFCB9F8F9EDC5EB"]
+			id: "571118233A7F0DA3"
+			shape: "gear"
+			tasks: [{
+				id: "177001536B1F99A0"
+				item: "create:deployer"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1773F3D3ECBC4923"]
+			description: [
+				"If you need any redstone, cutting these spores can yield some."
+				""
+				"Surely there is a way to grow more..."
+			]
+			icon: "minecraft:redstone"
+			id: "60885F74323E143A"
+			tasks: [
+				{
+					id: "1258CCBED9626C98"
+					item: "thermal:redstone_mushroom_spores"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "47FA42D7346B3C5F"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"1773F3D3ECBC4923"
+				"22FF287969C58B70"
+			]
+			description: [
+				"Floral Fertiliser can be used on soggy carpet to bring some colour to this monochrome place."
+				""
+				"Any dye can be used to make it in the Petal Apothecary. Yellow dye is the easiest to obtain since it can be extracted from wallpaper by washing it with an Encased Fan."
+				""
+				"Bones can be obtained from enemies, or alternatively from a composter."
+			]
+			icon: "botania:fertilizer"
+			id: "495E194ACEFD9CD7"
+			rewards: [
+				{
+					count: 5
+					id: "582C501AB1860969"
+					item: "botania:fertilizer"
+					type: "item"
+				}
+				{
+					id: "75C4CA1A7F3D3F42"
+					item: "botania:flower_bag"
+					type: "item"
+				}
+			]
+			subtitle: "Taste the Rainbow"
+			tasks: [
+				{
+					id: "6C87F9E5B39111AD"
+					item: "berry_good:sweet_berry_pips"
+					type: "item"
+				}
+				{
+					id: "0B2ABB2BB3C850AC"
+					item: "supplementaries:ash"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "04772AEB0EDB9BB5"
+					item: { Count: 2, id: "minecraft:yellow_dye" }
+					type: "item"
+				}
+				{
+					id: "1D8D76EAA77D721A"
+					item: "botania:fertilizer"
+					type: "item"
+				}
+			]
+			title: "Floral Fertilizer"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D014F9EC35B1333"]
+			description: [
+				"Sugarcane grows much faster on snad. "
+				""
+				"Snad not only allows for faster growth, updating it with redstone will force the plant on top of it to grow instantly."
+				""
+				"Can this be exploited? You be the judge."
+			]
+			icon: "minecraft:sugar_cane"
+			id: "2A93ADA6EAA0C7EB"
+			tasks: [
+				{
+					id: "1D1B056BCACA1685"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "391152D4E83414B7"
+					item: { Count: 5, id: "snad:snad" }
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"2A93ADA6EAA0C7EB"
+				"1BFE1926B47FD92D"
+			]
+			description: [
+				"If you are sick of eating nothing but berries (and possibly silverfish eggs), look no further!"
+				""
+				"Using a cooking pot, you can cook your berries into Liminal Jam."
+				""
+				"But first you will need to obtain Sugar Cane from the Petal Apothecary."
+			]
+			icon: "brewinandchewin:sweet_berry_jam"
+			id: "347FB9BA17B5C66C"
+			rewards: [
+				{
+					count: 3
+					id: "5FC9403C7D55E44E"
+					item: "brewinandchewin:sweet_berry_jam"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "17A1A221FE5B4639"
+					item: "brewinandchewin:coaster"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "263E3E78F0C20DD0"
+					item: "refurbished_furniture:sweet_berry_jam_toast"
+					type: "item"
+				}
+			]
+			subtitle: "Smooth with Limited Taste"
+			tasks: [
+				{
+					id: "225D62380594BB5A"
+					item: "miners_delight:copper_pot"
+					type: "item"
+				}
+				{
+					id: "26EC23B48D974895"
+					item: "minecraft:sweet_berries"
+					type: "item"
+				}
+				{
+					id: "77F4A59277554934"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+				{
+					id: "7566EDF33A22D38E"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+				{
+					id: "33C7B97B21FB8994"
+					item: "brewinandchewin:sweet_berry_jam"
+					type: "item"
+				}
+			]
+			title: "Liminal Jam"
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["021C50BEE88E0B07"]
+			description: [
+				"Somewhere within the infinite library sits a forgotten eye staring at endless books."
+				""
+				"Search atop of the giant piles of books and other lost junk."
+			]
+			hide_until_deps_complete: true
+			id: "12F6EDB7B3074DBA"
+			shape: "hexagon"
+			subtitle: "Hidden within an Infinite Library"
+			tasks: [{
+				id: "0E50ED4115F134D3"
+				item: {
+					Count: 1
+					id: "endrem:lost_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 12.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4EFCB9F8F9EDC5EB"]
+			description: [
+				"You can turn Livingwood into Charcoal using the coke oven."
+				"After that, Charcoal can be turned into Coal Coke."
+				""
+				"Which means that every plank can, in theory, be turned into Coal Coke with the right setup."
+			]
+			icon: "immersiveengineering:coal_coke"
+			id: "2138ADDDF2575A11"
+			tasks: [{
+				id: "15D84F269B0AF727"
+				title: "Completed"
+				type: "checkmark"
+			}]
+			title: "Renewable Coal Coke"
+			x: 2.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["495E194ACEFD9CD7"]
+			description: [
+				"With Mystical Flowers you can make all the dyes. "
+				""
+				"This will allow you to start painting with other colours than just yellow."
+				""
+				"You can add dyes to your palette by crafting the palette and dyes together on a crafting table."
+				""
+				"It is now also possible to develop colour film in the Lightroom."
+			]
+			icon: "xercapaint:item_easel"
+			id: "63B870600FBEBB1D"
+			rewards: [
+				{
+					count: 3
+					id: "5789C0B118C49A62"
+					item: "exposure:color_film"
+					type: "item"
+				}
+				{
+					id: "2B756AE011DB6C24"
+					item: "xercapaint:item_palette"
+					type: "item"
+				}
+			]
+			subtitle: "Taste the Rainbow!"
+			tasks: [
+				{
+					id: "4C1121ADF7D94181"
+					item: "xercapaint:item_easel"
+					type: "item"
+				}
+				{
+					id: "180A2276E1F5CB5C"
+					item: "xercapaint:item_canvas"
+					type: "item"
+				}
+			]
+			title: "Time to Paint"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3220EA10BF1E5F2E"]
+			description: ["Treated wood crates keep their items inside when broken, allowing easy transportation of items."]
+			id: "5DBBF595E620B429"
+			tasks: [{
+				id: "44EFA3D8158FDAD3"
+				item: "immersiveengineering:crate"
+				type: "item"
+			}]
+			title: "Wooden Shulker Boxes"
+			x: 7.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5782203B2280911B"]
+			description: [
+				"Treated wood is required for many advanced workstations."
+				""
+				"Simply take any regular planks and a bucket of creosete from the coke oven, and combine them in a crafting table! And yes, the ceramic bucket can be used too, even though it is not shown by jei."
+			]
+			id: "3220EA10BF1E5F2E"
+			tasks: [{
+				count: 8L
+				id: "798F2E7A9784FBD5"
+				item: "immersiveengineering:treated_wood_horizontal"
+				type: "item"
+			}]
+			title: "Treated Wood"
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1773F3D3ECBC4923"]
+			description: [
+				"Using the petal apothocary, you can convert those seeds you found in the carpet into better ones!"
+				""
+				"Strawberries can be difficult to farm since they need a light source placed directly above them in order to grow. They, however, will instantly heal you slightly upon consumption."
+			]
+			icon: "neapolitan:strawberries"
+			id: "2FEA5907FA6898CF"
+			rewards: [{
+				count: 3
+				id: "43AEE79244FE4B93"
+				item: {
+					Count: 1
+					id: "fairylights:hanging_lights"
+					tag: {
+						pattern: [{
+							Count: 1b
+							id: "fairylights:fairy_light"
+							tag: {
+								color: 11546150
+							}
+						}]
+						string: "fairylights:black_string"
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "The better the berry!"
+			tasks: [
+				{
+					id: "4B3C1F535219BDE0"
+					item: "neapolitan:strawberries"
+					type: "item"
+				}
+				{
+					id: "2631E1AA20F90289"
+					item: "neapolitan:strawberry_pips"
+					type: "item"
+				}
+			]
+			title: "The Better the Stem..."
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2A93ADA6EAA0C7EB"]
+			id: "40F2B2C01DB8EB9E"
+			rewards: [{
+				id: "1BA6ACDD1DF43EBE"
+				item: "mekanism:cardboard_box"
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "6423AB016F473D8D"
+				item: { Count: 4, id: "create:cardboard" }
+				type: "item"
+			}]
+			title: "Better Cardboard"
+			x: -8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3220EA10BF1E5F2E"]
+			description: ["The Engineer's crafting table can craft items a bit faster than normal crafting tables, and can store crafting ingredients!"]
+			id: "2C7588D42DDBD87D"
+			tasks: [{
+				id: "159E802F30C2FF56"
+				item: "immersiveengineering:craftingtable"
+				type: "item"
+			}]
+			title: "Better Crafting Table"
+			x: 2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"021C50BEE88E0B07"
+				"5DBBF595E620B429"
+			]
+			description: ["Backpacks can be made using leather obtained from scrapping books."]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "20CA5E31A6BC6960"
+			rewards: [
+				{
+					id: "469EB7AEC1EE8012"
+					item: "sophisticatedbackpacks:advanced_jukebox_upgrade"
+					type: "item"
+				}
+				{
+					id: "448C208C5E454147"
+					item: "sophisticatedbackpacks:pickup_upgrade"
+					type: "item"
+				}
+				{
+					id: "355706B93C7F1166"
+					item: "sophisticatedbackpacks:deposit_upgrade"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "4EF694C2C87272F0"
+					item: { Count: 3, id: "minecraft:leather" }
+					type: "item"
+				}
+				{
+					id: "01DCD5B62C93BBD5"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+			]
+			title: "Leather for Backpacks"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["541234B688B98E86"]
+			description: [""]
+			id: "05DF685B96B65E04"
+			rewards: [{
+				id: "2E280977AAF78FE8"
+				item: "minecraft:compass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "793A72CF3AA78699"
+				item: {
+					Count: 1
+					id: "thermal:satchel"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "On the Move!"
+			x: 2.5d
+			y: -4.0d
+		}
+	]
+	title: "Chapter 2"
+}

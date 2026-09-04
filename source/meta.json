@@ -1,0 +1,182 @@
+{
+  "upstream": {
+    "platform": "curseforge",
+    "project_id": 1389281,
+    "pack_name": "Liminal Industries Acension",
+    "pack_version": "1.19",
+    "version_id": 8728879,
+    "minecraft": "1.20.1",
+    "loader": "forge",
+    "loader_version": "47.4.13",
+    "author": "Aceplante"
+  },
+  "snapshot_source": "%APPDATA%\\PrismLauncher\\instances\\Liminal Industries Acension\\minecraft",
+  "snapshot_date": "2026-09-03",
+  "file_count": 41,
+  "files": {
+    "config/resourcepackoverrides.json": {
+      "sha256": "3e34197173a0ee0a2899a9415f667ee09b06680138c2ab75c7731f8c775001a4",
+      "bytes": 502
+    },
+    "config/ftbquests/quests/chapter_groups.snbt": {
+      "sha256": "739539b4146abfddb28d18027abc040e62af3634552c3c8092d021545f0c08fe",
+      "bytes": 28
+    },
+    "config/ftbquests/quests/data.snbt": {
+      "sha256": "999317039cac67db096941e737cfc6e00408af2d4e4600f163bb52ffe241db87",
+      "bytes": 499
+    },
+    "config/ftbquests/quests/chapters/escaping.snbt": {
+      "sha256": "48608d403c7b2b77e6fef7348d0b921985ef16273ef02d5ef42113a21e09aec5",
+      "bytes": 5230
+    },
+    "config/ftbquests/quests/chapters/poolrooms.snbt": {
+      "sha256": "b6ffa77069de267e08e313070d62d31d1331bf23c24c65e52c78d1826a6e50d8",
+      "bytes": 7187
+    },
+    "config/ftbquests/quests/chapters/sector_1.snbt": {
+      "sha256": "3b07094e572658e90b360eec1ed1c40b967485863db08697088d571a775b2a3e",
+      "bytes": 23549
+    },
+    "config/ftbquests/quests/chapters/sector_2.snbt": {
+      "sha256": "3ed985826ca6840b99ff91820022c69f872b27b586780836c42374f85ef1cd2c",
+      "bytes": 22709
+    },
+    "config/ftbquests/quests/chapters/sector_3.snbt": {
+      "sha256": "dfa870737257354214a90b849ecf7a713b740a24dd91062d00f59b7f701d409b",
+      "bytes": 51117
+    },
+    "config/ftbquests/quests/chapters/sector_4.snbt": {
+      "sha256": "3544af0f9b1d3fc45d81fac76310dbb76c3abaf5f25874d633e74db480c0c93b",
+      "bytes": 34532
+    },
+    "config/ftbquests/quests/chapters/sector_5.snbt": {
+      "sha256": "ecda04b10ba039d8b6b6b4e25de467b7d4eeae162114ae2b06f4fb1f4ec761ef",
+      "bytes": 29607
+    },
+    "kubejs/client_scripts/rename.js": {
+      "sha256": "237b15dc8b1fb8081f7e9e6bfc29f17a50d5d6c1406fc2796db71b06f766f2f6",
+      "bytes": 3109
+    },
+    "kubejs/startup_scripts/init.js": {
+      "sha256": "726b49317639df2fc517dc1388b214060606f9477fb22d3c4670b6262d1b4b86",
+      "bytes": 35817
+    },
+    "patchouli_books/reality_frame/book.json": {
+      "sha256": "39facfcdcd89b1586576e697bcd8736458c5ec05685db0b8c056f8d55e13cf4f",
+      "bytes": 283
+    },
+    "patchouli_books/reality_frame/en_us/categories/multiblock.json": {
+      "sha256": "439b269b2e136468994a8c9150661ab57e826c4c5274d60e6d0a5b1067cdc743",
+      "bytes": 131
+    },
+    "patchouli_books/reality_frame/en_us/entries/activating/activating.json": {
+      "sha256": "93fc4bcd8d8c56ea42363bfa0e8d732eff3037f6cfbba12ac22adcc102c357b4",
+      "bytes": 766
+    },
+    "patchouli_books/reality_frame/en_us/entries/black_hole/black_hole.json": {
+      "sha256": "1f379f2a6cce35cf041c2a474faf007b6758b0e828545cd55fa58a2fb382d52c",
+      "bytes": 630
+    },
+    "patchouli_books/reality_frame/en_us/entries/multiblock/reality_frame.json": {
+      "sha256": "6ba229ce48e76904137e32ddbc3390e6bbe28398241a0568d2d31a7795b0d2b8",
+      "bytes": 2032
+    },
+    "patchouli_books/summoning/book.json": {
+      "sha256": "6947840ece319b46d9cefb767663320b3d7af22a2fbe675be3b4a08826209be3",
+      "bytes": 272
+    },
+    "patchouli_books/summoning/en_us/categories/basic_summoning.json": {
+      "sha256": "6fd2f2e15a881758151bd0a2a6ee61a555439ef8cbf534e81df50db8605ea165",
+      "bytes": 111
+    },
+    "patchouli_books/summoning/en_us/categories/lesser_summoning.json": {
+      "sha256": "42bb9eb8d3f15f9ebd1280f59f672d12ee153fe5b1d475e2f8a767af6eec6ad7",
+      "bytes": 118
+    },
+    "patchouli_books/summoning/en_us/categories/moderate_summoning.json": {
+      "sha256": "dd0abd33eb835113e8b45a1bfadb4b3fd1224f126f058112b8b193abb202279d",
+      "bytes": 123
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/bee.json": {
+      "sha256": "bcca05dfdaa07581f23691b0883833dad302a4d07fdf9e3ca52b28107bef0904",
+      "bytes": 498
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/blaze.json": {
+      "sha256": "db9333d3538b07d03641a0d5c04694a534632df93ad59d423a43709f8813ce78",
+      "bytes": 532
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/chicken.json": {
+      "sha256": "277c06b5023d74c2e61005c3349344fbba06f12505ffafd3a097d03bc989a4f5",
+      "bytes": 515
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/cod.json": {
+      "sha256": "a3a305cc90062ed0f1140b29b856259eaaaa19c9bc1ade2a616eb5928a01215e",
+      "bytes": 502
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/cow.json": {
+      "sha256": "6815d7ba1c71cfd49529b38116bf00c7fad50788f3e1cd729f88ce9fd9352c9c",
+      "bytes": 506
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/dragons_breath.json": {
+      "sha256": "b7e6cb4c91c3d9107b5a3adcaefc578bafb179428679d01de29870c1ea24238a",
+      "bytes": 497
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/enderman.json": {
+      "sha256": "5baca3760030874977a790682d5fa452d0e3bd2933adb70edfaeb960ad0ac1a8",
+      "bytes": 529
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/frog.json": {
+      "sha256": "b50fc202b85689e07eff459cf0fff78d101b2499531bfc6a54a6027a909bd2d8",
+      "bytes": 511
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/ghast.json": {
+      "sha256": "2cc6dbc0b72d276628449dfc096f52637571743e54870748da1e3e6720b0d3c7",
+      "bytes": 519
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/giant_skeleton.json": {
+      "sha256": "c75ca3bd352eac4d109c2a339784ceb56d57bbc881cc0003a98620c143507344",
+      "bytes": 540
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/pig.json": {
+      "sha256": "3dcc6e4e864909d14690c701bcd175fde348ebab8565d54817b6404b8b450a0e",
+      "bytes": 504
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/rabbit.json": {
+      "sha256": "76118386f74b21e1f40d7390409fb6ec256a197de22d734b6ccd56dfad7be68a",
+      "bytes": 510
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/sheep.json": {
+      "sha256": "4ee148f1022b8a67692151829dd0055f2e86521eef4a306b12258dcfcfbb0ee4",
+      "bytes": 513
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/skeleton.json": {
+      "sha256": "14356939226182a79992b53cac99a5ea0bbd4549e93b289211def7c1db9e8dc8",
+      "bytes": 507
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/witch.json": {
+      "sha256": "cefbb618aa66a822ab3e35395135681d2040c7d22b9ac59aff80cf1ce0d65ad7",
+      "bytes": 517
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/wither_skeleton.json": {
+      "sha256": "101c86232ad54a5cf5b989b726a45ddf54dfcc4bf598dbf71f83f6f7266dd0ce",
+      "bytes": 558
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/wraith.json": {
+      "sha256": "c9044d4b215e3d1a9bc820e4f4d684e03cc5e4d383102eeead4873eda6325492",
+      "bytes": 497
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/zombie.json": {
+      "sha256": "c2b33a158a063d2d693dfd0df40e4bb66d9f8691a2e0caa98c5d9d009c17beb4",
+      "bytes": 515
+    },
+    "patchouli_books/summoning/en_us/entries/summonings/zombie_brute.json": {
+      "sha256": "06e97f8e7f4a8a8bc807d94690f8522113e212e4c3fe5b7463a2fb88be7e3af0",
+      "bytes": 542
+    },
+    "patchouli_books/summoning/en_us/templates/brazier.json": {
+      "sha256": "e8edcf7d7086a59cd60d4ad5c36606f5d4347e3e9df787bfd0e8991d4001e36a",
+      "bytes": 753
+    }
+  }
+}

@@ -1,0 +1,37 @@
+Liminal Industries Acension 繁體中文翻譯包
+Copyright (c) 2026 LIA-zhtw contributors
+
+本著作採用「創用 CC 姓名標示－非商業性－相同方式分享 4.0 國際」授權條款。
+This work is licensed under a Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+    https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW
+
+你可以自由地：
+  分享 — 以任何媒介或格式重製及散布本著作
+  修改 — 重混、轉換本著作、及依本著作建立新著作
+
+惟需遵照下列條件：
+  姓名標示 — 你必須給予適當表彰、提供指向本授權條款的連結，
+             同時指明是否（及如何）有作出修改。
+  非商業性 — 你不得將本著作用於商業目的。
+  相同方式分享 — 若你重混、轉換本著作，或依本著作建立新著作，
+                 你必須依本著作的授權條款來散布你的貢獻。
+
+--------------------------------------------------------------------------
+
+適用範圍
+
+本授權僅涵蓋本專案自行產出的內容：
+  · 翻譯文字（translation/）
+  · 工具腳本（scripts/）
+  · 專案文件（docs/、README.md）
+
+不涵蓋：
+  · Liminal Industries Acension 整合包本體及其任何檔案，
+    版權屬 Aceplante 及原版 Liminal Industries 作者 Appocryptha。
+  · 各模組的原始內容與其自帶語系檔，版權屬各模組作者。
+  · 本專案不散布任何模組 jar、整合包壓縮檔或其他二進位資源。
+
+source/ 目錄為上游檔案的唯讀快照，僅供比對與重新產生骨架之用，
+其內容之著作權屬原作者所有，不受本授權涵蓋。

@@ -1,0 +1,8 @@
+{
+  "_comment": "刻意與英文原文相同的條目。專有名詞、外語引文、曲目名不譯。",
+  "block.botania.jiyuulia.reference": "德文彩蛋引文（Flügel der Freiheit），保留原文",
+  "block.botania.jiyuulia_chibi.reference": "同上",
+  "item.botania.record_gaia_1.desc": "唱片曲目：藝人名 - 曲名，不譯",
+  "item.botania.record_gaia_2.desc": "同上",
+  "item.endrem.cryptic_eye.description": "Rickroll 彩蛋：以 §k 亂碼化的 URL，保留原文"
+}

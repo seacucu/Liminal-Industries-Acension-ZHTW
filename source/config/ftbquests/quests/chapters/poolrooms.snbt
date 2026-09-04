@@ -1,0 +1,319 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "poolrooms"
+	group: ""
+	hide_quest_until_deps_complete: true
+	icon: "kubejs:pool_tiles"
+	id: "7DB48A00641BCBE1"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "kubejs:pool_tiles"
+			id: "56A5BCD5589DA06C"
+			invisible: true
+			size: 2.0d
+			subtitle: "Bring Sunscreen"
+			tasks: [{
+				dimension: "backrooms:poolrooms"
+				id: "28C53194A1B5A41C"
+				type: "dimension"
+			}]
+			title: "Plunge into the Poolrooms"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"Ornate golden tiles can be found in a few rooms. They can also be collected collected with a pickaxe, but don't chip them too much..."
+				""
+				"Alternatively, you can use an extruder to safely collect the tiles as they grow. They can then be melted down for gold!"
+			]
+			icon: "kubejs:pool_tile_golden"
+			id: "43F641A648AB6462"
+			rewards: [
+				{
+					id: "5519BA5380CD9730"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+				{
+					id: "30B18A0803072685"
+					item: "supplementaries:confetti_popper"
+					type: "item"
+				}
+			]
+			subtitle: "These glitter"
+			tasks: [
+				{
+					id: "7D02DE37E9FC63CA"
+					item: "thermal:device_rock_gen"
+					type: "item"
+				}
+				{
+					id: "6A63C84435F0AA2F"
+					item: "botania:alchemy_catalyst"
+					type: "item"
+				}
+				{
+					id: "133BC0C3AB0C4757"
+					item: "kubejs:pool_tile_golden"
+					type: "item"
+				}
+				{
+					id: "065FF306F9174614"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+			]
+			title: "Renewable Gold"
+			x: 5.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4747407A1597CC43"]
+			description: ["You can collect Aluminium by placing the extruder on a block missing pool tiles."]
+			hide_until_deps_complete: false
+			icon: "immersiveengineering:raw_aluminum"
+			id: "6574AC14E194C4B2"
+			rewards: [{
+				id: "7299CD9E15B3524B"
+				item: "kubejs:party_popper"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4A4B4B9E54887680"
+					item: "thermal:device_rock_gen"
+					type: "item"
+				}
+				{
+					id: "369158725F596C22"
+					item: "botania:alchemy_catalyst"
+					type: "item"
+				}
+				{
+					id: "21017909594FAFDD"
+					item: "immersiveengineering:raw_aluminum"
+					type: "item"
+				}
+			]
+			title: "Renewable Aluminium"
+			x: 2.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"The Exotic Eye can be found somewhere in the Poolrooms."
+				""
+				"Its guardian protectors will not let it be stolen so easily..."
+			]
+			id: "66819437F5CE0687"
+			rewards: [
+				{
+					id: "2CCAA9C257339B93"
+					item: "plushie_buddies:plushie_guardian"
+					type: "item"
+				}
+				{
+					id: "5316747E39760A3B"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "Where is Atlantis?"
+			tasks: [{
+				id: "4E1B584CCB4E2E3A"
+				item: {
+					Count: 1
+					id: "endrem:exotic_eye"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -6.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"The Kekimurus can be found somewhere in the poolrooms. "
+				""
+				"This advanced flower can generate mana very quickly as long as you provide it with sufficient amounts of cake."
+			]
+			id: "24C4318902D9657F"
+			rewards: [
+				{
+					id: "1735241F51662493"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					id: "674D5E79F944B6B3"
+					item: "supplementaries:confetti_popper"
+					type: "item"
+				}
+			]
+			subtitle: "Not a lie, I promise"
+			tasks: [{
+				id: "4D73E036FA0A73BF"
+				item: "botania:kekimurus"
+				type: "item"
+			}]
+			title: "Finding the Kekimurus"
+			x: -5.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"Pool Tiles can be broken off using a pickaxe."
+				""
+				"Much like the walls and carpet of the backrooms, they too seem to regenerate..."
+			]
+			icon: "kubejs:pool_tile"
+			id: "4747407A1597CC43"
+			rewards: [{
+				id: "196BD53F229B4E77"
+				item: "supplementaries:confetti_popper"
+				type: "item"
+			}]
+			subtitle: "A new place to Vandalise!"
+			tasks: [
+				{
+					id: "7A1107C160F2CC21"
+					item: "kubejs:pool_tile"
+					type: "item"
+				}
+				{
+					id: "4CF79174489E081B"
+					item: "thermal:quartz_dust"
+					type: "item"
+				}
+			]
+			title: "Obtaining Pool Tiles "
+			x: 2.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			dependency_requirement: "one_started"
+			description: [
+				"All the water of the poolrooms seems to flow towards an exit."
+				""
+				"You'll know when you find it."
+				""
+				"Against your better judgement, it may be worth a try?"
+			]
+			icon: "kubejs:drain"
+			id: "25DBA9EE127F3CE4"
+			rewards: [
+				{
+					id: "173ACAA79AF83A49"
+					item: "plushie_buddies:plushie_drowned"
+					type: "item"
+				}
+				{
+					id: "746FA64488B54FEF"
+					item: "kubejs:party_popper"
+					type: "item"
+				}
+			]
+			shape: "square"
+			size: 2.0d
+			subtitle: "Ominous dark void?"
+			title: "Deeper Still"
+			x: 0.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"What sadist would fill a swimming pool full of molten silver?"
+				""
+				"Whatever the case, it must be found and exploited as soon as possible."
+			]
+			id: "296793FF672F9B7F"
+			rewards: [{
+				id: "2118041D57B9C9C2"
+				item: "kubejs:party_popper"
+				type: "item"
+			}]
+			subtitle: "Never speak of this"
+			tasks: [{
+				id: "7793DFA644229F2F"
+				item: "tconstruct:molten_silver_bucket"
+				type: "item"
+			}]
+			title: "Death Water"
+			x: 7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: [
+				"Using Reality Alloy, you can make a chest that can transport items from one dimension to another."
+				""
+				"This is exceptionally handy for transporting items to and from the poolrooms."
+			]
+			icon: {
+				Count: 1
+				id: "enderchests:ender_chest"
+				tag: {
+					code: "000"
+					owner: "all"
+				}
+			}
+			id: "5F72147C00F399D8"
+			rewards: [{
+				id: "587933AC832EDA2E"
+				item: "supplementaries:confetti_popper"
+				type: "item"
+			}]
+			subtitle: "Now you are Thinking with Portals"
+			tasks: [
+				{
+					count: 4L
+					id: "26197567375BF0C2"
+					item: { Count: 4, id: "kubejs:reality_alloy" }
+					type: "item"
+				}
+				{
+					id: "6D69388F3C932BE5"
+					item: {
+						Count: 1
+						id: "enderchests:ender_chest"
+						tag: {
+							code: "000"
+							owner: "all"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Interplanar Chests"
+			x: -2.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["56A5BCD5589DA06C"]
+			description: ["The exceptionally high chlorine content of the poolrooms renders normal maps almost unreadable..."]
+			id: "3E7CD9355BCB405F"
+			tasks: [{
+				id: "15C6E5F71794DF7F"
+				item: "supplementaries:slice_map"
+				type: "item"
+			}]
+			title: "Navigation"
+			x: 2.5d
+			y: 0.0d
+		}
+	]
+	title: "Poolrooms"
+}

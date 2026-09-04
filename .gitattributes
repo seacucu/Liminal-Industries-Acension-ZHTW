@@ -1,0 +1,11 @@
+# 本專案是資料倉庫，所有檔案都要逐位元組保留，不做任何行尾轉換。
+#
+# 理由：source/config/ftbquests/quests/chapters/*.snbt 是 CRLF，
+# scripts/keyify.py 逐行改寫時會原樣保留行尾，verify_skeleton.py 也會
+# 逐行比對骨架與上游原檔。若 Git 自動把 CRLF 換成 LF，產出的骨架會與
+# 上游整包不一致，diff 會出現大量假變更。
+* -text
+
+# 二進位
+*.png binary
+*.zip binary

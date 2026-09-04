@@ -1,0 +1,17 @@
+{
+    "name": "扭曲出黑洞",
+    "icon": "kubejs:data_chip_infinity",
+    "category": "patchouli:multiblock",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "kubejs:data_chip_infinity",
+            "title": "扭曲出黑洞",
+            "text": "只要對資料晶片加以改造，你就能把黑洞扭曲進後室。$(br2)手持奇點對黑洞右鍵，它會把奇點吞掉，並吐出 3 塊反物質作為回報。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "backrooms:data_chip_infinity"
+        }
+    ]
+}

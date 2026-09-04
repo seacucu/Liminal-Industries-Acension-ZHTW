@@ -1,0 +1,9 @@
+{
+    "name": "現實框架建造指南",
+    "landing_text": "教你如何搭建現實框架多方塊結構的指南",
+    "version": 1,
+    "creative_tab": "minecraft:tools_and_utilities",
+    "use_resource_pack": false,
+    "pamphlet": true,
+    "model": "patchouli:book_blue"
+}

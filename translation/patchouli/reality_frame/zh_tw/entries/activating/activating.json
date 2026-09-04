@@ -1,0 +1,18 @@
+{
+    "name": "啟動現實框架",
+    "icon": "kubejs:data_chip1",
+    "category": "patchouli:multiblock",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "kubejs:data_chip1",
+            "title": "啟動",
+            "text": "要啟動現實框架，你必須在控制器上方放置現實充能，然後手持資料晶片對控制器右鍵。$(br2)如果結構搭建正確，框架就會啟動、消耗掉現實充能，並依照資料晶片上的種子開始生成。整個過程大約需要 2 分鐘。"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "backrooms:data_chip_1",
+            "recipe2": "backrooms:data_chip_2"
+        }
+    ]
+}

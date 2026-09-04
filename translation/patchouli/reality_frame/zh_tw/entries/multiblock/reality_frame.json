@@ -1,0 +1,125 @@
+{
+    "name": "搭建現實框架",
+    "icon": "kubejs:reality_controller_running",
+    "category": "patchouli:multiblock",
+    "pages": [
+        {
+            "type": "patchouli:spotlight",
+            "item": "kubejs:reality_controller_running",
+            "title": "建造現實框架",
+            "text": "拿著這本書，你可以在世界裡看見多方塊結構的立體示意圖，搭建起來會輕鬆許多。$(br2)要注意的是，控制器可以放在任何一側，而現實充能在使用時會被消耗掉。"
+        },
+        {
+            "type": "patchouli:multiblock",
+            "multiblock": {
+                "pattern": [
+                    [
+                        "FFFFFFFFF",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "FFFFFFFFF"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "F       F",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "B        ",
+                        "         ",
+                        "         ",
+                        "         ",
+                        "F       F"
+                    ],
+                    [
+                        "FFFFFFFFF",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "C   0   F",
+                        "F       F",
+                        "F       F",
+                        "F       F",
+                        "FFFFFFFFF"
+                    ]
+                ],
+                "mapping": {
+                    "F": "kubejs:reality_frame",
+                    "C": "kubejs:reality_controller",
+                    "B": "kubejs:reality_charge"
+                },
+                "symmetrical": true
+            }
+        }
+    ]
+}
