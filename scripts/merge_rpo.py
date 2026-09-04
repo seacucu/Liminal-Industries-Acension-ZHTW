@@ -1,6 +1,6 @@
 """合併 config/resourcepackoverrides.json。
 
-整合包本身已經有一份設定（把 Liminal Resources 鎖在 TOP、全域 force_compatible），
+模組包本身已經有一份設定（把 Liminal Resources 鎖在 TOP、全域 force_compatible），
 直接覆蓋會弄壞它。本腳本以上游快照為基底，只**追加**本翻譯包所需的條目，
 並列出實際差異供人工確認。
 

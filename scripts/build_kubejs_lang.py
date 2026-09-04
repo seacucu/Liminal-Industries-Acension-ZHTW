@@ -2,7 +2,7 @@
 
 source/kubejs_names.json 是權威 key 清單（自 level.dat 的 Forge 註冊表取得）。
 本腳本逐 key 查譯名：先看 _BY_ID 的個別指定，再看英文名對照表。
-任何一個 key 找不到譯名都會報錯 —— 不容許靜默漏譯。
+任何一個 key 找不到譯名都會報錯，不容許靜默漏譯。
 """
 
 import json

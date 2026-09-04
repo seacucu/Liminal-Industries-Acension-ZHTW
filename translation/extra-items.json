@@ -1,6 +1,5 @@
 {
-  "_comment": "任務書會用到、但所屬模組完全沒有繁中的物品名。248 個任務中有 93 個沒有 title 欄位，FTB Quests 會退回顯示第一個任務物品的名稱——這些物品若無譯名就顯示英文。譯名與任務內文用字一致。由 scripts/distribute_extras.py 依實際資源命名空間分派。",
-
+  "_comment": "任務書會用到、但所屬模組完全沒有繁中的物品名。248 個任務中有 93 個沒有 title 欄位，FTB Quests 會退回顯示第一個任務物品的名稱，這些物品若無譯名就顯示英文。譯名與任務內文用字一致。由 scripts/distribute_extras.py 依實際資源命名空間分派。",
   "_thermal_comment": "Thermal Series 的方塊名由 CoFH 於執行時生成，任何語系檔都沒有對應 key，因此由本包直接提供。",
   "block.thermal.machine_refinery": "分餾塔",
   "block.thermal.machine_pyrolyzer": "熱解爐",
@@ -13,14 +12,11 @@
   "block.thermal.device_rock_gen": "造岩機",
   "item.thermal.redstone_mushroom_spores": "紅石蘑菇孢子",
   "item.thermal.deep_aquachow": "深海魚飼料",
-
   "_aa_comment": "Actually Additions 無繁中",
   "block.actuallyadditions.atomic_reconstructor": "原子重組儀",
   "block.actuallyadditions.empowerer": "賦能儀",
-
   "_eidolon_comment": "Eidolon Repraised 無繁中",
   "block.eidolon.crucible": "坩堝",
-
   "_es_comment": "engineered_schematics 無繁中。英文與 Create 的 Schematic Table 同名，故中文亦同為藍圖桌",
   "block.engineered_schematics.schematic_table_block": "藍圖桌"
 }

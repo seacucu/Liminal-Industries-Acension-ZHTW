@@ -1,5 +1,5 @@
 {
-  "_comment": "整合包 rename.js 的 45 條改名。上游只註冊 en_us，繁中語系下全數失效，由本包補上。譯名以模組既有譯法為基礎加上整合包的修飾語（例：爐渣→暗淡爐渣）。key 與所屬資源命名空間見 source/rename_targets.json。",
+  "_comment": "模組包 rename.js 的 45 條改名。上游只註冊 en_us，繁中語系下全數失效，由本包補上。譯名以模組既有譯法為基礎加上模組包的修飾語（例：爐渣→暗淡爐渣）。key 與所屬資源命名空間見 source/rename_targets.json。",
 
   "item.minecraft.bread": "長條麵包",
   "item.minecraft.quartz": "白石英",

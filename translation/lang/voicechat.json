@@ -6,7 +6,7 @@
   "message.voicechat.gain.manual": "手動",
   "message.voicechat.gain.manual.warning": "請保持啟用自動麥克風增益調整，以確保音量一致。",
   "message.voicechat.microphone_gain.warning": "放大超過 %s dB 可能造成音訊失真與其他問題。",
-  "message.voicechat.native_error": "部分模組載入失敗——你的作業系統可能不受支援。",
+  "message.voicechat.native_error": "部分模組載入失敗，你的作業系統可能不受支援。",
   "message.voicechat.onboarding.activation.voice": "%s 會在你說話時自動啟動麥克風。",
   "message.voicechat.onboarding.voice.description": "啟用麥克風測試，確認你說話時聽得到自己的聲音。",
   "message.voicechat.onboarding.voice.title": "調整語音啟動",

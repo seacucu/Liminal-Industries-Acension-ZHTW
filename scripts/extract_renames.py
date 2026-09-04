@@ -1,6 +1,6 @@
-"""解析 kubejs/client_scripts/rename.js，產出「翻譯 key → 整合包改名後的英文」。
+"""解析 kubejs/client_scripts/rename.js，產出「翻譯 key → 模組包改名後的英文」。
 
-整合包用 ClientEvents.lang("en_us", …) 改名，只註冊了英文；繁中語系下這些改名
+模組包用 ClientEvents.lang("en_us", …) 改名，只註冊了英文；繁中語系下這些改名
 全部失效。本腳本找出每個被改名物品的實際翻譯 key，供我們在 zh_tw 補上。
 
 key 來源優先序：模組 jar 的 en_us → 原版 client jar 的 en_us。
@@ -77,7 +77,7 @@ def registry():
 # 物品 id 與翻譯 key 對不上、或模組根本沒提供 key 的例外。
 # 每一條都經過實測確認（見 docs/known-issues.md）。
 KEY_OVERRIDES = {
-    # enderchests 三種箱子共用同一個顯示名，key 不含 ender_chest
+    # enderchests 三種儲物箱共用同一個顯示名，key 不含 ender_chest
     "enderchests:ender_chest": [("block.enderchests.chest.private", "enderchests"),
                                 ("block.enderchests.chest.public", "enderchests"),
                                 ("block.enderchests.chest.team", "enderchests")],

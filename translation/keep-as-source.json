@@ -1080,5 +1080,8 @@
   "ftblibrary.select_item.list_mode.rei": "縮寫、模組名或純格式字串，保留原文：REI",
   "gui.cfm_circuit_breaker.node_count": "縮寫、模組名或純格式字串，保留原文：%s / %s",
   "gui.cfm_circuit_breaker.progress": "縮寫、模組名或純格式字串，保留原文：%sFE / %sFE",
-  "keycategory.invmove": "縮寫、模組名或純格式字串，保留原文：InvMove"
+  "keycategory.invmove": "縮寫、模組名或純格式字串，保留原文：InvMove",
+  "datapack.create_central_kitchen.corn_delight": "資料包名稱由模組名組成，保留原文",
+  "datapack.create_central_kitchen.ends_delight": "資料包名稱由模組名組成，保留原文",
+  "datapack.create_central_kitchen.overweight_farming": "資料包名稱由模組名組成，保留原文"
 }

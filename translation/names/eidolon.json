@@ -1,6 +1,5 @@
 {
-  "_comment": "Eidolon: Repraised —— 黑魔法／神秘學主題。模組完全無繁中、MTP 亦無覆蓋。建材與工具的構詞（方塊、原礦、剝皮、懸掛式告示牌、飛濺／滯留藥水、之箭）一律照原版 zh_tw。",
-
+  "_comment": "Eidolon: Repraised，黑魔法／神秘學主題。模組完全無繁中、MTP 亦無覆蓋。建材與工具的構詞（方塊、原礦、剝皮、懸掛式告示牌、飛濺／滯留藥水、之箭）一律照原版 zh_tw。",
   "_modifiers": {
     "Illwood": "厄木",
     "Polished Wood": "拋光木",
@@ -11,7 +10,6 @@
     "Smooth Stone Tiles": "平滑石磚瓦",
     "Bone Pile": "骨堆"
   },
-
   "_wood": "厄木與拋光木的方塊家族。懸掛式告示牌照原版把修飾詞放中間，故整串直接列出",
   "Illwood": "厄木",
   "Illwood Log": "厄木原木",
@@ -36,7 +34,6 @@
   "Sign": "告示牌",
   "Masonry": "砌石",
   "Pillar": "石柱",
-
   "_stone": "石造建材",
   "Ancient Bricks": "遠古磚",
   "Ancient Brick": "遠古磚塊",
@@ -48,7 +45,6 @@
   "Smooth Stone Arch": "平滑石拱",
   "Mossy Smooth Stone Bricks": "青苔平滑石磚",
   "Pile of Bones": "骨堆",
-
   "_ore": "礦物。原礦／方塊／錠／粒的構詞照原版",
   "Silver Ore": "銀礦",
   "Deepslate Silver Ore": "深板岩銀礦",
@@ -76,7 +72,6 @@
   "Shadow Gem": "暗影寶石",
   "Shadow Gem Block": "暗影寶石方塊",
   "Gem": "寶石",
-
   "_ritual": "儀式用方塊與器具",
   "Crafting Altar": "合成祭壇",
   "Stone Altar": "石祭壇",
@@ -102,7 +97,6 @@
   "Candlestick": "燭台",
   "Magic Candle": "魔法蠟燭",
   "Magic Candlestick": "魔法燭台",
-
   "_plant": "植物",
   "Sprig of Avenna": "阿凡納枝",
   "Merammer Root": "梅拉默根",
@@ -111,7 +105,6 @@
   "Sildrian Seed": "席德里安種子",
   "Sprouting Fungus": "萌芽菌類",
   "Sprouts": "嫩芽",
-
   "_entity": "生物與投射物",
   "Chant Caster": "詠唱者",
   "Giant Skeleton": "巨型骷髏",
@@ -128,7 +121,6 @@
   "Spawn Slug": "鼻涕蟲生怪蛋",
   "Spawn Wraith": "幽魂生怪蛋",
   "Spawn Zombie Brute": "殭屍蠻兵生怪蛋",
-
   "_weapon": "武器與工具。銀製裝備的構詞照原版（鐵斧／鐵製靴子）",
   "Athame": "儀式匕首",
   "Axe of Cleaving": "劈裂之斧",
@@ -157,7 +149,6 @@
   "Warlock's Boots": "術士之靴",
   "Raven Cloak": "渡鴉斗篷",
   "Top Hat": "高禮帽",
-
   "_bauble": "飾品",
   "Basic Amulet": "基礎護符",
   "Basic Belt": "基礎腰帶",
@@ -175,7 +166,6 @@
   "Holy Symbol": "聖徽",
   "Unholy Symbol": "邪徽",
   "Arcane Seal": "奧術封印",
-
   "_material": "材料",
   "Enchanted Ash": "附魔灰燼",
   "Refined Crimson": "精煉緋紅",
@@ -197,7 +187,6 @@
   "Raven Feather": "渡鴉羽毛",
   "Alchemist's Tongs": "煉金鉗",
   "Offering Incense": "供奉薰香",
-
   "_research": "研究系統",
   "Parchment": "羊皮紙",
   "Note-taking Tools": "筆記工具",
@@ -207,7 +196,6 @@
   "Ancient Eye": "遠古之眼",
   "Music Disc": "唱片",
   "Kitsune² - Parousia": "Kitsune² - Parousia",
-
   "_potion": "六種藥水效果。飛濺／滯留／之箭的構詞照原版 zh_tw",
   "Potion of Decay": "衰敗藥水",
   "Splash Potion of Decay": "飛濺衰敗藥水",

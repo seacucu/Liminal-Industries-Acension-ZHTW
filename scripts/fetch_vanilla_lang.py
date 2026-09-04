@@ -1,6 +1,6 @@
 """從本機 Minecraft 資產取出原版 zh_tw 與 zh_cn 語系檔。
 
-zh_tw 是正體用詞的權威；zh_cn 則用來產生「簡中術語黑名單」——
+zh_tw 是正體用詞的權威；zh_cn 則用來產生「簡中術語黑名單」。
 同一個 key 兩者不同時，簡中那個寫法就是本專案不該出現的用詞。
 
 原版的非英文語系不在 client jar 裡，而是以 hash 命名存放在啟動器的 assets/objects/。

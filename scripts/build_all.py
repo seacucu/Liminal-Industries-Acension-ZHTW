@@ -16,7 +16,7 @@
   9. botania_review      → reference/botania-name-review.html
  10. verify_translation  → 全項檢查
 
-第 7 步若跑在第 5 步之前，botania_compose 會把整合包的改名沖掉
+第 7 步若跑在第 5 步之前，botania_compose 會把模組包的改名沖掉
 （例如 item.botania.ender_air_bottle 會從「閾限空氣瓶」變回「終界氣瓶」）。
 
 所有中間產物都在 build/（未納入版控），因此全新 clone 只要跑這支腳本
@@ -38,7 +38,7 @@ STEPS = [
     ("Botania 名稱抽出", ["extract_botania_names.py"]),
     ("Botania 名稱組合", ["botania_compose.py"]),
     ("Botania 術語代換", ["botania_substitute.py"]),
-    ("分派整合包改名", ["distribute_renames.py"]),
+    ("分派模組包改名", ["distribute_renames.py"]),
     ("分派補充物品名", ["distribute_extras.py"]),
     ("名稱缺口盤點", ["extract_gaps.py"]),
     ("補譯缺口名稱", ["compose_all_names.py"]),
@@ -46,6 +46,7 @@ STEPS = [
     ("Patchouli 書籍", ["patchouli.py", "build"]),
     ("Botania 查驗頁", ["botania_review.py"]),
     ("譯文檢查", ["verify_translation.py"]),
+    ("全 repo 用詞檢查", ["check_repo_terms.py"]),
 ]
 
 

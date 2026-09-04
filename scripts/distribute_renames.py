@@ -1,7 +1,7 @@
 """把 translation/renames.json 依「資源命名空間」分派進 translation/lang/<ns>.json。
 
 命名空間取自 source/rename_targets.json（由 extract_renames.py 產出）。
-這一步不能靠 key 前綴猜——item.thermal.rubber 的資源命名空間是 thermal，
+這一步不能靠 key 前綴猜，item.thermal.rubber 的資源命名空間是 thermal，
 但 item.thermal.rubberwood_boat 卻定義在 thermal_foundation 底下，
 放錯資料夾會像 Phase 0 的麵包一樣完全失效。
 """

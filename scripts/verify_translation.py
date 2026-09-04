@@ -88,6 +88,7 @@ SIMPLIFIED = set(
 # 人工補充的簡中用詞（無法由原版語系檔推導者）。
 # 主表由 scripts/build_cn_terms.py 從官方 zh_cn / zh_tw 自動產生。
 CN_TERMS = [
+    ("整合包", "模組包"),   # 臺灣稱 modpack 為模組包；整合包是簡中用語
     ("去皮", "剝皮"),
     # 以下是官方術語表產生不出來的：口語詞（官方 zh_cn 用「马铃薯」，抓不到「土豆」）
     # 與資訊領域用語（官方語系檔只收名詞性 key，UI 字串不在裡面）。
@@ -106,7 +107,7 @@ CN_TERMS = [
     ("文本", "文字"),
     ("信息", "資訊"),
     ("默認", "預設"),
-    # 刻意不列：程序（儀式流程）、質量（mass）、配置（配置得當）——正體皆常用
+    # 刻意不列：程序（儀式流程）、質量（mass）、配置（配置得當），正體皆常用
 ]
 
 CN_TERMS_FILE = os.path.join(ROOT, "_workspace", "build", "verify", "cn_terms.json")
@@ -189,7 +190,7 @@ def main(argv):
     failures = []
 
     def check(name, ok, detail=""):
-        print(f"  [{'PASS' if ok else 'FAIL'}] {name}" + (f" — {detail}" if detail else ""))
+        print(f"  [{'PASS' if ok else 'FAIL'}] {name}" + (f"：{detail}" if detail else ""))
         if not ok:
             failures.append(name)
 
@@ -205,7 +206,7 @@ def main(argv):
         with zipfile.ZipFile(CLIENT_JAR) as z:
             en.update(json.loads(
                 z.read("assets/minecraft/lang/en_us.json").decode("utf-8")))
-    # 模組未提供、由本包直接補上的 key（其英文即整合包的改名）
+    # 模組未提供、由本包直接補上的 key（其英文即模組包的改名）
     if os.path.exists(RENAME_TARGETS):
         for k, v in json.load(open(RENAME_TARGETS, encoding="utf-8")).items():
             en.setdefault(k, v["pack_name"])
@@ -271,7 +272,7 @@ def main(argv):
         corpus |= set("".join(json.load(open(_vp, encoding="utf-8")).values()))
     # MTP 是釘宮翻譯組維護的正體語料，用它擴大校正基礎。
     # 但 MTP 本身也有零星簡體殘留（自动拾取、温帶樹林…），
-    # 因此要求出現 5 條以上才採信 —— 偶發一兩次的多半是錯字而非正體用法。
+    # 因此要求出現 5 條以上才採信，偶發一兩次的多半是錯字而非正體用法。
     if MTP and os.path.exists(MTP):
         import collections
         freq = collections.Counter()
@@ -294,7 +295,7 @@ def main(argv):
     simp -= corpus
     if _fp:
         print(f"        （清單自我校正：剔除 {len(_fp)} 個誤收字 "
-              f"{''.join(sorted(_fp))}——原版 zh_tw 或 MTP 有在用）")
+              f"{''.join(sorted(_fp))}，原版 zh_tw 或 MTP 有在用）")
     bad = {k: sorted(set(v) & simp) for k, v in tr.items() if set(v) & simp}
     check("無簡體字", not bad, f"{len(bad)} 條含簡體")
     for k, chars in list(bad.items())[:5]:
@@ -330,7 +331,7 @@ def main(argv):
 
     # 夾在中文之間、且前後無空白的拉丁字母，多半是打字時混入的外文詞
     #（JEI、ME、Create 這類專名通常前後有空白或標點，故不會誤判）
-    # 需含小寫字母 —— 全大寫多半是 TNT、RF、TAB 這類正常縮寫
+    # 需含小寫字母，全大寫多半是 TNT、RF、TAB 這類正常縮寫
     sandwiched = re.compile("[一-鿿][A-Za-z]*[a-z][A-Za-z]*[一-鿿]")
     sbad = {k: sandwiched.findall(v) for k, v in tr.items()
             if sandwiched.search(v) and k not in allow}

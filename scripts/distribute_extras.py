@@ -1,6 +1,6 @@
 """把 translation/extra-items.json 依「實際資源命名空間」分派進 translation/lang/。
 
-命名空間不能用 key 的第二段去猜——item.thermal.rubberwood_boat 定義在
+命名空間不能用 key 的第二段去猜，item.thermal.rubberwood_boat 定義在
 assets/thermal_foundation/lang/ 底下，放錯資料夾會完全失效（Phase 0 的麵包就是這樣）。
 因此本腳本索引所有模組與原版的 en_us，反查每個 key 由哪個資源命名空間定義；
 若任何語系檔都沒有定義（例如 Thermal 的機器名由 CoFH 執行時生成），

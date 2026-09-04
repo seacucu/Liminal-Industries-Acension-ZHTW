@@ -1,7 +1,7 @@
 """Gate G1 驗收：檢查 key 化骨架與抽出的英文檔。
 
 1. key 集合是否與外部基準（VM 漢化組的 key 名稱清單）完全一致
-   —— 只比對 key 名稱，不引用其任何譯文
+   只比對 key 名稱，不引用其任何譯文
 2. 骨架 snbt 是否已無殘留明文（title / subtitle / description / task title）
 3. 骨架與上游原檔的差異是否僅限於預期改寫的那些行
 4. 格式保留：% 轉義、顏色碼、{image:...}
@@ -26,7 +26,7 @@ notes = []
 
 
 def check(name, ok, detail=""):
-    print(f"  [{'PASS' if ok else 'FAIL'}] {name}" + (f" — {detail}" if detail else ""))
+    print(f"  [{'PASS' if ok else 'FAIL'}] {name}" + (f"：{detail}" if detail else ""))
     if not ok:
         failures.append(name)
 

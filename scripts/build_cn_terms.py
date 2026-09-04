@@ -6,13 +6,13 @@
   entity.minecraft.blaze   zh_cn 烈焰人   zh_tw 烈焰使者   → 「烈焰人」列入黑名單
   block.minecraft.sculk    zh_cn 幽匿     zh_tw 伏聆       → 「幽匿」列入黑名單
 
-這比人工維護對照表可靠得多——先前手寫的 15 組漏掉了「烈焰人」，
+這比人工維護對照表可靠得多，先前手寫的 15 組漏掉了「烈焰人」，
 而我在譯 sector_5 時明明查過 blaze = 烈焰使者，卻在 sector_2、sector_3 用了簡中寫法。
 
 過濾規則（避免誤報）：
   · 只取名詞性 key（方塊、物品、生物、附魔、效果、生態域、流體）
   · 長度至少 2 個字，且整串都是漢字（排除含變數、標點的句子）
-  · **簡中寫法不得出現在官方 zh_tw 全文中** —— 這條最關鍵：
+  · **簡中寫法不得出現在官方 zh_tw 全文中**，這條最關鍵：
     若某個寫法正體版本自己也在用，那它就不是簡中專屬用詞
   · 簡中與正體相同者自然排除
 
@@ -30,7 +30,7 @@ TW = os.path.join(VERIFY, "vanilla_zh_tw.json")
 CN = os.path.join(VERIFY, "vanilla_zh_cn.json")
 OUT = os.path.join(VERIFY, "cn_terms.json")
 
-# 名詞性的 key 前綴——這些的值是「術語」，句子型的 key 不取
+# 名詞性的 key 前綴，這些的值是「術語」，句子型的 key 不取
 NOUN_PREFIXES = (
     "block.minecraft.", "item.minecraft.", "entity.minecraft.",
     "enchantment.minecraft.", "effect.minecraft.", "biome.minecraft.",
