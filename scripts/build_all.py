@@ -2,10 +2,12 @@
 
 順序有意義，不可任意調換：
 
+  0. fetch_vanilla_lang  原版 zh_tw → build/verify/（術語檢查的基準語料）
   1. keyify              上游 snbt → key 化骨架 + quest_en_us.json
   2. extract_kubejs      level.dat 註冊表 + init.js → kubejs_names.json
   3. extract_renames     rename.js → rename_targets.json（含資源命名空間）
   4. build_kubejs_lang   → translation/lang/kubejs.json
+  4b. extract_botania_names  Botania jar → build/botania/names.json
   5. botania_compose     → translation/lang/botania.json（**整份重寫**）
   6. botania_substitute  → 併入範圍外的術語與格式修正
   7. distribute_renames  → 分派改名，**必須在 botania_compose 之後**
@@ -15,6 +17,9 @@
 
 第 7 步若跑在第 5 步之前，botania_compose 會把整合包的改名沖掉
 （例如 item.botania.ender_air_bottle 會從「閾限空氣瓶」變回「終界氣瓶」）。
+
+所有中間產物都在 build/（未納入版控），因此全新 clone 只要跑這支腳本
+就能從 source/ 與本機的 LIA 實例重新產生一切。
 """
 
 import os
@@ -23,10 +28,12 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STEPS = [
+    ("原版 zh_tw 基準", ["fetch_vanilla_lang.py"]),
     ("骨架與英文抽出", ["keyify.py"]),
     ("KubeJS 註冊表", ["extract_kubejs.py"]),
     ("改名目標解析", ["extract_renames.py"]),
     ("KubeJS 譯文", ["build_kubejs_lang.py"]),
+    ("Botania 名稱抽出", ["extract_botania_names.py"]),
     ("Botania 名稱組合", ["botania_compose.py"]),
     ("Botania 術語代換", ["botania_substitute.py"]),
     ("分派整合包改名", ["distribute_renames.py"]),
