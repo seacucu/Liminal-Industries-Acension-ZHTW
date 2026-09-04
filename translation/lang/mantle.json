@@ -1,0 +1,5 @@
+{
+  "command.mantle.book.export.error_generic": "書本圖片匯出失敗，詳情請見日誌",
+  "command.mantle.book.export.error_io": "無法為書本圖片建立資料夾「%s」",
+  "command.mantle.book.export.success": "書本圖片已匯出至「%s」"
+}

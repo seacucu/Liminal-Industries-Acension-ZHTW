@@ -1,0 +1,22 @@
+{
+  "jearchaeology.brush.structure.ancient_city": "遠古城市 [ATM]",
+  "jearchaeology.brush.structure.archeologist_camp_grassy": "考古學家營地 [BA]",
+  "jearchaeology.brush.structure.archeologist_camp_redsand": "考古學家營地 [BA]",
+  "jearchaeology.brush.structure.archeologist_camp_sand": "考古學家營地 [BA]",
+  "jearchaeology.brush.structure.bastion": "堡壘遺蹟 [ATM]",
+  "jearchaeology.brush.structure.buried_ruins_or_obelist": "埋沒的遺跡與沙漠方尖碑 [BA]",
+  "jearchaeology.brush.structure.cold_ocean_ruin": "寒冷海底廢墟",
+  "jearchaeology.brush.structure.desert_pyramid": "沙漠神殿",
+  "jearchaeology.brush.structure.desert_well": "沙漠水井",
+  "jearchaeology.brush.structure.fossil_chicken": "雞的化石 [BA]",
+  "jearchaeology.brush.structure.fossil_creeper": "苦力怕的化石 [BA]",
+  "jearchaeology.brush.structure.fossil_jungle": "山貓的化石 [BA]",
+  "jearchaeology.brush.structure.fossil_sheep": "綿羊的化石 [BA]",
+  "jearchaeology.brush.structure.fossil_villager": "村民的化石 [BA]",
+  "jearchaeology.brush.structure.plains_gravel": "巨石陣 [BA]",
+  "jearchaeology.brush.structure.trail_ruins": "古蹟遺址",
+  "jearchaeology.brush.structure.underwater": "水底 [BA]",
+  "jearchaeology.brush.structure.warm_ocean_ruin": "溫暖海底廢墟",
+  "jearchaeology.recipe.brush": "刷掃",
+  "jearchaeology.recipe.sniff": "嗅探獸嗅聞"
+}

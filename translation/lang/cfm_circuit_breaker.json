@@ -1,0 +1,10 @@
+{
+  "block.cfm_circuit_breaker.circuit_breaker": "斷路器",
+  "container.cfm_circuit_breaker.circuit_breaker": "斷路器",
+  "gui.cfm_circuit_breaker.node_count": "%s / %s",
+  "gui.cfm_circuit_breaker.progress": "%sFE / %sFE",
+  "gui.cfm_circuit_breaker.status.energy": "沒有電力",
+  "gui.cfm_circuit_breaker.status.offline": "已離線",
+  "gui.cfm_circuit_breaker.status.online": "運轉中",
+  "gui.cfm_circuit_breaker.status.overloaded": "超載"
+}

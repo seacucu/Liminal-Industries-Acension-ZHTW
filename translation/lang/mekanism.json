@@ -1,3 +1,4 @@
 {
+  "constants.mekanism.recipe_warning": "偵測到 Mekanism 配方中有損壞的標籤，詳情請查看伺服器日誌。",
   "item.mekanism.sawdust": "粗鋸屑"
 }

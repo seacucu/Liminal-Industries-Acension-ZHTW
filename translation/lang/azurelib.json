@@ -1,0 +1,9 @@
+{
+  "enchantment.azurelib.incendiaryenchantment": "燃燒附掛",
+  "enchantment.azurelib.incendiaryenchantment.desc": "讓射出的子彈點燃生物",
+  "header.azurelib.optifine": "警告：遊戲客戶端偵測到 Optifine",
+  "label.azurelib.open_mods_folder": "開啟 mods 資料夾",
+  "label.azurelib.optifine_alternatives": "Optifine 的替代方案",
+  "label.azurelib.proceed_anyway": "仍要繼續",
+  "message.azurelib.optifine": "警告：多數模組並不支援 Optifine，問題從輕微的視覺異常到直接當機都有可能。"
+}

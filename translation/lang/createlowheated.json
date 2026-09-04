@@ -1,0 +1,12 @@
+{
+  "block.createlowheated.basic_burner": "基礎燃燒器",
+  "block.createlowheated.basic_burner.tooltip": "基礎燃燒器",
+  "block.createlowheated.basic_burner.tooltip.behaviour1": "手持 _燃料_ 右鍵點擊，或使用 _漏斗／機械手／機械臂_。",
+  "block.createlowheated.basic_burner.tooltip.behaviour2": "要點 _火_ 需以 _打火石_ 右鍵點擊。只要持續供應燃料，火就不會熄滅。",
+  "block.createlowheated.basic_burner.tooltip.behaviour3": "以最高轉速的鼓風扇對著它吹可使其強化。",
+  "block.createlowheated.basic_burner.tooltip.condition1": "需要燃料",
+  "block.createlowheated.basic_burner.tooltip.condition2": "需要打火石",
+  "block.createlowheated.basic_burner.tooltip.condition3": "強化燃燒器",
+  "block.createlowheated.basic_burner.tooltip.summary": "為 _熔盆配方_ 與 _蒸汽引擎_ 提供 _熱源_。",
+  "create.recipe.heat_requirement.lowheated": "低溫加熱"
+}

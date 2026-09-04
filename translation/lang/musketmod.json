@@ -1,0 +1,15 @@
+{
+  "death.attack.musketmod.bullet": "%1$s 被 %2$s 射殺了",
+  "entity.musketmod.bullet": "子彈",
+  "item.musketmod.blunderbuss": "喇叭槍",
+  "item.musketmod.cartridge": "紙彈藥筒",
+  "item.musketmod.musket": "火槍",
+  "item.musketmod.musket_upgrade": "火槍升級",
+  "item.musketmod.musket_upgrade.additions_slot_description": "加入鐵劍或望遠鏡",
+  "item.musketmod.musket_upgrade.base_slot_description": "加入火槍",
+  "item.musketmod.musket_upgrade.ingredients": "鐵劍或望遠鏡",
+  "item.musketmod.musket_upgrade_smithing_template": "鍛造模板",
+  "item.musketmod.musket_with_bayonet": "刺刀火槍",
+  "item.musketmod.musket_with_scope": "瞄準鏡火槍",
+  "item.musketmod.pistol": "燧發手槍"
+}

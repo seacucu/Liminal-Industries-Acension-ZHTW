@@ -1,0 +1,10 @@
+{
+  "biome.blueprint.original_source_marker": "原始來源標記",
+  "blueprint.message.redirect": "重新導向中",
+  "blueprint.screen.slabfish_settings": "Slabfish 帽設定……",
+  "blueprint.screen.slabfish_settings.title": "Slabfish 帽設定",
+  "blueprint.screen.slabfish_settings.tooltip": "Team Abnormals 贊助者專屬的 Slabfish 帽設定。可在 %s 成為贊助者。",
+  "entity.blueprint.boat": "船",
+  "entity.blueprint.chest_boat": "含儲物箱的船",
+  "entity.blueprint.falling_block": "掉落中的方塊"
+}

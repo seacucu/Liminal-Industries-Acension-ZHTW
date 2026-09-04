@@ -1,0 +1,7 @@
+{
+  "simplebackups.backups_paused": "備份已暫停",
+  "simplebackups.commands.finished": "備份合併已順利完成",
+  "simplebackups.commands.is_merging": "已有一項合併作業正在進行中",
+  "simplebackups.commands.only_modified": "備份的不只是已修改的檔案，請檢查你的設定",
+  "simplebackups.not_enough_space": "磁碟空間不足，無法建立備份。已中止！"
+}

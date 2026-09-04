@@ -1,0 +1,14 @@
+{
+  "element.button.clear": "清除",
+  "gui.ichunutil.configs.configs": "設定",
+  "gui.ichunutil.configs.needsRestart": "部分設定變更需要重新啟動才會生效！",
+  "gui.ichunutil.configs.noEditingServerConfig": "只有在單人世界環境中才能編輯伺服器設定！",
+  "gui.ichunutil.configs.title": "設定編輯器",
+  "gui.ichunutil.element.textField": "文字欄位",
+  "window.popup.title": "警示！",
+  "window.saveAs.confirmOverwrite": "檔案已存在！確定要覆寫嗎？",
+  "window.saveAs.failed": "檔案儲存失敗。",
+  "window.saveAs.fileName": "檔案名稱",
+  "window.saveAs.overwrite": "要覆寫嗎？",
+  "window.saveAs.title": "另存新檔"
+}

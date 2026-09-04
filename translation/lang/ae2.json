@@ -1,0 +1,23 @@
+{
+  "ae2.emi_integration.category_charger": "充能器",
+  "ae2.emi_integration.category_condenser": "壓縮器",
+  "ae2.emi_integration.category_entropy_manipulator": "熵能機械臂",
+  "ae2.emi_integration.category_inscriber": "壓印器",
+  "block.ae2.debug_chunk_loader": "開發用區塊載入器",
+  "chat.ae2.TestWorldNotInSuperflat": "測試世界只能在超平坦世界中建立！",
+  "dimension.ae2.spatial_storage": "空間儲存",
+  "gui.ae2.CPUs": "CPU",
+  "gui.ae2.ETAFormat": "HH:mm:ss",
+  "gui.ae2.LargeFontCraft": "+",
+  "gui.ae2.TransformTypeExplode": "爆炸",
+  "gui.ae2.TransformTypeThrowInFluid": "投入 %s",
+  "gui.ae2.units.appliedenergistics": "AE",
+  "gui.ae2.units.fe": "FE",
+  "gui.ae2.units.rf": "RF",
+  "gui.tooltips.ae2.InventoryTweaks": "物品欄微調",
+  "gui.tooltips.ae2.ShowAll": "顯示全部",
+  "gui.tooltips.ae2.ShowFluidsOnly": "只顯示流體",
+  "gui.tooltips.ae2.ShowItemsOnly": "只顯示物品",
+  "item.ae2.wrapped_generic_stack": "封裝通用堆疊",
+  "theoneprobe.ae2.stored_energy": "%1$d / %2$d"
+}

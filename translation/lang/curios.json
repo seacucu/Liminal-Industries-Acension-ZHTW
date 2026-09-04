@@ -1,0 +1,8 @@
+{
+  "curios.modifiers.slots.plus.0": "%s 個 %s 欄位",
+  "curios.modifiers.slots.plus.1": "+%s%% %s 欄位",
+  "curios.modifiers.slots.plus.2": "+%s%% %s 欄位",
+  "curios.modifiers.slots.take.0": "-%s 個 %s 欄位",
+  "curios.modifiers.slots.take.1": "-%s%% %s 欄位",
+  "curios.modifiers.slots.take.2": "-%s%% %s 欄位"
+}

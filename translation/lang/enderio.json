@@ -1,3 +1,4 @@
 {
-  "item.enderio.silicon": "濃稠黏土"
+  "item.enderio.silicon": "濃稠黏土",
+  "tooltip.enderio.conduit_probe.mode": "模式：%1$s"
 }

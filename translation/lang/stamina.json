@@ -1,0 +1,10 @@
+{
+  "attribute.name.bonus_stamina": "額外體力",
+  "effect.stamina.vigour": "精力",
+  "effect.stamina.vigour.description": "提升最大體力",
+  "enchantment.stamina.vigour": "精力",
+  "enchantment.stamina.vigour.desc": "提升最大體力",
+  "modifier.stamina.vigour": "精力",
+  "modifier.stamina.vigour.description": "提升最大體力",
+  "modifier.stamina.vigour.flavor": "快逃啊，你們這些蠢貨！"
+}

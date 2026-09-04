@@ -1,0 +1,11 @@
+{
+  "packAction.copyId.description": "按住 %s 即可複製",
+  "packAction.copyId.success": "已複製！",
+  "packAction.copyId.title": "複製資源包 ID",
+  "packAction.reloadSettings.description": "按住 %s 即可重新載入",
+  "packAction.reloadSettings.success": "已重新載入！",
+  "packAction.reloadSettings.title": "重新載入設定",
+  "packAction.toggleDebug.description": "按住 %s 即可切換",
+  "packAction.toggleDebug.success": "已切換！",
+  "packAction.toggleDebug.title": "切換顯示資源包 ID"
+}

@@ -1,3 +1,14 @@
 {
-  "block.createaddition.tesla_coil": "特斯拉充能器"
+  "block.createaddition.electrum_block": "電金方塊",
+  "block.createaddition.tesla_coil": "特斯拉充能器",
+  "createaddition.subtitle.little_zap": "特斯拉線圈迸出火花",
+  "createaddition.subtitle.loud_zap": "特斯拉線圈放電",
+  "item.createaddition.copper_spool.tooltip.summary": "用來收納電線。",
+  "item.createaddition.diamond_grit_sandpaper.tooltip.behaviour1": "_注視_ 時，對 _副手_ 持有或掉在 _地上_ 的物品進行拋光",
+  "item.createaddition.diamond_grit_sandpaper.tooltip.condition1": "使用時",
+  "item.createaddition.diamond_grit_sandpaper.tooltip.summary": "可用來 _精煉材料_。此過程可用機械手自動化。",
+  "item.createaddition.electrum_spool.tooltip.summary": "用來收納電線。",
+  "item.createaddition.festive_spool.tooltip.summary": "用來收納電線。",
+  "item.createaddition.gold_spool.tooltip.summary": "用來收納電線。",
+  "item.createaddition.spool.tooltip.summary": "用來收納電線。"
 }
