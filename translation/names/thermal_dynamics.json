@@ -1,0 +1,18 @@
+{
+  "_comment": "Thermal Dynamics（管道）15 條，其中 5 條是 JEI 搜尋關鍵字（.keyword），保留英文才能讓玩家用原詞搜尋。Fluiduct／Fluxduct 是 Thermal 自創的合成詞（fluid+duct／flux+duct）。",
+  "Attachment: Filter": "配件：過濾器",
+  "Attachment: Servo": "配件：伺服器",
+  "Attachment: Turbo-Servo": "配件：渦輪伺服器",
+  "Attachment: Redstone Flux Limiter": "配件：紅石通量限制器",
+  "Fluiduct": "流體導管",
+  "Fluiduct (Windowed)": "流體導管（透視）",
+  "Fluxduct": "通量導管",
+  "Fluid Distribution Interface": "流體分配介面",
+  "RF Distribution Interface": "RF 分配介面",
+  "Logistical Item Buffer": "物流物品緩衝器",
+
+  "_keyword": "JEI 搜尋關鍵字，保留英文原詞",
+  "energy rf transfer": "energy rf transfer",
+  "entangloporter quantum tesseract": "entangloporter quantum tesseract",
+  "fluid transfer": "fluid transfer"
+}

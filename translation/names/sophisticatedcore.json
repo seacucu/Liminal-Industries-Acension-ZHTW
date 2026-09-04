@@ -1,0 +1,5 @@
+{
+  "_comment": "Sophisticated Core 兩條數值格式。FE 與 mB 是能量與流體單位，保留不譯。",
+  "%s FE": "%s FE",
+  "%s mB %s": "%s mB %s"
+}

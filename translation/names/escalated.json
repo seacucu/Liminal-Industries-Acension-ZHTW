@@ -1,0 +1,14 @@
+{
+  "_comment": "Escalated（電扶梯與走道）22 條。同一英文名對到多個 key（外觀變體）是模組本身的設計。",
+  "Metal Escalator": "金屬電扶梯",
+  "Wooden Escalator": "木質電扶梯",
+  "Metal Walkway": "金屬走道",
+  "Wooden Walkway": "木質走道",
+  "Metal Walkway Steps": "金屬走道階梯",
+  "Wooden Walkway Steps": "木質走道階梯",
+  "Metal Walkway Terminal": "金屬走道端點",
+  "Wooden Walkway Terminal": "木質走道端點",
+  "Metal Handrail": "金屬扶手",
+  "Wooden Handrail": "木質扶手",
+  "Glass Handrail": "玻璃扶手"
+}

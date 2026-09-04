@@ -1,0 +1,17 @@
+{
+  "_comment": "Wan's Storage Shelves 缺譯的 77 條：12 種木材 × 6 種置物架，加薄紙板箱系列。木材名由組字器從原版 zh_tw 導出。薄紙板沿用本包既有改名（cardboard=薄紙板）。同一英文名對到多個 key（_1/_2/_3/_large 是外觀變體）是模組本身的設計。",
+  "Storage Shelf": "置物架",
+  "Crafting Storage Shelf": "合成置物架",
+  "_cardboard": "薄紙板箱",
+  "Cardboard": "薄紙板",
+  "Cardboard Box": "薄紙板箱",
+  "Cardboard Stack 1": "薄紙板堆 1",
+  "Cardboard Stack 2": "薄紙板堆 2",
+  "Cardboard Stack 3": "薄紙板堆 3",
+  "Large Cardboard Box": "大型薄紙板箱",
+  "Large Cardboard Box Stack": "大型薄紙板箱堆",
+  "_tooltip": "方塊提示",
+  "§8Can only be added once!": "§8只能加入一次！",
+  "§8Sneak + right-click to add to a storage shelf.": "§8潛行 + 右鍵點擊即可加到置物架上。",
+  "§8Can be added up to 3 times!": "§8最多可加入 3 次！"
+}

@@ -1,0 +1,32 @@
+{
+  "_comment": "Simple Radio（無線電）25 條。模組完全無繁中。%1$s 是材質名的佔位符，位置照原文保留。",
+  "Radio": "無線電",
+  "Walkie Talkie": "無線對講機",
+  "Spuddie Talkie": "馬鈴薯對講機",
+  "Antenna": "天線",
+  "Microphone": "麥克風",
+  "Speaker": "揚聲器",
+  "Transmitter": "發射器",
+  "Receiver": "接收器",
+  "Transceiver": "收發器",
+  "Frequencer": "調頻器",
+  "Insulator": "絕緣體",
+  "Radiosmithing Station": "無線電鍛造台",
+
+  "_module": "模組配件。%1$s 會被替換成材質名",
+  "Listener Module": "監聽模組",
+  "Speaker Module": "揚聲模組",
+  "Receiving Module": "接收模組",
+  "Transmitting Module": "發射模組",
+  "Iron %1$s Module": "鐵製 %1$s 模組",
+  "Gold %1$s Module": "金製 %1$s 模組",
+  "Diamond %1$s Module": "鑽石 %1$s 模組",
+  "Netherite %1$s Module": "獄髓 %1$s 模組",
+
+  "_tooltip": "介面提示",
+  "When in Emitting item:": "裝在發訊物品中時：",
+  "When in Listening item:": "裝在監聽物品中時：",
+  "When in Powering item:": "裝在供電物品中時：",
+  "When in Receiving item:": "裝在收訊物品中時：",
+  "When in Transmitting item:": "裝在發射物品中時："
+}

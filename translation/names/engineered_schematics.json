@@ -1,0 +1,8 @@
+{
+  "_comment": "Engineered Schematics 5 條。藍圖與 Create 的 Schematic Table 同名，中文亦同為藍圖（本包已將 schematic_table_block 譯為藍圖桌）。%s 是多方塊結構名的佔位符。",
+  "Blank Schematic": "空白藍圖",
+  "%s Schematic": "%s 藍圖",
+  "Mirrored %s Schematic": "鏡像 %s 藍圖",
+  "Block Error": "方塊錯誤",
+  "Complete": "已完成"
+}

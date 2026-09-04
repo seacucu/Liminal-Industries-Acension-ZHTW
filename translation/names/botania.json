@@ -1,0 +1,28 @@
+{
+  "_comment": "Botania 的旗幟圖案（15 種 × 16 色）與 6 個生物。方塊／物品名由 scripts/botania_compose.py 另外處理，這裡只補它涵蓋不到的部分。旗幟命名照原版 zh_tw 的「<顏色><圖案>圖紋」（黑色苦力怕圖紋）。",
+
+  "_banner": "旗幟圖案。火花的四種升級沿用本包既有譯名（瀰散／聚集／隔絕／擴散）",
+  "Axe": "斧圖紋",
+  "Pickaxe": "鎬圖紋",
+  "Shovel": "鏟圖紋",
+  "Hoe": "鋤圖紋",
+  "Sword": "劍圖紋",
+  "Fish": "魚圖紋",
+  "Tree": "樹圖紋",
+  "Mystical Flower": "神秘花朵圖紋",
+  "Lexicon": "辭典圖紋",
+  "Botania": "植物魔法圖紋",
+  "Potato Face": "馬鈴薯臉圖紋",
+  "Dispersive Symbol": "瀰散符號圖紋",
+  "Dominant Symbol": "聚集符號圖紋",
+  "Isolated Symbol": "隔絕符號圖紋",
+  "Recessive Symbol": "擴散符號圖紋",
+
+  "_entity": "生物與投射物",
+  "Treasury Weapon": "寶庫兵器",
+  "Ender Air Cloud": "閾限空氣雲",
+  "Falling Star": "墜星",
+  "Manastorm Epicenter": "魔力風暴中心",
+  "Pink Wither": "粉紅凋零怪",
+  "Luminizer Beam": "光導光束"
+}

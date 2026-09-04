@@ -1,0 +1,8 @@
+{
+  "_comment": "Create Crafts & Additions 9 條提示文字。線卷、砂紙、電金沿用模組既有 zh_tw；Create 的提示文字用 _底線_ 標記重點詞，原樣保留。",
+  "Electrum Block": "電金方塊",
+  "Used to store wires.": "用來收納電線。",
+  "When Used": "使用時",
+  "Applies polish to items held in the _offhand_ or lying on the _floor_ when _looking at them_": "_注視_ 時，對 _副手_ 持有或掉在 _地上_ 的物品進行拋光",
+  "Can be used to _refine materials_. The process can be automated with a Deployer.": "可用來 _精煉材料_。此過程可用機械手自動化。"
+}

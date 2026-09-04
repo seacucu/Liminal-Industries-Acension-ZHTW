@@ -1,0 +1,26 @@
+{
+  "_comment": "Immersive Engineering 缺譯的 138 條，其中 128 條是旗幟圖案（8 種 × 16 色）。旗幟命名照原版 zh_tw 的「<顏色><圖案>圖紋」。模組既有 zh_tw 稱 Treated Wood 為防腐木、Shader Grabbag 為皮膚獎勵袋，沿用。IE 的顏色寫法與原版不同（Grey/lightBlue/silver），列在 _modifiers。",
+  "_modifiers": {
+    "Grey": "灰色",
+    "Light Grey": "淺灰色"
+  },
+  "_banner": "旗幟圖案",
+  "Hammer": "工程錘圖紋",
+  "Ornate Frame": "華飾框圖紋",
+  "Plating": "裝甲板圖紋",
+  "Windmill": "風車圖紋",
+  "Wolf": "狼圖紋",
+  "Wolf (left)": "狼圖紋（左）",
+  "Wolf (right)": "狼圖紋（右）",
+  "Wooden Paneling": "木鑲板圖紋",
+  "_pattern": "旗幟圖案物品本身",
+  "Banner Pattern": "旗幟圖案",
+  "_shader": "塗裝袋與塗裝名。塗裝名皆為流行文化致敬（IKELOS／N7／Qrow／Terra／WAAAGH!），照原文不譯",
+  "Masterwork Shader Grabbag": "大師級皮膚獎勵袋",
+  "IKELOS": "IKELOS",
+  "N7": "N7",
+  "Qrow": "Qrow",
+  "Terra": "Terra",
+  "WAAAGH!": "WAAAGH!",
+  "Wolf (left).desc": "狼圖紋（左）"
+}

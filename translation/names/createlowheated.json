@@ -1,0 +1,11 @@
+{
+  "_comment": "Create: Low Heated 9 條。Create 的提示文字用 _底線_ 標記重點詞，原樣保留；熔盆配方、蒸汽引擎、打火石、漏斗／機械手／機械臂沿用 Create 本體的 zh_tw。",
+  "Basic Burner": "基礎燃燒器",
+  "Empowered Burner": "強化燃燒器",
+  "Requires Fuel": "需要燃料",
+  "Requires Flint and Steel": "需要打火石",
+  "Provides _heat_ to _Basin Recipes_ and the _Steam Engine_.": "為 _熔盆配方_ 與 _蒸汽引擎_ 提供 _熱源_。",
+  "Right click it with _Fuel_ or use a _Funnel/Deployer/Mechanical Arm_.": "手持 _燃料_ 右鍵點擊，或使用 _漏斗／機械手／機械臂_。",
+  "To start the _fire_ you need to right-click it with _Flint and Steel_. As long as it's fed continually, the fire will persist.": "要點 _火_ 需以 _打火石_ 右鍵點擊。只要持續供應燃料，火就不會熄滅。",
+  "Can be empowered by using a Max-RPM fan against it.": "以最高轉速的鼓風扇對著它吹可使其強化。"
+}

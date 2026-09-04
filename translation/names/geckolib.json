@@ -1,0 +1,38 @@
+{
+  "_comment": "GeckoLib 是動畫函式庫，這些是它內建的範例生物與裝備（正常遊玩不會出現，只在創造模式或測試時看得到）。生怪蛋構詞照原版 zh_tw。",
+
+  "Bat": "蝙蝠",
+  "Bat Spawn Egg": "蝙蝠生怪蛋",
+  "Bike": "腳踏車",
+  "Bike Spawn Egg": "腳踏車生怪蛋",
+  "Cool Kid": "酷小孩",
+  "Cool Kid Spawn Egg": "酷小孩生怪蛋",
+  "Fake Glass": "假玻璃",
+  "Fake Glass Spawn Egg": "假玻璃生怪蛋",
+  "Gremlin": "小魔怪",
+  "Gremlin Spawn Egg": "小魔怪生怪蛋",
+  "Mutant Zombie": "變異殭屍",
+  "Mutant Zombie Spawn Egg": "變異殭屍生怪蛋",
+  "Parasite": "寄生體",
+  "Parasite Spawn Egg": "寄生體生怪蛋",
+  "Race Car": "賽車",
+  "Race Car Spawn Egg": "賽車生怪蛋",
+
+  "_gear": "範例裝備。護甲構詞照原版（鐵製頭盔／胸甲／護腿／靴子）",
+  "Gecko Armor Helmet": "壁虎頭盔",
+  "Gecko Armor Chestplate": "壁虎胸甲",
+  "Gecko Armor Leggings": "壁虎護腿",
+  "Gecko Armor Boots": "壁虎靴子",
+  "Wolf Armor Helmet": "狼頭盔",
+  "Wolf Armor Chestplate": "狼胸甲",
+  "Wolf Armor Leggings": "狼護腿",
+  "Wolf Armor Boots": "狼靴子",
+
+  "_misc": "方塊、物品與提示",
+  "Gecko Habitat": "壁虎棲地",
+  "Jack-in-the-Box": "驚嚇箱",
+  "Fertilizer": "肥料",
+  "Gave %1$s to the entity": "已將 %1$s 給予該實體",
+  "Opening the Jack-in-the-Box!": "正在打開驚嚇箱！",
+  "Turn on rain to see the fertilizer model!": "打開下雨才看得到肥料的模型！"
+}

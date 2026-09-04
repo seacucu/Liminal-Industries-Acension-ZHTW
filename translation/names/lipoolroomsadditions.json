@@ -1,0 +1,11 @@
+{
+  "_comment": "LIA 專屬的泳池區裝飾 15 條。同一英文名對到多個 key（_front/_back 是模型部件）是模組本身的設計。欄杆的 Mid I／Mid T／Bend Inner／Bend Outer／End L 是接法代號，譯為直段／T 形段／內彎／外彎／端點。",
+  "Oak Pool Chair": "橡木泳池躺椅",
+  "Oil Treated Oak Pool Chair": "上油橡木泳池躺椅",
+  "White Painted Oak Pool Chair": "白漆橡木泳池躺椅",
+  "Pool Railing Mid I": "泳池欄杆直段",
+  "Pool Railing Mid T": "泳池欄杆 T 形段",
+  "Pool Railing Bend Inner": "泳池欄杆內彎",
+  "Pool Railing Bend Outer": "泳池欄杆外彎",
+  "Pool Railing End L": "泳池欄杆端點"
+}
