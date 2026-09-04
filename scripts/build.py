@@ -47,12 +47,25 @@ def pack_mcmeta(pack_version):
     }, ensure_ascii=False, indent=2)
 
 
+# 固定時間戳，讓同一份原始碼永遠產出逐位元組相同的 zip。
+# 否則每次打包的 hash 都不同，發布後沒人能驗證 zip 是否真的由這份原始碼產生。
+FIXED_TIME = (2026, 1, 1, 0, 0, 0)
+
+
+def _info(arcname):
+    zi = zipfile.ZipInfo(arcname, date_time=FIXED_TIME)
+    zi.compress_type = zipfile.ZIP_DEFLATED
+    zi.external_attr = 0o644 << 16
+    return zi
+
+
 def add_bytes(z, arcname, data):
-    z.writestr(arcname, data)
+    z.writestr(_info(arcname), data)
 
 
 def add_file(z, arcname, path):
-    z.write(path, arcname)
+    with open(path, "rb") as fh:
+        z.writestr(_info(arcname), fh.read())
 
 
 def build_resourcepack(out_path, pack_version):
