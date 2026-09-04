@@ -41,6 +41,7 @@ STEPS = [
     ("分派模組包改名", ["distribute_renames.py"]),
     ("分派補充物品名", ["distribute_extras.py"]),
     ("名稱缺口盤點", ["extract_gaps.py"]),
+    ("說明文字缺口盤點", ["extract_text_gaps.py"]),
     ("補譯缺口名稱", ["compose_all_names.py"]),
     ("補譯說明文字", ["apply_all_text.py"]),
     ("Patchouli 書籍", ["patchouli.py", "build"]),

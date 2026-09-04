@@ -100,7 +100,6 @@
   "modifier.tconstruct.tank_handler": "儲槽處理器",
   "modifier.tconstruct.tank_handler.description": "顯示儲槽當前的內容物與容量。",
   "modifier.tconstruct.tank_handler.flavor": "儲槽內容物",
-  "modifier.tconstruct.temperate.resistance": "溫和抗性",
   "modifier.tconstruct.trim": "盔甲紋飾",
   "modifier.tconstruct.trim.description": "以昂貴的紋飾模板為護甲增添細節",
   "modifier.tconstruct.trim.flavor": "繁複的細節！",
@@ -354,5 +353,55 @@
   "command.tconstruct.materials.success.traits.stat": "%s 對 %s 的特性：",
   "_advancement": "進度",
   "advancements.tconstruct.world.ancient_tools.title": "考古學家",
-  "advancements.tconstruct.world.ancient_tools.description": "找齊所有種類的遠古工具"
+  "advancements.tconstruct.world.ancient_tools.description": "找齊所有種類的遠古工具",
+  "_comment2": "TConstruct 3.10.1.76（Growth Update）新增的 34 條。藤蔓名照原版 zh_tw（twisting_vines=扭曲藤、weeping_vines=垂泣藤）；恆溫沿用模組既有的「恒溫」但改為正體字形，並一併統一同組的四個 key。",
+  "material.tconstruct.twisting_vine": "扭曲藤",
+  "material.tconstruct.twisting_vine.flavor": "把孢子吃了！",
+  "material.tconstruct.twisting_vine.encyclopedia": "提供 +6 挖掘速度，代價是放下工具時受到 1 點傷害",
+  "material.tconstruct.twisting_vine.ranged": "提供 +15% 拉弓速度，代價是放下工具時受到 1 點傷害",
+  "material.tconstruct.twisting_vine.armor": "提供 +10% 擊退抗性，代價是脫下護甲時受到 2 點傷害",
+  "material.tconstruct.weeping_vine": "垂泣藤",
+  "material.tconstruct.weeping_vine.flavor": "駕馭熱力。",
+  "material.tconstruct.weeping_vine.encyclopedia": "在炎熱生態域最多提供 +1.25 近戰傷害，在寒冷生態域則最多降低 1.25",
+  "material.tconstruct.weeping_vine.ranged": "在炎熱生態域提供 +0.75 力量，在寒冷生態域則最多降低 0.75",
+  "material.tconstruct.weeping_vine.armor": "在炎熱生態域最多提供 +5% 防護，在寒冷生態域則最多降低 5%",
+  "material.tconstruct.skyslime_vine.armor": "每件裝備減少 20% 重力",
+  "material.tconstruct.enderslime_vine.armor": "每件裝備有 25% 機率隨機將攻擊者傳送走",
+  "material.tconstruct.ancient_hide.ranged": "提供一個額外的防禦槽",
+  "modifier.tconstruct.entangled": "糾纏",
+  "modifier.tconstruct.entangled.description": "提升速度與擊退抗性，代價是卸下時受到傷害",
+  "modifier.tconstruct.entangled.flavor": "共生關係！",
+  "modifier.tconstruct.flamestance": "焰勢",
+  "modifier.tconstruct.flamestance.description": "在炎熱生態域提升威力與防護，在寒冷生態域則反過來降低",
+  "modifier.tconstruct.flamestance.flavor": "火之力！",
+  "modifier.tconstruct.flamestance.attack_damage": "焰勢傷害",
+  "modifier.tconstruct.flamestance.projectile_damage": "焰勢威力",
+  "modifier.tconstruct.flamestance.resistance": "焰勢抗性",
+  "modifier.tconstruct.skyfall": "緩墜",
+  "modifier.tconstruct.skyfall.description": "減弱重力的作用",
+  "modifier.tconstruct.skyfall.flavor": "墜落也要有型！",
+  "attribute.name.tconstruct.generic.safe_fall_distance": "安全落地距離",
+  "death.attack.tconstruct.entangled": "%1$s 沒能放開手上的工具",
+  "death.attack.tconstruct.entangled.player": "%1$s 與 %2$s 交戰時沒能放開手上的工具",
+  "book.tconstruct.material.castable": "澆鑄",
+  "book.tconstruct.material.composite": "複合",
+  "book.tconstruct.material.craftable": "部件製造台",
+  "book.tconstruct.material.skull": "頭顱製作",
+  "_override": {
+    "modifier.tconstruct.invariant": {
+      "value": "恆久",
+      "reason": "模組自帶譯文寫「恒久」，恒是恆的簡化字。原版 zh_tw 與 MTP 都不使用恒。"
+    },
+    "modifier.tconstruct.temperate": {
+      "value": "恆溫",
+      "reason": "同上，模組寫「恒溫」。"
+    },
+    "modifier.tconstruct.temperate.reinforced": {
+      "value": "恆溫加強",
+      "reason": "同上，模組寫「恒溫加強」。"
+    }
+  },
+  "modifier.tconstruct.temperate.resistance": "恆溫抗性",
+  "modifier.tconstruct.temperate.draw_speed": "恆溫速度",
+  "modifier.tconstruct.temperate.mining_speed": "恆溫速度"
 }

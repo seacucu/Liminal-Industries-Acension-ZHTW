@@ -185,5 +185,10 @@
   "Ichor is a reverse gravity fluid, helping you also reverse gravity. Surviving the trip back down is on you.": "靈漿是反重力流體，能讓你也跟著反重力。至於怎麼活著落地，那是你的事。",
   "Great for quickly building a wall, or just solidifying clay without a cast.": "很適合快速砌牆，或單純在沒有鑄模的情況下把黏土固化。",
   "Placing blocks turns a slimestaff into a building wand.": "放置方塊會把史萊姆法杖變成建築魔杖。",
-  "Potions allow a wide variety of effects crafted in a brewing stand. Can dump potions into tanks to fill tools.": "藥水能在釀造台調配出各式各樣的效果。可以把藥水倒進儲槽來裝填工具。"
+  "Potions allow a wide variety of effects crafted in a brewing stand. Can dump potions into tanks to fill tools.": "藥水能在釀造台調配出各式各樣的效果。可以把藥水倒進儲槽來裝填工具。",
+  "_gauge": "3.10.1 新增的計量槽。Gauge 沿用本包既有的「計量槽」譯法",
+  "Copper Gauge": "銅計量槽",
+  "Obsidian Gauge": "黑曜石計量槽",
+  "Interacting with the gauge shows the amount of fluid in the tank behind the gauge": "與計量槽互動可查看其後方儲槽的流體量",
+  "Shows the type of fluid in the tank behind the gauge, and shows the amount when interacting.": "顯示其後方儲槽的流體種類，互動時還會顯示流體量。"
 }

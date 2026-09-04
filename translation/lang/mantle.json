@@ -1,5 +1,12 @@
 {
   "command.mantle.book.export.error_generic": "書本圖片匯出失敗，詳情請見日誌",
   "command.mantle.book.export.error_io": "無法為書本圖片建立資料夾「%s」",
-  "command.mantle.book.export.success": "書本圖片已匯出至「%s」"
+  "command.mantle.book.export.success": "書本圖片已匯出至「%s」",
+  "gui.mantle.fluid.bottle": "%s 瓶",
+  "gui.mantle.fluid.bowl": "%s 碗",
+  "gui.mantle.fluid.capacity": "容量：%s mb",
+  "gui.mantle.fluid.contents": "內含：%s",
+  "gui.mantle.fluid.drop": "%s 滴",
+  "gui.mantle.fluid.format": "%s / %s mb %s",
+  "gui.mantle.fluid.sip": "%s 口"
 }

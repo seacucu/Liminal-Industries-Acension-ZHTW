@@ -1083,5 +1083,6 @@
   "keycategory.invmove": "縮寫、模組名或純格式字串，保留原文：InvMove",
   "datapack.create_central_kitchen.corn_delight": "資料包名稱由模組名組成，保留原文",
   "datapack.create_central_kitchen.ends_delight": "資料包名稱由模組名組成，保留原文",
-  "datapack.create_central_kitchen.overweight_farming": "資料包名稱由模組名組成，保留原文"
+  "datapack.create_central_kitchen.overweight_farming": "資料包名稱由模組名組成，保留原文",
+  "gui.mantle.fluid.format": "純格式字串（%s / %s mb %s），無文字可譯"
 }

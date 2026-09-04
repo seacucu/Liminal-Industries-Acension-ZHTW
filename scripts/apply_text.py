@@ -23,8 +23,12 @@ def main(argv):
     gaps = json.load(open(GAPS, encoding="utf-8")).get(ns, {})
     src = json.load(open(os.path.join(TEXT, f"{ns}.json"), encoding="utf-8"))
     mine = {k: v for k, v in src.items() if not k.startswith("_")}
+    # 模組自帶譯文有錯時，在 _override 列出 key 與理由即可覆寫。
+    # 一般 key 仍必須在缺口清單中，避免拼錯的 key 靜默寫進去。
+    override = src.get("_override", {})
+    mine.update({k: v["value"] for k, v in override.items()})
 
-    unknown = [k for k in mine if k not in gaps]
+    unknown = [k for k in mine if k not in gaps and k not in override]
     if unknown:
         print(f"{ns}：{len(unknown)} 個 key 不在缺口清單中（可能已有譯文或拼錯）",
               file=sys.stderr)
