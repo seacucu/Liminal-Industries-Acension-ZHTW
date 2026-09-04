@@ -1,0 +1,20 @@
+{
+  "block.engineered_schematics.schematic_table_block": "藍圖桌",
+  "desc.engineered_schematics.info.schematic.block_info": "按住 [%s] 查看所需材料",
+  "desc.engineered_schematics.info.schematic.ie_tier": "工程師鎚",
+  "desc.engineered_schematics.info.schematic.moved": "藍圖已移動",
+  "desc.engineered_schematics.info.schematic.no_multiblock": "空白藍圖",
+  "desc.engineered_schematics.info.schematic.placed": "（僅限創造模式）藍圖已放置",
+  "desc.engineered_schematics.info.schematic.rotated": "藍圖已旋轉",
+  "desc.engineered_schematics.info.schematic.size": "%s",
+  "desc.engineered_schematics.info.schematic.tier": "可以用 %s 來組成",
+  "desc.engineered_schematics.schematic_table": "藍圖桌",
+  "engineered_schematics.gui.schematic_table.mirror": "鏡像",
+  "item.engineered_schematics.multiblock_schematic": "空白藍圖",
+  "item.engineered_schematics.multiblock_schematic.error": "方塊錯誤",
+  "item.engineered_schematics.multiblock_schematic.formed": "已完成",
+  "item.engineered_schematics.multiblock_schematic.specific": "%s 藍圖",
+  "item.engineered_schematics.multiblock_schematic.specific.mirrored": "鏡像 %s 藍圖",
+  "itemGroup.engineered_schematics": "Engineered Schematics",
+  "manual.engineered_schematics.main": "Engineered Schematics"
+}

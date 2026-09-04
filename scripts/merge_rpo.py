@@ -19,7 +19,10 @@ SRC = os.path.join(ROOT, "source", "config", "resourcepackoverrides.json")
 OUT = os.path.join(ROOT, "_workspace", "build", "patch", "config", "resourcepackoverrides.json")
 
 PACK = "file/LIA-zhTW.zip"
-MTP = "file/ModsTranslationPack-1.20.x.zip"   # 官方 release 檔名，含 .x
+# MTP 的檔名依下載來源而異：GitHub release 是 -1.20.x.zip，CurseForge 是 -1.20.zip。
+# RPO 依檔名精確比對，缺檔的條目會被忽略，所以兩種都列進去最保險。
+MTP_NAMES = ["file/ModsTranslationPack-1.20.x.zip",
+             "file/ModsTranslationPack-1.20.zip"]
 
 
 def main():
@@ -27,7 +30,7 @@ def main():
     added_packs, added_overrides = [], []
 
     packs = list(base.get("default_packs", []))
-    for entry in (MTP, PACK):          # MTP 在前、本包在後 → 本包優先度最高
+    for entry in MTP_NAMES + [PACK]:   # MTP 在前、本包在後 → 本包優先度最高
         if entry not in packs:
             packs.append(entry)
             added_packs.append(entry)

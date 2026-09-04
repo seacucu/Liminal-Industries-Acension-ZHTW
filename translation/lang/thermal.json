@@ -1,7 +1,18 @@
 {
   "block.thermal.cured_rubber_block": "固化膠水方塊",
+  "block.thermal.device_rock_gen": "造岩機",
+  "block.thermal.machine_bottler": "裝瓶機",
+  "block.thermal.machine_chiller": "冷凝機",
+  "block.thermal.machine_crystallizer": "結晶器",
+  "block.thermal.machine_insolator": "植物增殖機",
+  "block.thermal.machine_press": "壓製機",
+  "block.thermal.machine_pyrolyzer": "熱解爐",
+  "block.thermal.machine_refinery": "分餾塔",
+  "block.thermal.machine_smelter": "感應熔煉爐",
   "block.thermal.rubber_block": "膠水方塊",
   "item.thermal.cured_rubber": "固化膠水",
+  "item.thermal.deep_aquachow": "深海魚飼料",
+  "item.thermal.redstone_mushroom_spores": "紅石蘑菇孢子",
   "item.thermal.rubber": "膠水",
   "item.thermal.sawdust": "重鋸屑"
 }

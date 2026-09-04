@@ -26,6 +26,13 @@ TERM_FIXES = [
     (None,           "瑪那鋼", "魔鋼",   None),
     (None,           "瑪那",   "魔力",   None),   # 瑪那只可能是 Mana
     (None,           "魔源",   "魔力",   None),
+    (None,           "玻璃板", "玻璃片", None),   # 原版 glass_pane = 玻璃片
+    # 口語型的兩岸差異，官方術語表收的是「马铃薯」故抓不到「土豆」
+    (None,           "小土豆", "小小馬鈴薯", None),
+    (None,           "土豆",   "馬鈴薯", None),
+    (None,           "概率",   "機率",   None),
+    (None,           "幾率",   "機率",   None),
+    (None,           "信號",   "訊號",   None),   # 原版：紅石訊號
     (r"Corporea",    "多媒體", "具現",   None),
     (r"Corporea",    "主媒體", "主具現", None),
     (r"Livingwood",  "活木枝", "活木",   r"Twig"),  # Twig 本來就該是「枝」

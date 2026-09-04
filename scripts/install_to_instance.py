@@ -58,11 +58,13 @@ def main():
 
     mtp_dir = os.path.join(INST, "resourcepacks")
     names = os.listdir(mtp_dir)
-    official = "ModsTranslationPack-1.20.x.zip"
-    if official not in names:
+    # 官方發布名是 -1.20.x.zip，但 CurseForge 下載下來常是 -1.20.zip，
+    # 因此 merge_rpo 兩個檔名都寫進 default_packs，這裡的判定要一致
+    known = ["ModsTranslationPack-1.20.x.zip", "ModsTranslationPack-1.20.zip"]
+    if not any(n in names for n in known):
         cand = [n for n in names if n.lower().startswith("modstranslationpack")]
-        print("\n[注意] resourcepacks 內沒有官方檔名的 MTP：")
-        print(f"        需要 {official}")
+        print("\n[注意] resourcepacks 內沒有 RPO 認得的 MTP 檔名：")
+        print(f"        需要 {' 或 '.join(known)}")
         print(f"        目前有 {cand if cand else '（無）'}")
         print("        RPO 依檔名精確比對，檔名不符就不會自動啟用。")
     return 0
