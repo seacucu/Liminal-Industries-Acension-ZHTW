@@ -76,7 +76,12 @@ FTB Quests 的任務檔由**伺服器**提供。只裝客戶端補丁的話，�
 
 任務書提到這些機器時會使用中文譯名並在必要處附上原文，方便你在 JEI 搜尋。
 
-完整清單與其他限制見 [`docs/known-issues.md`](docs/known-issues.md)。
+另外兩點：
+
+- **Botania 只重譯了方塊與物品名稱。** 植物魔法辭典的內文沒有重譯，只做了術語代換
+  （瑪那→魔力等），所以名稱與內文一致，但內文仍保有原譯的行文與半形標點。
+- 其餘模組（Tinkers' Construct、Supplementaries、Jade 等）自帶的繁中並不完整，
+  未涵蓋處會顯示英文。這不是本包能處理的範圍。
 
 ## 開發
 
@@ -86,19 +91,15 @@ python scripts/merge_rpo.py    # 合併 resourcepackoverrides.json
 python scripts/build.py        # 打包出三個交付物到 _workspace/build/dist/
 ```
 
-| 文件 | 內容 |
-|---|---|
-| [`docs/structure.md`](docs/structure.md) | 實例勘查結論：任務文字存放方式、規模、實測結果 |
-| [`docs/glossary.md`](docs/glossary.md) | 術語表與簡中用詞對照 |
-| [`docs/glossary-botania.md`](docs/glossary-botania.md) | Botania 專用術語與構詞規則 |
-| [`docs/known-issues.md`](docs/known-issues.md) | 已知未翻與結構性限制 |
+建置需要本機有一份 LIA 實例——`source/` 只是上游快照，KubeJS 的註冊表、
+Botania 的原始語系檔、原版 zh_tw 基準都直接從實例與啟動器資產讀取。
 
-Botania 1,060 條名稱的逐條查驗頁可用 `python scripts/botania_review.py` 產生。
-
-建置產物、分析用隨附檔與過程文件都放在 `_workspace/`（不納入版控）。
+所有產物與工作檔都寫到 `_workspace/`（不納入版控）：骨架、驗證基準、
+Botania 逐條查驗頁、三個交付 zip。
 
 譯文全部經 `scripts/verify_translation.py` 檢查：key 對應、章節完整度、簡體字、
 簡中用詞、非預期文字系統、`%%` 轉義、顏色碼保留、殘留英文。
+簡體字清單以原版 zh_tw 與 MTP 為語料自我校正，避免把「濃郁」「划算」誤判為簡體。
 
 ## 致謝
 
