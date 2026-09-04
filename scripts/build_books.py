@@ -10,6 +10,7 @@ Mantle 只讀優先度最高的那一份，不做合併，缺一條就直接顯�
 
   1. 對每個英文頁面，若模組的 zh_tw 已有同名檔就不動它；沒有的才由
      translation/book/tconstruct/pages.json 補上，並套回英文檔的結構。
+     模組自己那份有錯的少數頁面則列在同檔的 _override，每條都要寫明理由。
   2. 以 translation/book/tconstruct/lang/<書>.lang 整份取代 language.lang。
 
 輸出：_workspace/build/books/assets/tconstruct/book/...，由 build.py 併進資源包。
@@ -20,6 +21,7 @@ Mantle 只讀優先度最高的那一份，不做合併，缺一條就直接顯�
 
 import glob
 import json
+import shutil
 import os
 import re
 import sys
@@ -100,15 +102,28 @@ def translate_text(val, new, where):
 
 
 def main():
-    pages = json.load(open(os.path.join(SRC, "pages.json"), encoding="utf-8"))
-    pages = {k: v for k, v in pages.items() if not k.startswith("_")}
+    raw = json.load(open(os.path.join(SRC, "pages.json"), encoding="utf-8"))
+    pages = {k: v for k, v in raw.items() if not k.startswith("_")}
+    # 模組自帶譯文有錯時（簡中用詞、異體字、誤譯），在 _override 列出並寫明理由。
+    override = {k: v for k, v in raw.get("_override", {}).items()
+                if not k.startswith("_")}
+    for key, val in override.items():
+        if "reason" not in val:
+            raise SystemExit(f"_override {key}：必須寫明覆寫理由")
+    override = {k: {kk: vv for kk, vv in v.items() if kk != "reason"}
+                for k, v in override.items()}
+
+    if os.path.exists(OUT):
+        shutil.rmtree(OUT)
 
     z = zipfile.ZipFile(find_jar())
     books = book_files(z)
 
     written = 0
+    overwritten = 0
     missing = []
     used = set()
+    used_override = set()
 
     for book, langs in sorted(books.items()):
         en = langs.get("en_us", {})
@@ -116,15 +131,21 @@ def main():
         for rel in sorted(en):
             if rel == "language.lang":
                 continue
-            if rel in have:
-                continue                       # 模組自己有中文版，不覆寫
             key = f"{book}/{rel}"
-            if key not in pages:
-                missing.append(key)
-                continue
-            used.add(key)
+            if rel in have:                    # 模組自己有中文版
+                if key not in override:
+                    continue
+                used_override.add(key)
+                tw = override[key]
+                overwritten += 1
+            else:
+                if key not in pages:
+                    missing.append(key)
+                    continue
+                used.add(key)
+                tw = pages[key]
             data = json.loads(z.read(en[rel]).decode("utf-8"))
-            data = translate(data, pages[key], key)
+            data = translate(data, tw, key)
             path = os.path.join(OUT, book, "zh_tw", *rel.split("/"))
             os.makedirs(os.path.dirname(path), exist_ok=True)
             with open(path, "w", encoding="utf-8", newline="\n") as fh:
@@ -132,9 +153,9 @@ def main():
                 fh.write("\n")
             written += 1
 
-    stale = sorted(set(pages) - used)
+    stale = sorted((set(pages) - used) | (set(override) - used_override))
     if stale:
-        raise SystemExit("以下譯文在英文版中找不到對應頁面（模組更新後被移除了？）：\n  "
+        raise SystemExit("以下譯文在英文版中找不到對應頁面，或模組已自行補上／移除：\n  "
                          + "\n  ".join(stale))
     if missing:
         raise SystemExit(f"以下 {len(missing)} 頁模組沒有中文版，本包也還沒翻：\n  "
@@ -154,8 +175,8 @@ def main():
             fh.write(open(os.path.join(SRC, "lang", f), encoding="utf-8").read())
         langs_written += 1
 
-    print(f"書本頁面 {written} 檔 / 章節名稱 {langs_written} 本 → "
-          f"{os.path.relpath(OUT, ROOT)}")
+    print(f"書本頁面 {written} 檔（其中覆寫模組譯文 {overwritten} 檔）/ "
+          f"章節名稱 {langs_written} 本 → {os.path.relpath(OUT, ROOT)}")
     return 0
 
 
