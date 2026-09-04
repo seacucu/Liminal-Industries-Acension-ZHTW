@@ -13,6 +13,7 @@
   6. botania_substitute  → 併入範圍外的術語與格式修正
   7. distribute_renames  → 分派改名，**必須在 botania_compose 之後**
   8. patchouli build     → translation/patchouli/
+ 8b. build_books        → build/books/（TConstruct 六本書缺的中文頁）
   9. botania_review      → reference/botania-name-review.html
  10. verify_translation  → 全項檢查
 
@@ -45,6 +46,7 @@ STEPS = [
     ("補譯缺口名稱", ["compose_all_names.py"]),
     ("補譯說明文字", ["apply_all_text.py"]),
     ("Patchouli 書籍", ["patchouli.py", "build"]),
+    ("Mantle 書本頁面", ["build_books.py"]),
     ("Botania 查驗頁", ["botania_review.py"]),
     ("譯文檢查", ["verify_translation.py"]),
     ("全 repo 用詞檢查", ["check_repo_terms.py"]),

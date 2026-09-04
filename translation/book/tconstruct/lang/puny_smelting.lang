@@ -1,0 +1,36 @@
+# 《入門熔煉術》的章節名稱。整份取代模組自帶的 zh_tw。
+# 模組那份缺 armor_materials，且 armor 與 armor.subtext 各出現兩次（後者覆蓋前者），
+# 內容也停留在只有旅行者套裝的舊版。
+
+intro=介紹
+melter=熔化爐
+moving_fluids=流體的轉移
+casting=鑄造
+melee_harvest_materials=二級近戰採掘材料
+melee_harvest_materials.subtext=這些材料可以鑄造成近戰武器或採掘工具的部件。
+ranged_materials=二級遠程材料
+ranged_materials.subtext=這些材料可以鑄造成弓這類遠程武器的部件。
+armor_materials=二級盔甲材料
+armor_materials.subtext=這些材料可以鑄造成盔甲與盾牌。
+
+further_reading=延伸閱讀
+
+armor=入門盔甲
+armor.subtext=盔甲的路線由你選擇：旅行者套裝可高度改造，留給能力強化的空間較多；鑲板盔甲則有更多防禦的機會。要是你毫無時尚品味，兩種混搭也行。
+
+upgrades=升級強化
+upgrades.subtext=工具可以加上升級強化，不過每把工具能加的數量有限。
+upgrades.group_general=通用升級
+upgrades.group_harvest=採掘升級
+upgrades.group_melee=近戰升級
+upgrades.group_damage=額外傷害升級
+upgrades.group_armor=盔甲升級
+upgrades.group_armor.helmet=頭盔升級
+upgrades.group_armor.chestplate=胸甲升級
+upgrades.group_armor.leggings=護腿升級
+upgrades.group_armor.boots=靴子升級
+
+slotless=無槽位強化
+slotless.subtext=這些強化不佔用任何槽位，你想全加上去也可以。
+slotless.group_slotless=無槽位
+slotless.group_bonus_upgrades=槽位++

@@ -1,0 +1,19 @@
+# 《奇異熔鑄術》的章節名稱。整份取代模組自帶的 zh_tw。
+
+intro=介紹
+
+alloyer=合金爐
+
+foundry=熔鑄爐
+
+blazing_blood=烈焰血
+
+armor=奇異盔甲
+armor.subtext=用地獄的資源就能做出更高階的盔甲。以鑲板盔甲為例，它防禦極高，但可改造的空間較少。都這麼耐打了，還要那些花俏功能做什麼？
+
+melee_harvest_materials=四級近戰採掘材料
+melee_harvest_materials.subtext=這些材料需要烈焰血才能製作，可做成近戰武器或採掘工具的部件。
+ranged_materials=四級遠程材料
+ranged_materials.subtext=這些材料需要烈焰血才能製作，可做成弓這類遠程武器的部件。
+armor_materials=四級盔甲材料
+armor_materials.subtext=這些材料可以鑄造成盔甲與盾牌。

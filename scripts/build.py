@@ -25,6 +25,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
+BOOKS = os.path.join(ROOT, "_workspace", "build", "books")
 SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
 RPO = os.path.join(ROOT, "_workspace", "build", "patch", "config", "resourcepackoverrides.json")
 META = os.path.join(ROOT, "source", "meta.json")
@@ -71,6 +72,7 @@ def add_file(z, arcname, path):
 def build_resourcepack(out_path, pack_version):
     langs = sorted(f for f in os.listdir(LANG_DIR) if f.endswith(".json"))
     total = 0
+    books = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         add_bytes(z, "pack.mcmeta", pack_mcmeta(pack_version))
         if os.path.exists(PACK_ICON):
@@ -83,7 +85,14 @@ def build_resourcepack(out_path, pack_version):
             total += len(data)
             add_bytes(z, f"assets/{ns}/lang/zh_tw.json",
                       json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True))
-    return len(langs), total
+        # Mantle 書本：TConstruct 的六本書不走 lang 檔，內容本身就是資源
+        for dirpath, _, files in sorted(os.walk(BOOKS)):
+            for f in sorted(files):
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, BOOKS).replace("\\", "/")
+                add_file(z, rel, full)
+                books += 1
+    return len(langs), total, books
 
 
 def build_client(out_path, rp_path, pack_version):
@@ -149,7 +158,8 @@ LIA 更新後需重新安裝本補丁，否則任務書會變回英文。
 
 def main():
     for path, label in ((SKELETON, "key 化骨架"), (RPO, "合併後的 RPO 設定"),
-                        (PATCHOULI, "Patchouli 中文書")):
+                        (PATCHOULI, "Patchouli 中文書"),
+                        (BOOKS, "Mantle 書本中文頁")):
         if not os.path.exists(path):
             print(f"缺少{label}：{path}\n請先執行 scripts/build_all.py 與 scripts/merge_rpo.py",
                   file=sys.stderr)
@@ -163,9 +173,10 @@ def main():
     os.makedirs(DIST)
 
     rp = os.path.join(DIST, "LIA-zhTW.zip")
-    ns_count, entry_count = build_resourcepack(rp, pack_version)
+    ns_count, entry_count, book_count = build_resourcepack(rp, pack_version)
     print(f"資源包        {os.path.basename(rp):<38}"
-          f"{ns_count} 個命名空間 / {entry_count} 條 / {os.path.getsize(rp)//1024} KB")
+          f"{ns_count} 個命名空間 / {entry_count} 條 / 書本 {book_count} 檔 / "
+          f"{os.path.getsize(rp)//1024} KB")
 
     client = os.path.join(DIST, f"LIA-zhTW-Patch-v{VERSION}.zip")
     c = build_client(client, rp, pack_version)

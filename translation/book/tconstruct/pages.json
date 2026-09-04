@@ -1,0 +1,637 @@
+{
+  "_comment": "TConstruct 的書本不是 Patchouli，是 Mantle 的書本系統：內容放在 assets/tconstruct/book/<書>/<語系>/，不走 lang 檔。模組自帶的 zh_tw 停留在舊版，缺 79 頁，缺頁會逐檔回退成英文。本檔只列出模組 zh_tw 沒有的頁面，由 scripts/build_books.py 套回英文版的結構產出。欄位對應英文檔：title 為頁面標題，text 為內文（字串或段落陣列），effects／properties／block／entity 為條列，陣列長度必須與英文一致。",
+
+  "encyclopedia/intro/focus.json": {
+    "title": "主旨",
+    "text": [
+      "本書專注於工具的打造。與《匠魂寶典：材料與你》或《大師熔煉術》不同，它不會說明打造工具所需的技術怎麼使用，而是假設你已經掌握了那些技術，直接列出所有可用的選項。",
+      "若你還不清楚這些技術怎麼用，或不知道去哪裡取得資源，請翻閱《匠魂寶典：材料與你》、《入門熔煉術》、《大師熔煉術》、《奇異熔鑄術》或《工匠裝置寶典》。"
+    ]
+  },
+
+  "encyclopedia/tools/ancient.json": {
+    "title": "遠古工具",
+    "text": [
+      "遠古工具無法合成，只能在世界各處的戰利品中找到，或向流浪商人購買。它們的材料是隨機的，也無法透過更換部件改變。",
+      "遠古工具通常帶有兩種不同工具類別的材料（例如近戰與遠程各一）。此外，它們從均衡強化獲得的效果也比較強。"
+    ]
+  },
+
+  "encyclopedia/tools/ancient/tconstruct_battlesign.json": {
+    "text": [
+      "戰鬥招牌是盾牌與劍的綜合體，可在堡壘遺跡中找到，也能靠以物易物取得，或從各種豬布林手中奪得。"
+    ],
+    "properties": [
+      "+2 近戰傷害",
+      "1.4 近戰速度",
+      "格擋 50 點傷害",
+      "120° 格擋角度",
+      "格擋時 20% 速度",
+      "3 個防禦槽",
+      "1 個能力槽"
+    ]
+  },
+
+  "encyclopedia/tools/ancient/tconstruct_melting_pan.json": {
+    "text": [
+      "熔煮鍋能挖掘可熔化的方塊，同時也具備手杖的功能。可在地牢、雪屋、屍殼身上找到，或在擊退突襲後由工具匠贈予。",
+      "延展強化可讓它一次挖掘多個同類方塊，範圍隨等級提升。"
+    ],
+    "properties": [
+      "6 挖掘速度",
+      "石質挖掘等級",
+      "10% 擊退抗性",
+      "熔煉+",
+      "1 個防禦槽",
+      "1 個升級槽",
+      "2 個能力槽"
+    ]
+  },
+
+  "encyclopedia/tools/ancient/tconstruct_swasher.json": {
+    "text": [
+      "揮斬劍結合了近戰武器與手持流體槍。常見於埋沒的寶藏與沉船中，也可從沉屍手中奪得，偶爾還能釣上來。"
+    ],
+    "properties": [
+      "+0 近戰傷害",
+      "1.5 近戰速度",
+      "噴灑 I",
+      "潑灑 I",
+      "3 個升級槽",
+      "1 個能力槽"
+    ]
+  },
+
+  "encyclopedia/tools/ancient/tconstruct_war_pick.json": {
+    "text": [
+      "戰鎬是一把善於開採石頭、金屬與礦石的弩。可在廢棄礦坑、掠奪者前哨站、殭屍村民身上找到，也可由武器匠贈予。",
+      "延展強化會擴大戰鎬的圓形挖掘半徑。"
+    ],
+    "properties": [
+      "+0 近戰傷害",
+      "1.2 近戰速度",
+      "1.0 拉弓速度",
+      "1.00 箭矢初速度",
+      "0.75 精確度",
+      "3 個升級槽",
+      "1 個能力槽"
+    ]
+  },
+
+  "encyclopedia/abilities/armor/boots/tconstruct_glowing.json": {
+    "text": [
+      "行走時會在附近的黑暗處放置螢光球。每放一顆消耗 5 點耐久度。範圍可用延展強化擴大。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個能力槽"]
+  },
+
+  "encyclopedia/abilities/armor/boots/tconstruct_pathing.json": {
+    "text": [
+      "行走時踏平腳下的草地，在身後留下一條土徑。延展強化可擴大作用範圍。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個能力槽"]
+  },
+
+  "encyclopedia/abilities/armor/boots/tconstruct_tilling.json": {
+    "text": [
+      "把腳下的土地翻成耕地。作用範圍可用延展強化擴大。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個能力槽"]
+  },
+
+  "encyclopedia/abilities/armor/chestplate/tconstruct_wings.json": {
+    "text": [
+      "讓你在半空中跳躍即可滑翔。滑翔時會緩慢消耗胸甲的耐久度。"
+    ],
+    "effects": ["最高 1 級", "需要 2 個能力槽"]
+  },
+
+  "encyclopedia/abilities/armor/general/tconstruct_bursting.json": {
+    "text": [
+      "每級有 25% 機率消耗少量流體（通常介於 10 mb 到 50 mb），為反擊附加特殊效果。盾牌在格擋時機率加倍。",
+      "手持工具對儲槽或排流口互動即可填充流體。"
+    ],
+    "effects": ["無等級上限", "每級需要 1 個能力槽", "對流體儲槽使用工具即可填充"]
+  },
+
+  "encyclopedia/abilities/armor/general/tconstruct_wetting.json": {
+    "text": [
+      "受到傷害時，每級有 25% 機率消耗少量流體（通常介於 10 mb 到 50 mb），觸發點燃、治療或清除狀態效果等作用。盾牌在格擋時機率加倍。",
+      "手持工具對儲槽或排流口互動即可填充流體。"
+    ],
+    "effects": ["無等級上限", "每級需要 1 個能力槽", "對流體儲槽使用工具即可填充"]
+  },
+
+  "encyclopedia/abilities/armor/leggings/tconstruct_crafting_table.json": {
+    "text": [
+      "在工具的物品欄中加入一個 3x3 的工作台。"
+    ],
+    "effects": ["僅有 1 級", "需要 1 個能力槽"]
+  },
+
+  "encyclopedia/abilities/armor/leggings/tconstruct_soul_belt.json": {
+    "text": [
+      "死亡並重生後，快捷欄中的物品仍會留在物品欄裡。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個能力槽", "需要靈魂綁定"]
+  },
+
+  "encyclopedia/abilities/interact/tconstruct_brushing.json": {
+    "text": [
+      "對可疑方塊按住互動鍵即可緩慢刷掃。完成時消耗耐久度，並支援範圍刷掃。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個能力槽"]
+  },
+
+  "encyclopedia/abilities/interact/tconstruct_slurping.json": {
+    "text": [
+      "可飲用工具內儲存的流體來觸發效果，例如點燃自己、清除狀態效果或回復飢餓值。",
+      "等級越高，消耗的流體越多，效果也越強。"
+    ],
+    "effects": ["無等級上限", "每級需要 1 個能力槽", "對流體儲槽使用工具即可填充"]
+  },
+
+  "encyclopedia/abilities/interact/tconstruct_splashing.json": {
+    "text": [
+      "互動時消耗少量流體（通常介於 10 mb 到 50 mb），對目標方塊或生物施加特殊效果，例如點燃、額外傷害或藥水效果。",
+      "手持工具對儲槽或排流口互動即可填充流體。"
+    ],
+    "effects": ["無等級上限", "需要 1 個能力槽", "對流體儲槽使用工具即可填充"]
+  },
+
+  "encyclopedia/slotless/general/tconstruct_barebow.json": {
+    "text": [
+      "讓弓不再從物品欄取用彈藥。適合用來確保改用晶簇或自容箭袋，或是拿弓來發射箭矢以外的東西。"
+    ],
+    "effects": ["僅能使用一次", "無槽位"]
+  },
+
+  "encyclopedia/slotless/general/tconstruct_trim.json": {
+    "text": [
+      "把盔甲紋飾與對應的材料組合起來，即可為盔甲加上一層獨特花紋的彩色外觀。"
+    ],
+    "effects": ["可重複使用", "無槽位"]
+  },
+
+  "encyclopedia/slotless/general/tconstruct_workbench.json": {
+    "text": [
+      "在工具的物品欄中加入一個 2x2 的工作台。"
+    ],
+    "effects": ["僅有 1 級", "無槽位"]
+  },
+
+  "encyclopedia/upgrades/general/tconstruct_scope.json": {
+    "text": [
+      "隨著工具蓄力，遠處的景物會逐漸放大。完全拉滿時的倍率仍略遜於望遠鏡。"
+    ],
+    "effects": ["最高 1 級", "需要 1 個升級槽"]
+  },
+
+  "encyclopedia/upgrades/general/tconstruct_smelting.json": {
+    "text": [
+      "以工具造成近戰傷害、挖掘方塊、射出箭矢或格擋傷害時，會烹烤工具內的物品。一次烹烤 1 個。",
+      "潛行並互動即可開啟工具的物品欄。"
+    ],
+    "effects": ["每級需要 1 個升級槽"]
+  },
+
+  "encyclopedia/upgrades/armor/boots/tconstruct_lightspeed.json": {
+    "text": [
+      "在光線充足處，每級提供 +9% 移動速度。光線不足時仍有加成，但幅度較小。",
+      "此強化生效期間，靴子會持續耗損。"
+    ],
+    "effects": ["可逐級疊加", "最高 5 級", "每級需要 1 個升級槽"]
+  },
+
+  "encyclopedia/upgrades/armor/helmet/tconstruct_headlight.json": {
+    "text": [
+      "讓你周圍的方塊在視覺上亮起來。"
+    ],
+    "effects": ["僅有 1 級", "需要 1 個升級槽"]
+  },
+
+  "encyclopedia/upgrades/armor/leggings/tconstruct_swift_sneak.json": {
+    "text": [
+      "每級減少 15% 的潛行速度懲罰。達到 5 級時，你可以一邊潛行一邊疾跑。"
+    ],
+    "effects": ["最高 5 級", "每級需要 1 個升級槽"]
+  },
+
+  "encyclopedia/fluids/tconstruct_acetaldehyde.json": {
+    "title": "乙醛",
+    "text": "別跟乙醇搞混了，這是一種帶著果香的燃料。"
+  },
+  "encyclopedia/fluids/tconstruct_biodiesel.json": {
+    "title": "生物柴油",
+    "text": "真正可再生的火源。"
+  },
+  "encyclopedia/fluids/tconstruct_concrete.json": {
+    "title": "混凝土",
+    "text": "那東西哪兒也去不了了。"
+  },
+  "encyclopedia/fluids/tconstruct_creosote.json": {
+    "title": "雜酚油",
+    "text": "拿來封住木材再好不過，但很多人覺得這種油毒性太強而不敢用。而且它還會燒起來。"
+  },
+  "encyclopedia/fluids/tconstruct_ethanol.json": {
+    "title": "乙醇",
+    "text": "別跟乙烯醇、乙炔醇或乙醛搞混了。"
+  },
+  "encyclopedia/fluids/tconstruct_glowstone.json": {
+    "title": "螢光石",
+    "text": "螢光石是市面上最亮的流體。"
+  },
+  "encyclopedia/fluids/tconstruct_herbicide.json": {
+    "title": "除草劑",
+    "text": "要不是連作物一起毀掉，它拿來收成會很好用。",
+    "block": ["移除大多數植物，包括樹葉", "把草地變成泥土"]
+  },
+  "encyclopedia/fluids/tconstruct_lava.json": {
+    "title": "熔岩",
+    "text": "熔岩便宜又早期就能取得，是用流體強化戰鬥力的入門選擇。"
+  },
+  "encyclopedia/fluids/tconstruct_milk.json": {
+    "title": "鮮奶",
+    "text": "鮮奶能治好大多數病痛。此外，配戴骷髏頭顱時飲用會使你鈣質化，強化骷髏系的特性。"
+  },
+  "encyclopedia/fluids/tconstruct_phenolic_resin.json": {
+    "title": "酚醛樹脂",
+    "text": "這是一種合成熱固性樹脂。這件事對你可能有用，也可能沒用。"
+  },
+  "encyclopedia/fluids/tconstruct_plantoil.json": {
+    "title": "植物油",
+    "text": "嚴格說來可以吃，但我不建議吃太多。"
+  },
+  "encyclopedia/fluids/tconstruct_redstone.json": {
+    "title": "紅石",
+    "text": "紅石很適合把生物趕到整齊的位置上，又不會傷到牠們。",
+    "entity": ["威力 1.5 的爆炸", "0 點爆炸傷害", "爆炸擊退方向反轉"],
+    "block": ["爆炸不破壞方塊"]
+  },
+  "encyclopedia/fluids/tconstruct_redstone_acid.json": {
+    "title": "紅石酸",
+    "text": "會讓你變得怕電，所以離電線遠一點吧？"
+  },
+  "encyclopedia/fluids/tconstruct_water.json": {
+    "title": "水",
+    "text": "水不是最有用的流體，但在炎熱的環境中能保護你不被火燒傷。",
+    "entity": ["2 點水傷害", "撲滅火焰"],
+    "block": ["破壞會被水沖毀的方塊"]
+  },
+  "encyclopedia/fluids/tconstruct_ender_slime.json": {
+    "text": "把麻煩傳送到隨機的地方去，也算是一種處理麻煩的辦法。",
+    "block": ["以手持的方塊取代被擊中的方塊"],
+    "entity": ["回歸 +7 秒", "若目標未處於回歸狀態則傳送目標"]
+  },
+  "encyclopedia/fluids/tconstruct_magma.json": {
+    "text": "曾經幻想自己是隻地獄幽靈嗎？這東西讓你離目標近了一半。",
+    "entity": ["威力 1 的爆炸", "最高 2 點爆炸傷害"],
+    "block": ["爆炸會破壞方塊", "爆炸會引燃火焰"]
+  },
+  "encyclopedia/fluids/tconstruct_molten_cinderslime.json": {
+    "text": "餘燼史萊姆的流向是反的，連爆炸也是反的。",
+    "entity": ["威力 2 的爆炸", "最高 3 點爆炸傷害", "爆炸擊退方向反轉"],
+    "block": ["爆炸會破壞方塊"]
+  },
+  "encyclopedia/fluids/tconstruct_molten_queens_slime.json": {
+    "text": "有時候你只想炸掉敵人，而不想把自己的世界一起炸了。",
+    "entity": ["威力 2 的爆炸", "最高 3 點爆炸傷害"],
+    "block": ["爆炸不破壞方塊", "爆炸會引燃火焰"]
+  },
+  "encyclopedia/fluids/tconstruct_molten_signalum.json": {
+    "text": "熔融信素很適合用於反向擊退的爆炸戰鬥，又不會對環境造成太大破壞。",
+    "entity": ["威力 2 的爆炸", "最高 2 點爆炸傷害", "爆炸擊退方向反轉"],
+    "block": ["爆炸不破壞方塊"]
+  },
+  "encyclopedia/fluids/tconstruct_molten_slimesteel.json": {
+    "text": "史萊姆鋼很適合想要飛起來的人，前提是你得先想好怎麼落地。",
+    "entity": ["威力 1.5 的爆炸", "0 點爆炸傷害", "額外的爆炸擊退"],
+    "block": ["爆炸會破壞方塊"]
+  },
+
+  "fantastic_foundry/alloyer/fluid_cannon.json": {
+    "title": "流體加農砲",
+    "text": [
+      "Thruul 自以為聰明，做了個流體加農砲往敵人身上噴流體。我的流體加農砲用上了鈷的力量，能射出更大的彈丸、造成更強的效果。唯一的缺點是流體消耗得快很多。",
+      "不過在噴嘴前方放入物品這個點子還是很不錯的，那個設計我實在改不了多少。"
+    ]
+  },
+  "fantastic_foundry/alloyer/proxy_tank.json": {
+    "title": "工匠儲槽",
+    "text": [
+      "工匠儲槽很適合用來填充或抽乾容量會變動的流體物品，例如帶儲槽的工具。只要把工具放進儲槽裡，再用流體物品、水龍頭或渠道填充即可。",
+      "可惜這個設計對桶子或銅罐這類容器不太管用，它們的容量是固定的，水龍頭沒辦法慢慢把它們填滿。那種東西還是用鑄件槽比較好。"
+    ]
+  },
+
+  "mighty_smelting/abilities/armor/boots/tconstruct_glowing.json": {
+    "text": ["真是個亮眼的點子。"],
+    "effects": [
+      "行走時在黑暗處放置螢光球",
+      "放置螢光球會消耗耐久度",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/boots/tconstruct_pathing.json": {
+    "text": ["老是忘記回家的路嗎？那就一路留下痕跡吧！走到哪踩到哪，再也不會忘記自己去過哪裡！"],
+    "effects": [
+      "行走時鋪出土徑",
+      "範圍可由延展強化擴大",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/boots/tconstruct_tilling.json": {
+    "text": ["想開一片大農場嗎？非常大的那種？現在你可以了。"],
+    "effects": [
+      "行走時翻出耕地",
+      "範圍可由延展強化擴大",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/chestplate/tconstruct_wings.json": {
+    "text": ["這不叫飛，這叫墜落！只是墜得很有型！"],
+    "effects": [
+      "可在半空中跳躍以滑翔",
+      "僅有 1 級",
+      "需要 2 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/general/tconstruct_bursting.json": {
+    "text": [
+      "盔甲會漏東西有點噁心。但也非常有效！",
+      "手持工具對儲槽按右鍵即可填充。"
+    ],
+    "effects": [
+      "每級都有機率對攻擊者施加流體效果",
+      "效果依流體而異，包括著火與劇毒",
+      "每級需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/general/tconstruct_wetting.json": {
+    "text": [
+      "受傷時稍微濕一下也沒關係啦。等等，你沒把這個強化加在褲子上嗎？",
+      "手持工具對儲槽按右鍵即可填充。"
+    ],
+    "effects": [
+      "受傷時每級都有機率施加流體效果",
+      "效果依流體而異，包括治療與力量",
+      "每級需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/leggings/tconstruct_crafting_table.json": {
+    "text": ["就像口袋裡的線全部纏在一起那樣，只是這回派得上用場。"],
+    "effects": [
+      "在工具的物品欄中加入一個完整的工作台",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/armor/leggings/tconstruct_soul_belt.json": {
+    "text": ["朋友要留在身邊，工具要留得更近。"],
+    "effects": [
+      "遭遇不測時，快捷欄的物品仍會跟著你",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/interact/tconstruct_brushing.json": {
+    "text": ["發掘一個古文明。至少也能挖出一堆傻氣的陶器。"],
+    "effects": [
+      "持續對可疑方塊使用即可找到戰利品",
+      "僅有 1 級",
+      "需要 1 個能力槽"
+    ]
+  },
+  "mighty_smelting/abilities/interact/tconstruct_slurping.json": {
+    "text": ["嗯～好喝！"],
+    "effects": [
+      "使用時飲用工具內儲存的流體",
+      "每級需要 1 個能力槽",
+      "等級越高喝得越多，效果也越強"
+    ]
+  },
+  "mighty_smelting/abilities/interact/tconstruct_splashing.json": {
+    "text": [
+      "瞧，泳池派對，只是沒有泳池。",
+      "手持工具對儲槽按右鍵即可填充。"
+    ],
+    "effects": [
+      "互動時消耗流體",
+      "效果依流體而異，包括著火與劇毒",
+      "每級需要 1 個能力槽"
+    ]
+  },
+
+  "puny_smelting/armor/tconstruct_plate_boots.json": {
+    "text": [
+      "那是什麼鬼東西？",
+      "要進地獄就得有雙硬底靴保護雙腳！從來沒人想過那地面到底有多燙。"
+    ],
+    "properties": [
+      "較高耐久度",
+      "較高護甲值",
+      "2 個升級槽",
+      "3 個防禦槽",
+      "2 項材料特性"
+    ]
+  },
+  "puny_smelting/armor/tconstruct_plate_chestplate.json": {
+    "text": [
+      "把頭靠在胸甲上，就能在苦力怕從你背後炸開的同時聽見自己的心跳。你剛才幹嘛把它脫掉？",
+      "高防禦力再加上鎖鏈的靈活度，沒有比這更帥的了！"
+    ],
+    "properties": [
+      "較高耐久度",
+      "較高護甲值",
+      "2 個升級槽",
+      "3 個防禦槽",
+      "2 項材料特性"
+    ]
+  },
+  "puny_smelting/armor/tconstruct_plate_helmet.json": {
+    "text": [
+      "硬頭殼配硬頭盔。",
+      "一頂結實的好頭盔，保護你的腦袋。沒有東西傷得了你那顆頭！"
+    ],
+    "properties": [
+      "較高耐久度",
+      "較高護甲值",
+      "2 個升級槽",
+      "3 個防禦槽",
+      "2 項材料特性"
+    ]
+  },
+  "puny_smelting/armor/tconstruct_plate_leggings.json": {
+    "text": [
+      "我的腿，我的腿。",
+      "這條褲子能為你的各種戰鬥需求提供高度防護！"
+    ],
+    "properties": [
+      "較高耐久度",
+      "較高護甲值",
+      "2 個升級槽",
+      "3 個防禦槽",
+      "2 項材料特性"
+    ]
+  },
+  "puny_smelting/armor/tconstruct_plate_shield.json": {
+    "text": [
+      "亮晶晶的長方形盾牌，帶你踏上亮晶晶的長方形冒險。",
+      "一面能擋下最強攻擊的強力盾牌。在盾牌核心上澆鑄金屬或陶瓷即可製成。"
+    ],
+    "properties": [
+      "較高格擋值",
+      "舉盾時移動速度較低",
+      "2 個升級槽",
+      "3 個防禦槽",
+      "2 項材料特性"
+    ]
+  },
+  "puny_smelting/casting/casting_tank.json": {
+    "title": "鑄件槽",
+    "text": [
+      "鑄件槽最適合自動填充或抽乾桶子、碗、瓶子這類容量固定的流體容器。可搭配漏斗、水龍頭與渠道使用。",
+      "對上方互動可放入物品，對下方互動則可放入流體。對工具的效果不佳，那種東西用工匠儲槽會更合適。"
+    ]
+  },
+  "puny_smelting/casting/sandcast3.json": {
+    "title": "沙鑄模",
+    "text": [
+      "沙鑄模也可以在部件製造台中製作：把沙子或空白沙鑄模放進模板欄位即可。製作護甲板鑄模一定要用這個方法。"
+    ]
+  },
+  "puny_smelting/movingfluids/fluid_cannon.json": {
+    "title": "流體加農砲",
+    "text": [
+      "熔融金屬多到不知道該拿它怎麼辦嗎？試試流體加農砲吧！接上紅石脈衝，它就會射出內含的流體，可能燒傷敵人、破壞方塊，也可能自動餵飽你！",
+      "對下方互動可放入一疊物品，讓它與流體一起作用；搭配對的流體類型，還能用來放置方塊或使用工具。"
+    ]
+  },
+  "puny_smelting/movingfluids/gauge.json": {
+    "title": "計量槽",
+    "text": [
+      "想知道儲槽裡還剩多少流體嗎？試試計量槽吧！對方塊互動時，計量槽會告訴你裡面的流體量。",
+      "黑曜石計量槽還會直接在視窗裡顯示內含的流體，雖然要看我的儲槽內部本來也不難就是了。"
+    ]
+  },
+  "puny_smelting/slotless/general/tconstruct_barebow.json": {
+    "text": ["到底是誰說徒手射箭是個好主意的？"],
+    "effects": [
+      "弓不會從物品欄取用彈藥",
+      "適合優先使用晶簇或箭袋時採用",
+      "僅能使用一次",
+      "無槽位"
+    ]
+  },
+  "puny_smelting/slotless/general/tconstruct_trim.json": {
+    "text": ["把盔甲裝飾得漂漂亮亮，代價不便宜。"],
+    "effects": [
+      "為盔甲加上裝飾邊紋",
+      "模板與材料的組合決定花樣",
+      "可重複使用",
+      "無槽位"
+    ]
+  },
+  "puny_smelting/slotless/general/tconstruct_workbench.json": {
+    "text": ["有時候你就是不想為了合成而停下翻口袋的手。"],
+    "effects": [
+      "在工具的物品欄中加入一個 2x2 的工作台",
+      "僅有 1 級",
+      "無槽位"
+    ]
+  },
+  "puny_smelting/upgrades/armor/helmet/tconstruct_headlight.json": {
+    "text": ["你照亮了我的世界！"],
+    "effects": [
+      "在視覺上照亮你周圍的方塊",
+      "僅有 1 級",
+      "需要 1 個升級槽"
+    ]
+  },
+  "puny_smelting/upgrades/armor/leggings/tconstruct_swift_sneak.json": {
+    "text": ["潛行也要潛得快。"],
+    "effects": [
+      "提升蹲下時的移動速度",
+      "可多級，每級再加快一些",
+      "每級需要 1 個升級槽"
+    ]
+  },
+  "puny_smelting/upgrades/general/tconstruct_scope.json": {
+    "text": ["360 度無瞄準。"],
+    "effects": [
+      "讓工具在蓄力時逐漸拉近視野",
+      "僅有 1 級",
+      "需要 1 個升級槽"
+    ]
+  },
+  "puny_smelting/upgrades/general/tconstruct_smelting.json": {
+    "text": ["一隻雞要被拍多用力才會熟？"],
+    "effects": [
+      "潛行並互動即可把物品放進工具裡",
+      "使用工具時會烹烤裡面的物品",
+      "可多級，每級再加一個欄位",
+      "每級需要 1 個升級槽"
+    ]
+  },
+  "puny_smelting/upgrades/ranged/tconstruct_pierce.json": {
+    "text": [
+      "工具獲得仙人掌的力量，能突破盔甲攻擊。",
+      "別和貫穿搞混了。"
+    ],
+    "effects": [
+      "箭矢可抵銷少量護甲",
+      "可多級，每級提升效果",
+      "每級需要 1 個升級槽"
+    ]
+  },
+
+  "tinkers_gadgetry/ancient/tconstruct_battlesign.json": {
+    "text": [
+      "戰鬥招牌結合了近戰武器與盾牌。通常位於堡壘遺跡中，也能從豬布林身上取得。"
+    ],
+    "properties": [
+      "中等傷害",
+      "中等格擋值",
+      "3 個防禦槽",
+      "1 個能力槽"
+    ]
+  },
+  "tinkers_gadgetry/ancient/tconstruct_melting_pan.json": {
+    "text": [
+      "熔煮鍋能熔化方塊，也能盛裝流體，滿足你揮舞手杖的心願。可在地牢、雪屋、屍殼身上找到，也可由村民贈予。"
+    ],
+    "properties": [
+      "可挖掘能熔化的方塊",
+      "熔煉+",
+      "1 個防禦槽",
+      "1 個升級槽",
+      "2 個能力槽"
+    ]
+  },
+  "tinkers_gadgetry/ancient/tconstruct_swasher.json": {
+    "text": [
+      "揮斬劍結合了近戰武器與手持流體槍，可在各種海洋地點找到。"
+    ],
+    "properties": [
+      "中等傷害",
+      "高攻擊速度",
+      "流體手槍",
+      "3 個升級槽",
+      "1 個能力槽"
+    ]
+  },
+  "tinkers_gadgetry/ancient/tconstruct_war_pick.json": {
+    "text": [
+      "戰鎬結合了鎬與弩。可在廢棄礦坑中找到，也能從村民或不祥村民手中取得。"
+    ],
+    "properties": [
+      "可挖掘石質方塊及類似方塊",
+      "可預先備好一支箭待發",
+      "3 個升級槽",
+      "1 個能力槽"
+    ]
+  }
+}

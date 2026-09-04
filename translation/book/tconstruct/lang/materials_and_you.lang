@@ -1,0 +1,16 @@
+# 《匠魂寶典：材料與你》的章節名稱。整份取代模組自帶的 zh_tw。
+
+intro=介紹
+
+melee_harvest_materials=一級近戰採掘材料
+melee_harvest_materials.subtext=這些材料可以放進部件製造台，做成近戰武器或採掘工具的部件。
+ranged_materials=一級遠程材料
+ranged_materials.subtext=這些材料可以放進部件製造台，做成弓這類遠程武器的部件。
+
+tools=工具
+
+armor=基礎盔甲
+armor.subtext=基礎盔甲不必四處獵取資源，也不必蓋任何機械就能做出來。它提供的防禦有限，但仍有很多升級的空間。你會做出什麼有趣的東西呢？
+
+modifiers=強化
+further_reading=延伸閱讀
