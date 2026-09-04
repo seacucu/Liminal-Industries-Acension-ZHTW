@@ -1,0 +1,21 @@
+{
+  "_comment": "Create: Copycats+ 的方塊特性說明 18 條。Create 的提示文字用 _底線_ 標記重點詞，原樣保留。仿形(Copycat) 沿用本包既有譯名。",
+  "itemGroup.copycats.functional": "Create: Copycats+ | 功能",
+  "keyinfo.copycats.fill_copycat": "為仿形方塊填入材料",
+  "tooltip.copycats.characteristics.copycat.title": "仿形",
+  "tooltip.copycats.characteristics.copycat.description": "手持材料右鍵點擊可 _指定材質_ 與 _旋轉_。用扳手可 _移除材料_。",
+  "tooltip.copycats.characteristics.copy_cat.title": "？？？",
+  "tooltip.copycats.characteristics.copy_cat.description": "對 _貓_ 右鍵點擊。",
+  "tooltip.copycats.characteristics.ct_toggle.title": "連接材質切換",
+  "tooltip.copycats.characteristics.ct_toggle.description": "空手潛行右鍵點擊可 _切換連接材質_。",
+  "tooltip.copycats.characteristics.functional.title": "功能性",
+  "tooltip.copycats.characteristics.functional.description": "用法與非仿形版本 _完全相同_。",
+  "tooltip.copycats.characteristics.ghost.title": "幽靈",
+  "tooltip.copycats.characteristics.ghost.description": "_不會_ 與實體碰撞。",
+  "tooltip.copycats.characteristics.multi_state.title": "多重狀態",
+  "tooltip.copycats.characteristics.multi_state.description": "可在同一格內放入 _多個_ 使用不同材料的副本。",
+  "tooltip.copycats.characteristics.pre_assembled.title": "預先組裝",
+  "tooltip.copycats.characteristics.pre_assembled.description": "放置後可拆解 _個別部件_。",
+  "tooltip.copycats.characteristics.stackable.title": "可堆疊",
+  "tooltip.copycats.characteristics.stackable.description": "手持同款仿形方塊右鍵點擊可 _加大_。"
+}

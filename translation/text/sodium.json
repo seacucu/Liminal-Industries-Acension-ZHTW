@@ -1,0 +1,12 @@
+{
+  "_comment": "Embeddium（Sodium 分支）的警告訊息與效能影響等級 9 條。",
+  "sodium.console.broken_nvidia_driver": "你的 NVIDIA 顯示卡驅動程式版本過舊！\n  * 這會造成嚴重的",
+  "sodium.console.core_shaders_error": "下列資源包與 Embeddium 不相容：",
+  "sodium.console.core_shaders_warn": "下列資源包可能與 Embeddium 不相容：",
+  "sodium.console.pojav_launcher": "使用 Embeddium 時不支援 PojavLauncher。\n  * 你極有可能",
+  "sodium.option_impact.low": "低",
+  "sodium.option_impact.medium": "中",
+  "sodium.option_impact.high": "高",
+  "sodium.option_impact.extreme": "極高",
+  "sodium.option_impact.varies": "不一定"
+}

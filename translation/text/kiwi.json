@@ -1,0 +1,20 @@
+{
+  "_comment": "Kiwi 函式庫的指令回應、裝飾品與提示 18 條。裝飾品名稱是作者 Snownee 的活動贈品，照字面譯。{1}{2}{3} 是佔位符。",
+  "commands.kiwi.reload.success": "設定 %s 已重新載入。",
+  "commands.kiwi.reload.failed": "找不到設定 %s，或該設定並非由 Kiwi 提供。",
+  "cosmetic.snownee.2020q3": "行星",
+  "cosmetic.snownee.2020q4": "狐狸",
+  "cosmetic.snownee.2021q1": "電子貓",
+  "cosmetic.snownee.sunny_milk": "桑尼米爾克",
+  "cosmetic.snownee.xmas": "聖誕帽",
+  "gui.kiwi.builder.convert": "轉換物品",
+  "gui.kiwi.cosmetic": "Kiwi 裝飾品畫面",
+  "gui.kiwi.cosmetic.enabled": "快捷鍵已啟用",
+  "gui.kiwi.cosmetic.disabled": "快捷鍵已停用",
+  "msg.kiwi.no_dependencies": "{1}：模組 §e{2}§r 需要先啟用下列模組：§e{3}",
+  "tip.kiwi.click_here": "[點擊這裡]",
+  "tip.kiwi.press_ctrl": "§r§7<按 §f§oCtrl§r§7……>",
+  "tip.kiwi.press_shift": "§r§7<按 §f§oShift§r§7……>",
+  "tip.kiwi.press_shift_or_ctrl": "§r§7<按 §f§oShift§r§7 或 §f§oCtrl§r§7……>",
+  "tip.kiwi.debug_tooltip.success": "偵錯提示已停用。你可以在設定中重新開啟。"
+}

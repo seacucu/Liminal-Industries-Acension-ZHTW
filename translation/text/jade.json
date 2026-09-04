@@ -1,0 +1,22 @@
+{
+  "_comment": "Jade（方塊資訊顯示）19 條。主題名沿用其原模組名（Create／One Probe／Waila 經典）。",
+  "gui.jade.by": "由 Snownee 以 %s 製作",
+  "gui.jade.jade_settings": "模組設定",
+  "gui.jade.no_results": "沒有結果 :(",
+  "gui.jade.preview": "預覽",
+  "gui.jade.save_and_quit": "儲存並離開",
+  "gui.jade.search": "搜尋",
+  "gui.jade.search.hint": "搜尋……",
+  "gui.jade.server_feature": "此功能需要伺服器也安裝 Jade",
+  "jade.collectingItems": "收集物品中……",
+  "jade.fluid2": "%s %s / %s",
+  "jade.input_signal": "輸入：%d",
+  "jade.theme.jade.create": "Create",
+  "jade.theme.jade.dark": "深色",
+  "jade.theme.jade.top": "One Probe",
+  "jade.theme.jade.waila": "經典",
+  "jade.zombieConversion.time": "轉化時間：%s",
+  "narration.jade.clear_content.usage": "左鍵點擊以清除內容",
+  "toast.jade.tts_hint.1": "Jade 的旁白已開啟",
+  "toast.jade.tts_hint.2": "再按一次 %s 即可關閉"
+}

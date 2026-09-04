@@ -1,0 +1,21 @@
+{
+  "_comment": "Sophisticated Storage 系列的狀態訊息 18 條。存入(deposit)／補貨(restock)／虛空(void) 為其核心操作。",
+  "gui.sophisticatedcore.status.deposited_item": "已將 %s 存入儲物容器",
+  "gui.sophisticatedcore.status.deposited_items": "已將 %s 個物品存入儲物容器",
+  "gui.sophisticatedcore.status.cannot_deposit_item": "無法將 %s 存入任何儲物容器",
+  "gui.sophisticatedcore.status.cannot_deposit_items": "無法將任何物品存入儲物容器",
+  "gui.sophisticatedcore.status.restocked_item": "已從儲物容器補回 %s",
+  "gui.sophisticatedcore.status.restocked_items": "已從儲物容器補回 %s 個物品",
+  "gui.sophisticatedcore.status.cannot_restock_item": "無法從任何儲物容器補回 %s",
+  "gui.sophisticatedcore.status.cannot_restock_items": "無法從儲物容器補回任何物品",
+  "gui.sophisticatedcore.status.cannot_restock_full_stack": "%s 這一組已經滿了",
+  "gui.sophisticatedcore.status.cannot_restock_full_stacks": "所有組都已經滿了",
+  "gui.sophisticatedcore.status.no_storage_in_range": "範圍內找不到儲物容器",
+  "gui.sophisticatedcore.status.matching_items_found": "在 %s 個位置找到同類物品。",
+  "gui.sophisticatedcore.status.matching_stacks_found": "在 %s 個位置找到完全相同的物品。",
+  "gui.sophisticatedcore.status.no_matching_items_found": "找不到完全相同或同類的物品",
+  "gui.sophisticatedcore.upgrades.buttons.void_any": "虛空化任何物品",
+  "gui.sophisticatedcore.upgrades.buttons.void_anything_disabled": "「虛空化任何物品」選項已停用",
+  "gui.sophisticatedcore.upgrades.buttons.void_overflow": "虛空化溢出物",
+  "gui.sophisticatedcore.upgrades.buttons.void_overflow.detail": "讓單一欄位裝滿該物品，\n並把溢出的部分虛空化"
+}

@@ -1,0 +1,11 @@
+{
+  "_comment": "AzureLib 的附魔與介面文字。附魔說明是玩家看得到的內容；text.* 多為設定介面。",
+  "enchantment.azurelib.incendiaryenchantment": "燃燒附掛",
+  "enchantment.azurelib.incendiaryenchantment.desc": "讓射出的子彈點燃生物",
+  "_comment2": "Optifine 警告是玩家實際會看到的畫面，翻譯；其餘 text.* 是設定介面元件，依方針跳過。",
+  "header.azurelib.optifine": "警告：遊戲客戶端偵測到 Optifine",
+  "message.azurelib.optifine": "警告：多數模組並不支援 Optifine，問題從輕微的視覺異常到直接當機都有可能。",
+  "label.azurelib.optifine_alternatives": "Optifine 的替代方案",
+  "label.azurelib.open_mods_folder": "開啟 mods 資料夾",
+  "label.azurelib.proceed_anyway": "仍要繼續"
+}

@@ -1,0 +1,9 @@
+{
+  "_comment2": "anti_repost 是模組作者防止盜傳的提示。木材／樹葉名稱來自其他模組，照該模組通行譯法。",
+  "gui.moonlight.open_mod_page": "開啟 %s 的 CurseForge 頁面",
+  "leaves_type.twilightforest.dark": "暗影木",
+  "wood_type.twilightforest.dark": "暗影木",
+  "leaves_type.ulterlands.souldrained": "石化",
+  "message.moonlight.anti_repost": "看來你是從惡意網站下載 %1$s 的 :( 請到",
+  "message.moonlight.anti_repost_link": "這裡"
+}

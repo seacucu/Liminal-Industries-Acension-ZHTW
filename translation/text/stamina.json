@@ -1,0 +1,11 @@
+{
+  "_comment": "Stamina（體力）8 條。flavor 是 Tinkers 風格的趣味註腳，原文是《魔戒》甘道夫的台詞「Fly you fools!」，中譯沿用通行譯法。",
+  "attribute.name.bonus_stamina": "額外體力",
+  "effect.stamina.vigour": "精力",
+  "effect.stamina.vigour.description": "提升最大體力",
+  "enchantment.stamina.vigour": "精力",
+  "enchantment.stamina.vigour.desc": "提升最大體力",
+  "modifier.stamina.vigour": "精力",
+  "modifier.stamina.vigour.description": "提升最大體力",
+  "modifier.stamina.vigour.flavor": "快逃啊，你們這些蠢貨！"
+}
