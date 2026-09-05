@@ -1,5 +1,5 @@
 {
-  "_comment": "Tinkers' Ponder：遊戲內的互動教學場景 59 條。術語沿用 Tinkers 既有 zh_tw：焦黑(Seared)／焦褐(Scorched)、冶煉爐(Smeltery)、熔鑄爐(Foundry)、熔煉爐(Melter)、合金爐(Alloyer)、加熱器(Heater)、鑄件台(Casting Table)、鑄模(Cast)、水龍頭(Faucet)、導管(Duct)、排水口(Drain)、溜槽(Chute)。",
+  "_comment": "Tinkers' Ponder：遊戲內的互動教學場景 56 條。術語沿用 Tinkers 既有 zh_tw：焦黑(Seared)／焦褐(Scorched)、冶煉爐(Smeltery)、熔鑄爐(Foundry)、熔煉爐(Melter)、合金爐(Alloyer)、加熱器(Heater)、鑄件台(Casting Table)、鑄模(Cast)、水龍頭(Faucet)、導管(Duct)、排水口(Drain)、溜槽(Chute)。",
   "tponder.ponder.tag.smeltery": "冶煉爐",
   "tponder.ponder.tag.smeltery.description": "匠魂用來熔煉與鑄造的元件",
   "tponder.ponder.melter_building.header": "搭建熔煉爐",
@@ -55,8 +55,5 @@
   "tponder.ponder.tank.text_2": "計量槽：可裝 48 錠的流體，被破壞時保留內含液體",
   "tponder.ponder.tank.text_3": "儲槽：可裝 48 錠的流體，被破壞時保留內含液體",
   "tponder.ponder.tank.text_4": "鑄件槽：可與物品互動，被破壞時保留內含液體",
-  "tponder.ponder.tank.text_5": "代理槽：可與物品互動，代管其中的物品",
-  "tponder.ponder.fluid_cannon_using.header": "使用流體加農砲",
-  "tponder.ponder.fluid_cannon_using.text_1": "流體加農砲可以射出流體，不同流體有不同效果",
-  "tponder.ponder.fluid_cannon_using.text_2": "各種流體的效果請查閱匠魂指南"
+  "tponder.ponder.tank.text_5": "代理槽：可與物品互動，代管其中的物品"
 }
