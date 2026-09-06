@@ -26,6 +26,7 @@ LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
 MANUAL = os.path.join(ROOT, "translation", "manual")
 GUIDE = os.path.join(ROOT, "translation", "guide")
+GUIDE_HIDDEN = os.path.join(ROOT, "_workspace", "build", "guide-hidden")
 
 # GuideME 的語系目錄名稱要有底線：_zh_tw，不是 zh_tw。少了底線，LangUtil 不會把它
 # 認成語系，那批頁面就變成預設語系底下的新頁面，於是側邊欄每一條都多出一個中文的
@@ -86,6 +87,7 @@ def build_resourcepack(out_path, pack_version):
     books = 0
     manual = 0
     guide = 0
+    hidden = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         add_bytes(z, "pack.mcmeta", pack_mcmeta(pack_version))
         if os.path.exists(PACK_ICON):
@@ -126,7 +128,15 @@ def build_resourcepack(out_path, pack_version):
                 ns, folder, page = rel.split("/", 2)
                 add_file(z, f"assets/{ns}/{folder}/{LANG_DIR_NAME}/{page}", full)
                 guide += 1
-    return len(langs), total, books, manual, guide
+        # 模組沒裝、頁面卻被模組翻譯包帶進 AE2 指南的那些條目，以同路徑覆蓋成
+        # 沒有 frontmatter 的版本，讓它們不進側邊欄。詳見 hide_absent_guides.py
+        for dirpath, _, files in sorted(os.walk(GUIDE_HIDDEN)):
+            for f in sorted(files):
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, GUIDE_HIDDEN).replace("\\", "/")
+                add_file(z, rel, full)
+                hidden += 1
+    return len(langs), total, books, manual, guide, hidden
 
 
 def build_client(out_path, rp_path, pack_version):
@@ -207,11 +217,11 @@ def main():
     os.makedirs(DIST)
 
     rp = os.path.join(DIST, "LIA-zhTW.zip")
-    (ns_count, entry_count, book_count,
-     manual_count, guide_count) = build_resourcepack(rp, pack_version)
+    (ns_count, entry_count, book_count, manual_count,
+     guide_count, hidden_count) = build_resourcepack(rp, pack_version)
     print(f"資源包        {os.path.basename(rp):<38}"
           f"{ns_count} 個命名空間 / {entry_count} 條 / 書本 {book_count} 檔 / "
-          f"手冊 {manual_count} 篇 / 指南 {guide_count} 頁 / "
+          f"手冊 {manual_count} 篇 / 指南 {guide_count} 頁 / 隱藏 {hidden_count} 頁 / "
           f"{os.path.getsize(rp)//1024} KB")
 
     client = os.path.join(DIST, f"LIA-zhTW-Patch-v{VERSION}.zip")
