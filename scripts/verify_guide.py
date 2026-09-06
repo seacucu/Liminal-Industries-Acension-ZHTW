@@ -4,9 +4,11 @@ markdown 本身很寬容，改壞了不會報錯，只會在遊戲裡少一個 3
 或是變成紅字的 Page does not exist。這支腳本比對譯文與英文原文的骨架：
 
   1. frontmatter 的欄位與值都相同，只有 navigation.title 可以翻譯
-  2. 自訂標籤（<GameScene>、<ItemLink>、<RecipeFor>…）的名稱、順序與屬性完全相同
+  2. 自訂標籤（<GameScene>、<ItemLink>、<RecipeFor>…）的名稱與屬性完全相同
+     （中文語序不同，同一句裡的 <ItemLink> 先後可以變，所以不比順序）
      屬性裡的 id 是資源 ID、src 是路徑，任何一個字動到都會壞
-  3. markdown 連結與圖片的目標路徑相同（顯示文字才翻譯），且順序相同
+  3. markdown 連結與圖片的目標路徑集合相同（顯示文字才翻譯；
+     中文語序與英文不同，同一句裡的連結先後可以變）
   4. 標題階層（# 的數量與順序）相同
   5. 無簡體字、無殘留未譯
 
@@ -17,6 +19,7 @@ markdown 本身很寬容，改壞了不會報錯，只會在遊戲裡少一個 3
     python scripts/verify_guide.py
 """
 
+import collections
 import os
 import re
 import sys
@@ -80,17 +83,16 @@ def check(en_text, tw_text):
     en_tags, en_links, en_head = skeleton(en_body)
     tw_tags, tw_links, tw_head = skeleton(tw_body)
 
-    if en_tags != tw_tags:
-        only_en = [t for t in en_tags if t not in tw_tags]
-        only_tw = [t for t in tw_tags if t not in en_tags]
+    if sorted(en_tags) != sorted(tw_tags):
+        en_c, tw_c = collections.Counter(en_tags), collections.Counter(tw_tags)
+        only_en = sorted((en_c - tw_c).elements())
+        only_tw = sorted((tw_c - en_c).elements())
         bad.append(f"自訂標籤不符：缺 {only_en[:3]}、多 {only_tw[:3]}"
                    f"（英文 {len(en_tags)} 個、譯文 {len(tw_tags)} 個）")
 
-    if [t for _, t in en_links] != [t for _, t in tw_links]:
-        bad.append(f"連結目標不符：英文 {[t for _, t in en_links]}、"
-                   f"譯文 {[t for _, t in tw_links]}")
-    if [b for b, _ in en_links] != [b for b, _ in tw_links]:
-        bad.append("連結與圖片的種類或順序不符（! 前綴）")
+    if sorted(en_links) != sorted(tw_links):
+        bad.append(f"連結目標不符：英文 {sorted(t for _, t in en_links)}、"
+                   f"譯文 {sorted(t for _, t in tw_links)}")
 
     if en_head != tw_head:
         bad.append(f"標題階層不符：英文 {en_head}、譯文 {tw_head}")
