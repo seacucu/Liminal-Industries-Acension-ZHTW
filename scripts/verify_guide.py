@@ -12,8 +12,8 @@ markdown 本身很寬容，改壞了不會報錯，只會在遊戲裡少一個 3
   4. 標題階層（# 的數量與順序）相同
   5. 無簡體字、無殘留未譯
 
-相對路徑刻意與上游寫法一致，打包時才由 build.py 補上語系目錄那一層，
-理由見 build.py 的 shift_relative_paths。
+相對路徑與上游寫法完全一致：GuideME 認出 _zh_tw 是語系目錄後會把它從頁面 ID
+剝掉，連結、parent 與 <ImportStructure src> 因此都照英文原文寫就對了。
 
 用法：
     python scripts/verify_guide.py

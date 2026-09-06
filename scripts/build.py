@@ -17,7 +17,6 @@
 
 import json
 import os
-import re
 import shutil
 import sys
 import zipfile
@@ -28,26 +27,14 @@ PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
 MANUAL = os.path.join(ROOT, "translation", "manual")
 GUIDE = os.path.join(ROOT, "translation", "guide")
 
-# GuideME 的頁面 ID 保留語系目錄（LangUtil.stripLangFromPageId 只有開發模式的
-# GuideSourceWatcher 會用，走資源包的 GuideReloadListener 不會），而
-# LinkParser 是拿 IdUtils.resolveLink(href, 該頁自己的 ID) 去解析的。
-# 於是譯文頁裡的 getting-started.md 會被解成 ae2:zh_tw/getting-started.md，
-# 連結、圖片與 <ImportStructure> 全部指空。頁面本身則是以剝掉語系後的 ID 存放，
-# 所以多退一層就會落回正確位置，而且等該頁也翻好時，一樣會開到中文版。
+# GuideME 的語系目錄名稱要有底線：_zh_tw，不是 zh_tw。少了底線，LangUtil 不會把它
+# 認成語系，那批頁面就變成預設語系底下的新頁面，於是側邊欄每一條都多出一個中文的
+# 孤兒節點，連結與 navigation.parent 也全部指到帶目錄前綴的錯誤 ID。
 #
-# 譯文原始檔因此與上游保持一模一樣的相對寫法（上游更新才好 diff），
-# 多出來的那一層在打包時才補上。
-REL_PATH = re.compile(r'(\]\(|(?:src|href)=")([^)"]+)')
-ABSOLUTE = re.compile(r"^(?:[a-z0-9_.-]+:|/|#|https?://)")
-
-
-def shift_relative_paths(text):
-    def sub(m):
-        prefix, target = m.group(1), m.group(2)
-        if ABSOLUTE.match(target):
-            return m.group(0)
-        return f"{prefix}../{target}"
-    return REL_PATH.sub(sub, text)
+# 認成語系之後頁面 ID 會剝掉語系目錄，所以連結、parent 與 <ImportStructure src>
+# 的相對寫法都與英文原文完全相同，不需要任何改寫。模組翻譯包的
+# assets/extendedae/ae2guide/_zh_tw 與 _en_us 兩份逐行對照即為此。
+LANG_DIR_NAME = "_zh_tw"
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
 BOOKS = os.path.join(ROOT, "_workspace", "build", "books")
 SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
@@ -137,10 +124,7 @@ def build_resourcepack(out_path, pack_version):
                 full = os.path.join(dirpath, f)
                 rel = os.path.relpath(full, GUIDE).replace("\\", "/")
                 ns, folder, page = rel.split("/", 2)
-                with open(full, encoding="utf-8", newline="") as fh:
-                    text = shift_relative_paths(fh.read())
-                add_bytes(z, f"assets/{ns}/{folder}/zh_tw/{page}",
-                          text.encode("utf-8"))
+                add_file(z, f"assets/{ns}/{folder}/{LANG_DIR_NAME}/{page}", full)
                 guide += 1
     return len(langs), total, books, manual, guide
 
