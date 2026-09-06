@@ -29,8 +29,4 @@ item_ids:
 
 ## 配方
 
-<Row>
-  <RecipeFor id="certus_quartz_wrench" />
-
-  <RecipeFor id="nether_quartz_wrench" />
-</Row>
+如上所述，這兩把扳手在本模組包沒有任何配方，原本的兩張配方圖已移除。

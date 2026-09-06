@@ -20,4 +20,4 @@ item_ids:
 
 ## 配方
 
-<RecipeFor id="fluix_pearl" />
+Thermal 的壓製機配方圖指南畫不出來，請在 JEI 裡查。

@@ -25,4 +25,4 @@ item_ids:
 
 ## 配方
 
-<RecipeFor id="sky_dust" />
+這兩種機器的配方圖指南畫不出來，請在 JEI 裡查。

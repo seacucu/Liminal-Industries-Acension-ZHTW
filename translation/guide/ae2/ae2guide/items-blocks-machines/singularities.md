@@ -29,8 +29,6 @@ item_ids:
 **本翻譯包修正**：原文說是讓 <ItemLink id="minecraft:ender_pearl" /> 或 <ItemLink id="ender_dust" />\
 與 <ItemLink id="singularity" /> 發生反應、用爆炸觸發，但 LIA 移除了那條配方，改用 **Mekanism 的合成機**：2 個奇點 ＋ 量子絲 → 量子纏結奇點。以下關於爆炸的敘述在本模組包已不適用。
 
-<RecipeFor id="quantum_entangled_singularity" />
-
 ***幾乎任何爆炸都行，苦力怕也可以。***
 
 永遠成對產出，但只需要一顆 <ItemLink id="singularity" />。

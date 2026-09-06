@@ -29,25 +29,49 @@
   "ae2/ae2guide/items-blocks-machines/wrench.md": {
     "reason": "kubejs/server_scripts/item_nerfs.js 以「沒有耐久、瞬間破壞」為由移除了 ae2:certus_quartz_wrench 與 ae2:nether_quartz_wrench 的配方，也沒有補上替代配方。AE2 讀的是 Forge 的 tools/wrench 標籤，所以改用其他模組的扳手仍可操作。",
     "changes": [
-      "加註兩把扳手在本模組包無法合成，需改用其他模組的扳手"
+      "加註兩把扳手在本模組包無法合成，需改用其他模組的扳手",
+      "移除兩張永遠找不到配方的 <RecipeFor>，同上"
     ]
   },
   "ae2/ae2guide/items-blocks-machines/sky_dust.md": {
     "reason": "kubejs/server_scripts/tier3.js 移除了隕石粉原本的壓印機配方，改為機械動力粉碎輪（50% 機率）；tier4.js 另外加了 Thermal 粉碎機的配方。",
     "changes": [
-      "改寫取得方式，原文的壓印機說法在本模組包不成立"
+      "改寫取得方式，原文的壓印機說法在本模組包不成立",
+      "移除畫不出來的 <RecipeFor id=\"sky_dust\">：GuideME 只畫得出它認得的配方類型，機械動力與 Thermal 的機器配方會變成紅字錯誤"
     ]
   },
   "ae2/ae2guide/items-blocks-machines/fluix_pearl.md": {
     "reason": "kubejs/server_scripts/tier4.js 移除了福魯伊克斯珍珠的合成配方，改為 Thermal 壓製機搭配冷凝球模具、以 3 個福魯伊克斯粉壓製，與終界珍珠無關。",
     "changes": [
-      "改寫敘述，原文的「裹上福魯伊克斯的終界珍珠」在本模組包不成立"
+      "改寫敘述，原文的「裹上福魯伊克斯的終界珍珠」在本模組包不成立",
+      "移除畫不出來的 <RecipeFor id=\"fluix_pearl\">，同上"
     ]
   },
   "ae2/ae2guide/items-blocks-machines/singularities.md": {
     "reason": "kubejs/server_scripts/tier5.js 移除了量子纏結奇點的配方，改為 Mekanism 合成機：2 個奇點 ＋ kubejs:quantum_string。",
     "changes": [
-      "加註改由 Mekanism 合成機製作，原文用爆炸觸發的敘述已不適用"
+      "加註改由 Mekanism 合成機製作，原文用爆炸觸發的敘述已不適用",
+      "移除畫不出來的 <RecipeFor id=\"quantum_entangled_singularity\">，同上"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/certus_quartz_dust.md": {
+    "reason": "kubejs/server_scripts/fixes_recipes.js 以 remove({type:'ae2:inscriber', output:'ae2:certus_quartz_dust'}) 移除了壓印機配方，改為機械動力石磨（90% 機率）與 Thermal 粉碎機。",
+    "changes": [
+      "移除畫不出來的 <RecipeFor id=\"certus_quartz_dust\">：GuideME 只畫得出它認得的配方類型，機械動力與 Thermal 的機器配方會變成紅字錯誤",
+      "改寫開頭敘述與配方段，說明本模組包實際的兩種作法"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/fluix_dust.md": {
+    "reason": "同上，fixes_recipes.js 移除了福魯伊克斯粉的壓印機配方，改為機械動力石磨（90% 機率）與 Thermal 粉碎機。",
+    "changes": [
+      "移除畫不出來的 <RecipeFor id=\"fluix_dust\">",
+      "改寫開頭敘述與配方段，說明本模組包實際的兩種作法"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/storage_cells.md": {
+    "reason": "上游指南的原始碼比本模組包的 AE2 15.4.10 新，頁面引用的 ae2:upgrade/item_storage_cell_1k_to_4k 在這個版本根本不存在，遊戲內會顯示紅字錯誤。升級行為本身仍然有效。",
+    "changes": [
+      "移除找不到的 <Recipe id=\"upgrade/item_storage_cell_1k_to_4k\">，保留升級說明文字"
     ]
   }
 }
