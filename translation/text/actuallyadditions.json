@@ -268,7 +268,7 @@
   "info.actuallyadditions.placer.sides.1": "放置面向",
   "info.actuallyadditions.placer.sides.2": "一般放置方塊時，方塊會朝向你所注視的另一個方塊的那一面。但這個方塊並沒有在看任何東西，所以你可以在這裡指定它要朝哪一面放置。",
   "actuallyadditions.lolWutHowUDoDis": "這東西壞掉了。丟掉吧。拜託。",
-  "itemGroup.actuallyadditions": "Actually Additions",
+  "itemGroup.actuallyadditions": "真正的附加",
   "_jei": "JEI 介面",
   "jei.actuallyadditions.coffee.extra.milk": "+01:00，-1 級",
   "jei.actuallyadditions.coffee.maxAmount": "最大數量",
