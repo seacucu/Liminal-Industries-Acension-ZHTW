@@ -17,6 +17,7 @@
 
 import json
 import os
+import re
 import shutil
 import sys
 import zipfile
@@ -25,6 +26,28 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
 MANUAL = os.path.join(ROOT, "translation", "manual")
+GUIDE = os.path.join(ROOT, "translation", "guide")
+
+# GuideME 的頁面 ID 保留語系目錄（LangUtil.stripLangFromPageId 只有開發模式的
+# GuideSourceWatcher 會用，走資源包的 GuideReloadListener 不會），而
+# LinkParser 是拿 IdUtils.resolveLink(href, 該頁自己的 ID) 去解析的。
+# 於是譯文頁裡的 getting-started.md 會被解成 ae2:zh_tw/getting-started.md，
+# 連結、圖片與 <ImportStructure> 全部指空。頁面本身則是以剝掉語系後的 ID 存放，
+# 所以多退一層就會落回正確位置，而且等該頁也翻好時，一樣會開到中文版。
+#
+# 譯文原始檔因此與上游保持一模一樣的相對寫法（上游更新才好 diff），
+# 多出來的那一層在打包時才補上。
+REL_PATH = re.compile(r'(\]\(|(?:src|href)=")([^)"]+)')
+ABSOLUTE = re.compile(r"^(?:[a-z0-9_.-]+:|/|#|https?://)")
+
+
+def shift_relative_paths(text):
+    def sub(m):
+        prefix, target = m.group(1), m.group(2)
+        if ABSOLUTE.match(target):
+            return m.group(0)
+        return f"{prefix}../{target}"
+    return REL_PATH.sub(sub, text)
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
 BOOKS = os.path.join(ROOT, "_workspace", "build", "books")
 SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
@@ -75,6 +98,7 @@ def build_resourcepack(out_path, pack_version):
     total = 0
     books = 0
     manual = 0
+    guide = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         add_bytes(z, "pack.mcmeta", pack_mcmeta(pack_version))
         if os.path.exists(PACK_ICON):
@@ -104,7 +128,21 @@ def build_resourcepack(out_path, pack_version):
                 ns, entry = rel.split("/", 1)
                 add_file(z, f"assets/{ns}/manual/zh_tw/{entry}", full)
                 manual += 1
-    return len(langs), total, books, manual
+        # GuideME（AE2 指南）：內容根目錄下的第一層若是語系代碼就視為該語系的頁面，
+        # 來源排成 translation/guide/<命名空間>/<內容根目錄>/<頁面路徑>
+        for dirpath, _, files in sorted(os.walk(GUIDE)):
+            for f in sorted(files):
+                if not f.endswith(".md"):
+                    continue
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, GUIDE).replace("\\", "/")
+                ns, folder, page = rel.split("/", 2)
+                with open(full, encoding="utf-8", newline="") as fh:
+                    text = shift_relative_paths(fh.read())
+                add_bytes(z, f"assets/{ns}/{folder}/zh_tw/{page}",
+                          text.encode("utf-8"))
+                guide += 1
+    return len(langs), total, books, manual, guide
 
 
 def build_client(out_path, rp_path, pack_version):
@@ -185,10 +223,12 @@ def main():
     os.makedirs(DIST)
 
     rp = os.path.join(DIST, "LIA-zhTW.zip")
-    ns_count, entry_count, book_count, manual_count = build_resourcepack(rp, pack_version)
+    (ns_count, entry_count, book_count,
+     manual_count, guide_count) = build_resourcepack(rp, pack_version)
     print(f"資源包        {os.path.basename(rp):<38}"
           f"{ns_count} 個命名空間 / {entry_count} 條 / 書本 {book_count} 檔 / "
-          f"手冊 {manual_count} 篇 / {os.path.getsize(rp)//1024} KB")
+          f"手冊 {manual_count} 篇 / 指南 {guide_count} 頁 / "
+          f"{os.path.getsize(rp)//1024} KB")
 
     client = os.path.join(DIST, f"LIA-zhTW-Patch-v{VERSION}.zip")
     c = build_client(client, rp, pack_version)

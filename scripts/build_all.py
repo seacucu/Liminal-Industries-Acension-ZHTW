@@ -16,8 +16,10 @@
  8b. build_books        → build/books/（TConstruct 六本書缺的中文頁）
   9. botania_review      → reference/botania-name-review.html
  9b. extract_manual      IE 手冊 jar → build/manual/（翻譯與檢查的英文基準）
+ 9c. extract_guide       AE2 指南 jar → build/guide/（同上）
  10. verify_translation  → 全項檢查
  11. verify_manual       → 手冊譯文的標記結構檢查
+ 12. verify_guide        → 指南譯文的標記結構檢查
 
 第 7 步若跑在第 5 步之前，botania_compose 會把模組包的改名沖掉
 （例如 item.botania.ender_air_bottle 會從「閾限空氣瓶」變回「終界氣瓶」）。
@@ -51,8 +53,10 @@ STEPS = [
     ("Mantle 書本頁面", ["build_books.py"]),
     ("Botania 查驗頁", ["botania_review.py"]),
     ("手冊原文抽出", ["extract_manual.py"]),
+    ("指南原文抽出", ["extract_guide.py"]),
     ("譯文檢查", ["verify_translation.py"]),
     ("手冊檢查", ["verify_manual.py"]),
+    ("指南檢查", ["verify_guide.py"]),
     ("全 repo 用詞檢查", ["check_repo_terms.py"]),
 ]
 
