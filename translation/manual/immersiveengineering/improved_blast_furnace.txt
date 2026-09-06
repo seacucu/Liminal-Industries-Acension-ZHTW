@@ -1,0 +1,6 @@
+改良高爐
+工業級精煉
+<&brick_recipe>改良高爐是<link;crude_blast_furnace;煉鋼>更專業的作法。它不只能自動進出料，還可以外接<link;improved_blast_furnace;預熱器;preheater>，靠灌入熱空氣加快精煉速度。
+爐體是用強化磚砌的，所以建議你把最初幾爐鋼直接投資在這個升級上。
+<&multiblock>改良高爐的結構和粗製版本相似，只是磚塊換成了強化版，頂部多了一個漏斗負責進料。鋼從爐子正面產出，爐渣從背面產出，而且會自動送進相連的容器或<link;conveyors;輸送帶>。鐵與焦炭則從頂部餵入。<np>
+<&preheater>高爐預熱器負責把空氣加熱後吹進爐內，藉此加快煉鐵速度。每座高爐最多能在兩側的接口各接一台預熱器，每台運轉需要 <config;i;machines.preheater_consumption> Flux/t。

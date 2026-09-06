@@ -1,0 +1,7 @@
+藍圖工作台
+建築師的法典
+
+一開始，你得先做出一張藍圖工作台。
+<&schematic_table>
+在這張桌上可以把紙做成<link;engineered_schematics:schematic_item;藍圖>，適用於任何已註冊到沉浸工程的多方塊結構。
+<br>

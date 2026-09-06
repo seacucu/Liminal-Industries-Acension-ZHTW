@@ -24,6 +24,7 @@ import zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
+MANUAL = os.path.join(ROOT, "translation", "manual")
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
 BOOKS = os.path.join(ROOT, "_workspace", "build", "books")
 SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
@@ -73,6 +74,7 @@ def build_resourcepack(out_path, pack_version):
     langs = sorted(f for f in os.listdir(LANG_DIR) if f.endswith(".json"))
     total = 0
     books = 0
+    manual = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         add_bytes(z, "pack.mcmeta", pack_mcmeta(pack_version))
         if os.path.exists(PACK_ICON):
@@ -92,7 +94,17 @@ def build_resourcepack(out_path, pack_version):
                 rel = os.path.relpath(full, BOOKS).replace("\\", "/")
                 add_file(z, rel, full)
                 books += 1
-    return len(langs), total, books
+        # BluSunrize 手冊：正文一條目一個 txt，模組找不到當前語系就退回 en_us
+        for dirpath, _, files in sorted(os.walk(MANUAL)):
+            for f in sorted(files):
+                if not f.endswith(".txt"):
+                    continue
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, MANUAL).replace("\\", "/")
+                ns, entry = rel.split("/", 1)
+                add_file(z, f"assets/{ns}/manual/zh_tw/{entry}", full)
+                manual += 1
+    return len(langs), total, books, manual
 
 
 def build_client(out_path, rp_path, pack_version):
@@ -173,10 +185,10 @@ def main():
     os.makedirs(DIST)
 
     rp = os.path.join(DIST, "LIA-zhTW.zip")
-    ns_count, entry_count, book_count = build_resourcepack(rp, pack_version)
+    ns_count, entry_count, book_count, manual_count = build_resourcepack(rp, pack_version)
     print(f"資源包        {os.path.basename(rp):<38}"
           f"{ns_count} 個命名空間 / {entry_count} 條 / 書本 {book_count} 檔 / "
-          f"{os.path.getsize(rp)//1024} KB")
+          f"手冊 {manual_count} 篇 / {os.path.getsize(rp)//1024} KB")
 
     client = os.path.join(DIST, f"LIA-zhTW-Patch-v{VERSION}.zip")
     c = build_client(client, rp, pack_version)

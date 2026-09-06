@@ -1,0 +1,12 @@
+製作元件
+關鍵零件
+許多機器與工具都是由各種次級元件組成的。其中幾樣你會經常用到，所以在手冊裡另闢一篇來介紹。§2鐵機械元件§r與§2鋼機械元件§r是大多數多方塊結構與機械的核心。<np>
+<&create_bp>既然這些元件你會愈做愈多，不妨替它們畫一份<link;blueprints;藍圖>。
+<&mech_components>在<link;workbench;工程師作業台>上使用這份藍圖，就能用更低的成本做出這些元件。<np>
+<&elec_components>§2電子元件§r比機械元件複雜，用量也少一些，但只要牽涉到進階控制的裝置就少不了它，例如<link;item_batcher;計量分配器>或<link;turrets;砲塔>。<np>
+<&light_bulbs>§2白熾燈泡§r的燈絲以碳化竹子或紙製成，通電後會發光發熱。它主要用來製作<link;lighting;燈籠;electric_lantern>。<np>
+<&tubes>另一種比較少用的元件是§2真空管§r。這種昂貴的材料用於<link;logic_circuits;邏輯電路>與更複雜的電子機械。<np>
+<&pcb>§2電路底板§r是一塊絕緣的銅板，可以在上面焊接各式元件，做成<link;logic_circuits;邏輯電路>。
+
+
+

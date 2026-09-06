@@ -1,0 +1,5 @@
+挖掘機
+比矮人還能挖
+<&excavator>挖掘機是現代工程學的顛峰之作，能從一般採礦到不了的礦脈裡挖出<link;minerals;礦物>。相對地，它是一座複雜的結構，運轉需要 <config;i;machines.excavator.consumption> Flux/t。
+<&wheel><&full>整座結構分成兩部分：第一頁的機體，以及第二頁的斗輪，斗輪要照前一頁的樣子嵌進機體的「支架」中。機體的能量輸入在側面，背面則有紅石控制面板與物品輸出口。<br>挖掘機持續開採後，礦脈的蘊藏量會慢慢下降，不過一條礦脈最多可以產出 <config;i;machines.excavator.yield> 個礦石方塊。
+
