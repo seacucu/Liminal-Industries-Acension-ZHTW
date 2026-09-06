@@ -37,7 +37,7 @@ navigation:
         網路 1
   </BoxAnnotation>
 
-<BoxAnnotation color="#915dcd" min="2 0 0" max="3 2 2">
+<BoxAnnotation color="#5CA7CD" min="2 0 0" max="3 2 2">
         網路 2
   </BoxAnnotation>
 
@@ -54,7 +54,7 @@ navigation:
         網路 1
   </BoxAnnotation>
 
-  <BoxAnnotation color="#915dcd" min="1.3 0 0" max="3 2 2">
+  <BoxAnnotation color="#5CA7CD" min="1.3 0 0" max="3 2 2">
         網路 2
   </BoxAnnotation>
 
@@ -69,6 +69,62 @@ navigation:
 
   <BoxAnnotation color="#915dcd" min="0 0 0" max="7 3 3">
         全部是同一個網路
+  </BoxAnnotation>
+
+  <IsometricCamera yaw="195" pitch="30" />
+</GameScene>
+
+## 子網路情境下的連線
+
+[子網路](../ae2-mechanics/subnetworks.md)正是利用網路連線（更精確地說，是利用**沒有**連線）
+來限制哪些[裝置](../ae2-mechanics/devices.md)碰得到哪些裝置。
+
+說穿了，子網路就只是一個獨立的網路而已。
+
+舉例來說，看看[自動礦石幸運機](../example-setups/ore-fortuner.md)。那裡其實有三個各自獨立的網路，
+每一個在整套設施裡都有特定用途。
+
+<GameScene zoom="6" interactive={true}>
+  <ImportStructure src="../assets/assemblies/ore_fortuner.snbt" />
+
+  <BoxAnnotation color="#915dcd" min="0 0 2" max="3 1 3">
+        網路 1，作用像一條管線子網路，限制輸入匯流排碰得到的東西，
+        讓礦石方塊只能「存」進成形面板。
+  </BoxAnnotation>
+
+  <BoxAnnotation color="#5CA7CD" min="0 0 0" max="3 1 1">
+        網路 2，作用像另一條管線子網路，限制破壞面板碰得到的東西，
+        讓幸運化後的原礦只能存進木桶，而不是進你的主網路。
+        這也表示它們不會用掉主網路的任何頻道。
+  </BoxAnnotation>
+
+  <BoxAnnotation color="#82CD5C" min="2 0 1" max="4 1 2">
+        網路 3，就是掛著你所有倉儲與合成的主網路。它在這裡其實只是負責供電，
+        而且刻意*不*與那兩條子網路相連。
+  </BoxAnnotation>
+
+  <IsometricCamera yaw="195" pitch="30" />
+</GameScene>
+
+## P2P 情境下的連線
+
+有一種 [P2P 通道](../items-blocks-machines/p2p_tunnels.md)搬運的是[頻道](channels.md)，
+而不是物品、流體或紅石訊號，這一點不知為何常讓人搞混。
+通道所依附的網路，和通道所承載的網路是兩回事。它們*可以*是同一個網路，但不必是，通常也不是。
+
+<GameScene zoom="6" background="transparent">
+  <ImportStructure src="../assets/assemblies/p2p_channels_network_connection.snbt" />
+
+  <BoxAnnotation color="#915dcd" min="0 0 0" max="1.98 2 1">
+        網路 1，被承載的那個網路（通常就是你的主網路）
+  </BoxAnnotation>
+
+  <BoxAnnotation color="#5CA7CD" min="2.02 0 0" max="3.98 1 1">
+        網路 2，跑 ME P2P 通道的那個網路（通常*不是*你的主網路）
+  </BoxAnnotation>
+
+  <BoxAnnotation color="#915dcd" min="4.02 0 0" max="6 1 1">
+        網路 1，被承載的那個網路（通常就是你的主網路）
   </BoxAnnotation>
 
   <IsometricCamera yaw="195" pitch="30" />
@@ -109,11 +165,11 @@ navigation:
 <GameScene zoom="6" background="transparent">
   <ImportStructure src="../assets/assemblies/pattern_provider_network_connection_2.snbt" />
 
-  <BoxAnnotation color="#915dcd" min="0 0 0" max="2 2 2">
+  <BoxAnnotation color="#915dcd" min="0 0 0" max="1.98 2 2">
         網路 1
   </BoxAnnotation>
 
-  <BoxAnnotation color="#915dcd" min="2 0 0" max="4 2 2">
+  <BoxAnnotation color="#5CA7CD" min="2.02 0 0" max="4 2 2">
         網路 2
   </BoxAnnotation>
 
