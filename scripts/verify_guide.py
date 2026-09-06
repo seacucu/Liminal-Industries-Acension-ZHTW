@@ -20,6 +20,7 @@ markdown 本身很寬容，改壞了不會報錯，只會在遊戲裡少一個 3
 """
 
 import collections
+import json
 import os
 import re
 import sys
@@ -27,6 +28,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EN = os.path.join(ROOT, "_workspace", "build", "guide")
 MINE = os.path.join(ROOT, "translation", "guide")
+CONTENT_FIXES = os.path.join(MINE, "content-fixes.json")
 
 TAG = re.compile(r"<([A-Z][A-Za-z0-9]*)((?:\s+[a-zA-Z_]+=(?:\"[^\"]*\"|\{[^}]*\}))*)\s*/?>")
 ATTR = re.compile(r"([a-zA-Z_]+)=(\"[^\"]*\"|\{[^}]*\})")
@@ -107,11 +109,21 @@ def check(en_text, tw_text):
     return bad
 
 
+def load_content_fixes():
+    """刻意為 LIA 改寫內容的頁面。這類頁面的結構本來就會與上游不同，
+    差異照樣列出來供人核對，但不算失敗。"""
+    if not os.path.exists(CONTENT_FIXES):
+        return set()
+    return {k for k in json.load(open(CONTENT_FIXES, encoding="utf-8"))
+            if not k.startswith("_")}
+
+
 def main():
     if not os.path.isdir(EN):
         print("請先執行 scripts/extract_guide.py", file=sys.stderr)
         return 1
 
+    fixed = load_content_fixes()
     total = fails = missing = 0
     for ns in sorted(os.listdir(EN)):
         if not os.path.isdir(os.path.join(EN, ns)):
@@ -131,14 +143,20 @@ def main():
                     if not os.path.exists(mine):
                         missing += 1
                         continue
+
                     en_text = open(os.path.join(dirpath, f), encoding="utf-8").read()
                     tw_text = open(mine, encoding="utf-8").read()
                     bad = check(en_text, tw_text)
-                    if bad:
+                    if not bad:
+                        continue
+                    if f"{ns}/{folder}/{rel}" in fixed:
+                        # 記錄在 content-fixes.json 的改寫，列出差異但不算失敗
+                        print(f"· {ns}/{folder}/{rel}（刻意改寫）")
+                    else:
                         fails += 1
                         print(f"✗ {ns}/{folder}/{rel}")
-                        for b in bad:
-                            print(f"    {b}")
+                    for b in bad:
+                        print(f"    {b}")
 
     print(f"\n頁面 {total}、已譯 {total - missing}、未譯 {missing}、有問題 {fails}")
     return 1 if fails else 0

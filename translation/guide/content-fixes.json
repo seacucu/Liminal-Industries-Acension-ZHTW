@@ -1,0 +1,29 @@
+{
+  "_comment": "本翻譯包為 LIA 這個模組包刻意改寫的指南段落。這裡記的不是翻譯，是內容更動，所以每一條都要寫清楚改了什麼、為什麼改，遊戲內對應的段落也一律加上〔本翻譯包修正〕字樣，讓讀者知道那不是上游原文。會需要這樣做，是因為 LIA 用 kubejs 大幅改動了配方（光是移除就有數百條），卻沒有同步更新各模組自帶的指南，於是指南教的作法在這個模組包做不出來。verify_guide.py 會跳過這些頁面的結構比對，但仍檢查簡體字等其他項目。",
+  "ae2/ae2guide/items-blocks-machines/fluix_crystal.md": {
+    "reason": "kubejs/server_scripts/ae2_fixes.js 移除了 ae2:transform/fluix_crystal 與 ae2:transform/fluix_crystals，並以 remove({output:'ae2:fluix_crystal'}) 連帶掃掉 ae2:misc/deconstruction_fluix_block，改由 Thermal 結晶器製作：水 2000mb ＋ 充能賽特斯石英水晶 ＋ 隕石粉 → 福魯伊克斯水晶。",
+    "changes": [
+      "移除三個永遠找不到的 <Recipe>：transform/fluix_crystals、transform/fluix_crystal、misc/deconstruction_fluix_block",
+      "把「丟進水裡」的製作方式改寫為 Thermal 結晶器，並列出實際材料"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/certus_quartz_crystal.md": {
+    "reason": "同上，ae2:transform/certus_quartz_crystals 被移除，改由 Thermal 結晶器製作：水 2000mb ＋ 賽特斯石英粉 → 賽特斯石英水晶。misc/deconstruction_certus_quartz_block 未被移除，保留。",
+    "changes": [
+      "移除找不到的 <Recipe id=\"transform/certus_quartz_crystals\">",
+      "補上 Thermal 結晶器的作法"
+    ]
+  },
+  "ae2/ae2guide/getting-started.md": {
+    "reason": "入門頁的「順帶一提福魯伊克斯」教玩家把充能賽特斯、紅石與地獄石英丟進水裡，那條配方在本模組包已被移除。新手照做會直接卡住。",
+    "changes": [
+      "改寫福魯伊克斯的製作方式為 Thermal 結晶器"
+    ]
+  },
+  "ae2/ae2guide/example-setups/throw-in-water-automation.md": {
+    "reason": "本頁的兩個樣板範例中，福魯伊克斯那一個在本模組包已無效（石英芽床那一個仍然有效，transform/*_budding_quartz 未被移除）。",
+    "changes": [
+      "加註福魯伊克斯已改由 Thermal 結晶器製作，本頁的福魯伊克斯樣板不適用"
+    ]
+  }
+}
