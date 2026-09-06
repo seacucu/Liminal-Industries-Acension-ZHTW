@@ -12,6 +12,8 @@ navigation:
 一種作法是用 <ItemLink id="export_bus" />、<ItemLink id="level_emitter" /> 與 <ItemLink id="crafting_card" />，
 自動向網路的[自動合成](../ae2-mechanics/autocrafting.md)請求補貨。這套設施適合用來維持「單一物品、大量庫存」。
 
+當然，把位準發射器與紅石卡拿掉，就能讓網路不停地一直合成下去。
+
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/level_emitter_autostocking.snbt" />
 

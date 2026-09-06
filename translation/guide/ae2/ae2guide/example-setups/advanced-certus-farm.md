@@ -13,6 +13,8 @@ navigation:
 它不再需要你囤一大堆芽床、每隔一陣子手動復原，
 而是靠[充能器自動化](charger-automation.md)與[丟進水裡的自動化](throw-in-water-automation.md)自動完成。
 
+生長速度的估算見[賽特斯石英生長](../ae2-mechanics/certus-growth.md)。
+
 **這是一個複雜的建築，有些東西被擋在別的東西後面，請旋轉鏡頭從各個角度看過一遍**
 
 <GameScene zoom="6" interactive={true}>

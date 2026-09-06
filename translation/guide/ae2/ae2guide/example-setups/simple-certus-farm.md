@@ -17,6 +17,8 @@ navigation:
 若用的是微瑕、裂損或重損的石英芽床，你就得手動補回芽床。或者，照[半自動賽特斯農場](semiauto-certus-farm.md)
 與[進階賽特斯農場](advanced-certus-farm.md)所說的方式，自動補回。
 
+生長速度的估算見[賽特斯石英生長](../ae2-mechanics/certus-growth.md)。
+
 <GameScene zoom="6" interactive={true}>
   <ImportStructure src="../assets/assemblies/simple_certus_farm.snbt" />
 

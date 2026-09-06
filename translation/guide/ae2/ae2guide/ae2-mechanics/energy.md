@@ -25,12 +25,14 @@ navigation:
   <BlockImage id="controller" p:state="online" scale="4" />
 
   <BlockImage id="vibration_chamber" p:active="true" scale="4" />
+  
+  <BlockImage id="crystal_resonance_generator" scale="4" />
 </Row>
 
 AE2 內部不使用 Forge Energy（Forge 版）或 TechReborn Energy（Fabric 版），而是把它們轉換成自己的單位 AE。
 這個轉換是單向的。負責轉換的是 <ItemLink id="energy_acceptor" /> 與 <ItemLink id="controller" />，
 不過控制器的面拿去接[頻道](../ae2-mechanics/channels.md)更值得。
-<ItemLink id="vibration_chamber" /> 也能自己發電，但 AE2 的設計本來就是要搭配發電能力更強的科技模組。
+<ItemLink id="vibration_chamber" /> 也能自己發電，<ItemLink id="crystal_resonance_generator" /> 則能被動供電，但 AE2 的設計本來就是要搭配發電能力更強的科技模組。
 
 也因此，在規劃基地的供電架構時，最好把整個 AE2 網路當成一台大型的多方塊機器來看待。
 

@@ -26,7 +26,7 @@ AE2 自己的電力（AE）與 Forge Energy（FE）它都收。物品可以從�
 
 想手動供電的話，在它的頂面或底面放一個 <ItemLink id="crank" />，右鍵轉到物品充飽為止。
 
-它同時也是 AE2 村民的工作站。
+它同時也是[福魯伊克斯學者](fluix_researcher.md)的工作站。
 
 ## 簡易自動化
 

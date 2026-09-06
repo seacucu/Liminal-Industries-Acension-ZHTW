@@ -19,6 +19,8 @@ navigation:
 
 這座農場比[簡易賽特斯農場](simple-certus-farm.md)複雜一些，因為它其實是三套設施擠在一起。
 
+生長速度的估算見[賽特斯石英生長](../ae2-mechanics/certus-growth.md)。
+
 **這是一個複雜的建築，有些東西被擋在別的東西後面，請旋轉鏡頭從各個角度看過一遍**
 
 <GameScene zoom="6" interactive={true}>

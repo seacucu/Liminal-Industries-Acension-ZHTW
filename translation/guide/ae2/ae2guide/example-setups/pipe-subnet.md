@@ -162,7 +162,7 @@ navigation:
   </BoxAnnotation>
 
 <BoxAnnotation color="#dddddd" min="0 1 2" max="1 1.3 3">
-        儲存匯流排
+        介面
   </BoxAnnotation>
 
 <IsometricCamera yaw="195" pitch="30" />

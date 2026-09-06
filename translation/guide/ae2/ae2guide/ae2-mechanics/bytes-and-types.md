@@ -2,7 +2,7 @@
 navigation:
   parent: ae2-mechanics/ae2-mechanics-index.md
   title: 位元組與類型
-  icon: creative_item_cell
+  icon: creative_storage_cell
 ---
 
 # 位元組與類型
