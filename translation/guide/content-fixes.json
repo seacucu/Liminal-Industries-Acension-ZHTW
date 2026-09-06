@@ -1,5 +1,5 @@
 {
-  "_comment": "本翻譯包為 LIA 這個模組包刻意改寫的指南段落。這裡記的不是翻譯，是內容更動，所以每一條都要寫清楚改了什麼、為什麼改，遊戲內對應的段落也一律加上〔本翻譯包修正〕字樣，讓讀者知道那不是上游原文。會需要這樣做，是因為 LIA 用 kubejs 大幅改動了配方（光是移除就有數百條），卻沒有同步更新各模組自帶的指南，於是指南教的作法在這個模組包做不出來。verify_guide.py 會跳過這些頁面的結構比對，但仍檢查簡體字等其他項目。",
+  "_comment": "本翻譯包為 LIA 這個模組包刻意改寫的指南段落。這裡記的不是翻譯，是內容更動，所以每一條都要寫清楚改了什麼、為什麼改，遊戲內對應的段落也一律加上「本翻譯包修正」字樣（粗體，後接全形冒號；不要寫成 **〔…〕** 那種形式，markdown 的強調規則遇到緊鄰的全形括號會失效，會把星號原樣印出來），讓讀者知道那不是上游原文。會需要這樣做，是因為 LIA 用 kubejs 大幅改動了配方（光是移除就有數百條），卻沒有同步更新各模組自帶的指南，於是指南教的作法在這個模組包做不出來。verify_guide.py 會跳過這些頁面的結構比對，但仍檢查簡體字等其他項目。",
   "ae2/ae2guide/items-blocks-machines/fluix_crystal.md": {
     "reason": "kubejs/server_scripts/ae2_fixes.js 移除了 ae2:transform/fluix_crystal 與 ae2:transform/fluix_crystals，並以 remove({output:'ae2:fluix_crystal'}) 連帶掃掉 ae2:misc/deconstruction_fluix_block，改由 Thermal 結晶器製作：水 2000mb ＋ 充能賽特斯石英水晶 ＋ 隕石粉 → 福魯伊克斯水晶。",
     "changes": [

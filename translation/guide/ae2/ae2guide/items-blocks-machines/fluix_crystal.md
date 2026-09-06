@@ -18,7 +18,7 @@ item_ids:
 
 AE2 方塊、[裝置](../ae2-mechanics/devices.md)與物品最主要的材料之一。
 
-**〔本翻譯包修正〕**以下這段與原文不同。原文寫的是「把地獄石英、紅石與充能賽特斯石英水晶丟進水裡」，
+**本翻譯包修正**：以下這段與原文不同。原文寫的是「把地獄石英、紅石與充能賽特斯石英水晶丟進水裡」，
 但 LIA 已經移除那條配方，改成用 <ItemLink id="thermal:machine_crystallizer" /> 製作：
 
 *   水 2000 mB ＋ <ItemLink id="charged_certus_quartz_crystal" /> ＋ <ItemLink id="sky_dust" />
