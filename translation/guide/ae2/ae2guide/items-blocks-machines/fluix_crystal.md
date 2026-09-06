@@ -16,17 +16,14 @@ item_ids:
 
 *「福魯伊克斯水晶具備一項獨特能力：吸收能量並在不同形式之間轉換，這正是一切物質能源技術的基礎」*
 
-AE2 方塊、[裝置](../ae2-mechanics/devices.md)與物品最主要的材料之一。作法是把地獄石英、紅石與
-<ItemLink id="charged_certus_quartz_crystal" /> 丟進水裡。
+AE2 方塊、[裝置](../ae2-mechanics/devices.md)與物品最主要的材料之一。
 
-用 <ItemLink id="formation_plane" /> 與 <ItemLink id="annihilation_plane" /> 可以把它[自動化](../example-setups/throw-in-water-automation.md)。
+**〔本翻譯包修正〕**以下這段與原文不同。原文寫的是「把地獄石英、紅石與充能賽特斯石英水晶丟進水裡」，
+但 LIA 已經移除那條配方，改成用 <ItemLink id="thermal:machine_crystallizer" /> 製作：
 
-## 配方
+*   水 2000 mB ＋ <ItemLink id="charged_certus_quartz_crystal" /> ＋ <ItemLink id="sky_dust" />
+    → <ItemLink id="fluix_crystal" />
 
-<Row>
-  <Recipe id="transform/fluix_crystals" />
-
-  <Recipe id="transform/fluix_crystal" />
-
-  <Recipe id="misc/deconstruction_fluix_block" />
-</Row>
+福魯伊克斯方塊的分解配方一併被移除了，所以原文列出的三個配方圖在本模組包都不存在，此處已拿掉。
+[丟進水裡的自動化](../example-setups/throw-in-water-automation.md)那一頁對福魯伊克斯同樣不適用，
+但對石英芽床仍然有效。

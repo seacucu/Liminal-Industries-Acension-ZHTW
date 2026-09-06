@@ -22,4 +22,7 @@ AE2 方塊、[裝置](../ae2-mechanics/devices.md)與物品最主要的材料之
 
 <Recipe id="misc/deconstruction_certus_quartz_block" />
 
-<Recipe id="transform/certus_quartz_crystals" />
+**〔本翻譯包修正〕**原文在這裡還列了一條「把賽特斯石英粉丟進水裡」的配方，
+但 LIA 已經移除它，改成用 <ItemLink id="thermal:machine_crystallizer" /> 製作：
+
+*   水 2000 mB ＋ <ItemLink id="certus_quartz_dust" /> → <ItemLink id="certus_quartz_crystal" />
