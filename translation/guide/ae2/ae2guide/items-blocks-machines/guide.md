@@ -1,7 +1,7 @@
 ---
 navigation:
   parent: items-blocks-machines/items-blocks-machines-index.md
-  title: 指南
+  title: 應用能源 2 指南
   icon: guide
 categories:
 - tools
@@ -9,7 +9,7 @@ item_ids:
 - ae2:guide
 ---
 
-# 指南
+# 應用能源 2 指南
 
 <ItemImage id="guide" scale="8" />
 
