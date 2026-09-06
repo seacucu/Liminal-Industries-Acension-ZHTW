@@ -36,8 +36,9 @@
   "信號": {
     "allow": [
       "信號彈",
+      "信號槍",
       "信號顏色"
     ],
-    "reason": "原版 zh_tw 的 redstone signal 作「紅石訊號」，故「信號」入列。但 Immersive Engineering 的 Flare Cartridge，MTP 與正體中文一般用法都作「信號彈」（flare 本來就是信號彈，不是 signal），手冊必須與物品名一致。僅在該詞下放行。"
+    "reason": "原版 zh_tw 的 redstone signal 作「紅石訊號」，故「信號」入列。但 Immersive Engineering 的 Flare Cartridge，MTP 與正體中文一般用法都作「信號彈」（flare 本來就是信號彈，不是 signal），手冊必須與物品名一致。AE2 指南裡的 flaregun 同理，作「信號槍」。僅在這幾個詞下放行。"
   }
 }
