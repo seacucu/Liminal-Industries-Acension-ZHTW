@@ -16,7 +16,7 @@ item_ids:
 <ImportStructure src="../assets/blocks/storage_bus.snbt" />
 </GameScene>
 
-一直捨不得把你那面亂七八糟的箱子牆換掉嗎？儲存匯流排來了！
+一直捨不得把你那座亂七八糟的儲物箱山換掉嗎？儲存匯流排來了！
 
 儲存匯流排把它所貼著的容器變成[網路倉儲](../ae2-mechanics/import-export-storage.md)的一部分。
 它的作法是讓網路看得見那個容器的內容，並在[裝置](../ae2-mechanics/devices.md)對網路倉儲推料與取料時，

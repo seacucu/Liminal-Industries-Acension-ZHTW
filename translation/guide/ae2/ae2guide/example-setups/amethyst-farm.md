@@ -28,7 +28,7 @@ navigation:
   </BoxAnnotation>
 
   <BoxAnnotation color="#dddddd" min="2 1 1" max="2.3 2 2">
-        (2) 成形面板：篩選設為紫水晶簇。
+        (2) 成形面板：篩選設為紫水晶晶簇。
         <ItemImage id="minecraft:amethyst_cluster" scale="2" />
   </BoxAnnotation>
 
@@ -65,7 +65,7 @@ navigation:
 ## 運作原理
 
 1. 第一片 <ItemLink id="annihilation_plane" /> 試著打掉面前的東西，但它只打得掉 <ItemLink id="minecraft:amethyst_cluster" />，
-    因為子網路上唯一的倉儲是篩選為紫水晶簇的 <ItemLink id="formation_plane" />。這招之所以成立，
+    因為子網路上唯一的倉儲是篩選為紫水晶晶簇的 <ItemLink id="formation_plane" />。這招之所以成立，
 全靠面板附了絲綢之觸；否則未成熟的芽什麼都不掉，它照樣打得掉。
 2. <ItemLink id="formation_plane" /> 把晶簇放到正對面的方塊上。
 3. 第二片 <ItemLink id="annihilation_plane" /> 把晶簇打掉，產出 <ItemLink id="minecraft:amethyst_shard" />。
