@@ -112,8 +112,12 @@ def main():
 
     total = fails = missing = 0
     for ns in sorted(os.listdir(EN)):
+        if not os.path.isdir(os.path.join(EN, ns)):
+            continue
         for folder in sorted(os.listdir(os.path.join(EN, ns))):
             base = os.path.join(EN, ns, folder)
+            if not os.path.isdir(base):
+                continue
             for dirpath, _, files in sorted(os.walk(base)):
                 for f in sorted(files):
                     if not f.endswith(".md"):
