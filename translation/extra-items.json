@@ -18,5 +18,7 @@
   "_eidolon_comment": "Eidolon Repraised 無繁中",
   "block.eidolon.crucible": "坩堝",
   "_es_comment": "engineered_schematics 無繁中。英文與 Create 的 Schematic Table 同名，故中文亦同為藍圖桌",
-  "block.engineered_schematics.schematic_table_block": "藍圖桌"
+  "block.engineered_schematics.schematic_table_block": "藍圖桌",
+  "_ae2_guide_comment": "MTP 把 item.ae2.guide 譯為「指南」，在物品欄與 JEI 裡和其他模組的指南書分不出來，故覆蓋為含模組名的版本。",
+  "item.ae2.guide": "應用能源 2 指南"
 }
