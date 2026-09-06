@@ -44,6 +44,14 @@ navigation:
 
 5.  如果這次合成是同一筆請求中另一項合成的前置步驟，產物會存在該合成 CPU 裡，接著用於下一步。
 
+## 遞迴配方
+
+<ItemImage id="minecraft:netherite_upgrade_smithing_template" scale="4" />
+
+自動合成演算法有一種東西*處理不了*：遞迴配方。例如「1 個紅石粉 = 2 個紅石粉」這種複製類配方，
+像是把紅石丟進 Botania 的魔力池。原版 Minecraft 的鍛造模板也是一例。
+不過，這類配方[還是有辦法處理的](../example-setups/recursive-crafting-setup.md)。
+
 # 樣板
 
 <ItemImage id="crafting_pattern" scale="4" />
@@ -107,7 +115,7 @@ navigation:
 
 *   （必要）[合成儲存器](../items-blocks-machines/crafting_cpu_multiblock.md)，容量分級與一般單元相同（1k、4k、16k、64k、256k）。
     它存放合成過程中的材料與中間產物，所以作業牽涉的材料愈多，CPU 就需要愈大或愈多的儲存器。
-*   （選用）<ItemLink id="crafting_accelerator" />，讓系統從樣板供應器一次送出更多批材料。
+*   （選用）<ItemLink id="crafting_accelerator" />，讓系統更頻繁地從樣板供應器送出材料批次。
     舉例來說，一個被 6 台分子組裝機包圍的樣板供應器，就能同時餵滿（也就是同時用到）全部 6 台，而不是一次只用一台。
 *   （選用）<ItemLink id="crafting_monitor" />，顯示該 CPU 目前正在處理的作業。可以用 <ItemLink id="color_applicator" /> 染色。
 *   （選用）<ItemLink id="crafting_unit" />，單純用來填滿空間，好讓 CPU 湊成長方體。

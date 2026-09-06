@@ -2,7 +2,7 @@
 navigation:
   parent: example-setups/example-setups-index.md
   title: 處理器自動化
-  icon: inscriber
+  icon: logic_processor
 ---
 
 # 處理器生產的自動化
@@ -21,6 +21,16 @@ navigation:
 
 這套作法剛好也向下相容於舊版 AE2，因為就算 <ItemLink id="inscriber" /> 是分面的，
 管線子網路照樣會從正確的面進料與取料。
+
+## 關於樣板編碼的一課
+
+你要編碼的[樣板](../items-blocks-machines/patterns.md)，**往往和你在 JEI 裡看到的不一樣**，
+也和你按下 JEI 的 + 按鈕所產生的不一樣。以這個例子來說，JEI 會產生兩份分開的樣板：
+一份做印刷元件、一份做最終組裝，而且印刷元件那份還會把[模具](../items-blocks-machines/presses.md)算進材料。
+那不是我們要的，因為這套設施不是那樣運作的。我們要的是一份「原料進、成品出」的樣板；
+模具本來就已經裝在壓印機裡了，不該放進樣板。
+
+---
 
 <GameScene zoom="4" interactive={true}>
   <ImportStructure src="../assets/assemblies/processor_automation.snbt" />
@@ -140,6 +150,7 @@ navigation:
 ## 設定
 
 * <ItemLink id="pattern_provider" />（1）維持預設設定，放入對應的 <ItemLink id="processing_pattern" />。
+  注意樣板是「原料直接到成品處理器」，**不要**把[模具](../items-blocks-machines/presses.md)放進去。
 
   ![Logic Pattern](../assets/diagrams/logic_pattern.png)
   ![Calculation Pattern](../assets/diagrams/calculation_pattern.png)

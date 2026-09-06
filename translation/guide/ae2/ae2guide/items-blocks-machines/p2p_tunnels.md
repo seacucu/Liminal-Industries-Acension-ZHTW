@@ -49,6 +49,13 @@ P2P 通道讓物品、流體、紅石訊號、電力、光線與[頻道](../ae2-
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
+還有 ME P2P，它搬運的是頻道。
+
+<GameScene zoom="4" background="transparent">
+  <ImportStructure src="../assets/assemblies/p2p_channels.snbt" />
+  <IsometricCamera yaw="195" pitch="30" />
+</GameScene>
+
 ## P2P 通道的種類與調諧
 
 <GameScene zoom="6" background="transparent">
@@ -65,7 +72,7 @@ P2P 通道有很多種。只有 ME P2P 通道可以直接合成，其餘都是�
 - 光源 P2P 通道：用火把或螢光石右鍵點擊。
 
 某些通道有特殊限制。舉例來說，ME P2P 通道的頻道無法穿過另一個 ME P2P 通道；
-而能量 P2P 通道會靠提高自身的[能量](../ae2-mechanics/energy.md)消耗，間接對通過的 FE 抽取 2.5% 的稅。
+而能量 P2P 通道會靠提高自身的[能量](../ae2-mechanics/energy.md)消耗，間接對通過的 FE 或 E 抽取 5% 的稅。
 
 ## P2P 最常見的用法
 
@@ -83,6 +90,10 @@ P2P 通道最常見的用途，是用 ME P2P 通道來壓縮[頻道](../ae2-mech
 
   <BoxAnnotation color="#dddddd" min="1.3 1.3 6.3" max="2 2.7 6.7">
         石英纖維在主網路與 P2P 子網路之間共享電力。
+  </BoxAnnotation>
+
+  <BoxAnnotation color="#dddddd" min="4.1 0 5.7" max="5 2.3 6.4">
+        通道的輸入端可以直接貼在控制器上，也可以拉線纜過去。
   </BoxAnnotation>
 
   <IsometricCamera yaw="225" pitch="30" />

@@ -17,7 +17,7 @@ navigation:
 會掉落一個 <ItemLink id="certus_quartz_dust" />，且不受幸運影響。如果打掉的是完全長成的晶簇，則會掉落四個
 <ItemLink id="certus_quartz_crystal" />，幸運則會增加這個數量。
 
-石英芽床共有四個階級：無瑕、微瑕、破損、重損。
+石英芽床共有四個階級：無瑕、微瑕、裂損、重損，最初都是在[隕石坑](../ae2-mechanics/meteorites.md)裡找到的。
 
 <GameScene zoom="4" background="transparent">
   <ImportStructure src="../assets/assemblies/budding_blocks.snbt" />
@@ -39,6 +39,13 @@ navigation:
   <ImportStructure src="../assets/assemblies/budding_certus_2.snbt" />
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
+
+由於各種交互作用，芽床每被遮住一面，它整體的生長速率就會下降，
+加速器加到一定程度後，這個負面效果反而會蓋過加速器的好處。實測結果如下：
+
+![Items/min for ratios](../assets/diagrams/certus_farm_speed_chart_1.png)
+
+![common setups](../assets/diagrams/certus_farm_speed_chart_2.png)
 
 如果你的石英還不夠做 <ItemLink id="energy_acceptor" /> 或 <ItemLink id="vibration_chamber" />，
 可以做一個 <ItemLink id="crank" /> 插在加速器末端。
