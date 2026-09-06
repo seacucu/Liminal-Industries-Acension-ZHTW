@@ -40,7 +40,7 @@ navigation:
   <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
-由於各種交互作用，芽床每被遮住一面，它整體的生長速率就會下降，
+由於機制之間彼此牽動，芽床每被遮住一面，它整體的生長速率就會下降，
 加速器加到一定程度後，這個負面效果反而會蓋過加速器的好處。實測結果如下：
 
 ![Items/min for ratios](../assets/diagrams/certus_farm_speed_chart_1.png)
