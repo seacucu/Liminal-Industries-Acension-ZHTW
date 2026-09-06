@@ -20,9 +20,21 @@ item_ids:
 當 <ItemLink id="import_bus" />、<ItemLink id="interface" /> 這類[裝置](../ae2-mechanics/devices.md)
 往[網路倉儲](../ae2-mechanics/import-export-storage.md)送東西而「存」到它身上時，它就放置或丟出。
 
-<GameScene zoom="6" interactive={true}>
+<GameScene zoom="8" interactive={true}>
   <ImportStructure src="../assets/assemblies/formation_plane_demonstration.snbt" />
   <IsometricCamera yaw="255" pitch="30" />
+</GameScene>
+
+注意這和[管線子網路](../example-setups/pipe-subnet.md)裡的「輸入匯流排 → 儲存匯流排」與「介面 → 儲存匯流排」很相似。
+
+<GameScene zoom="6" interactive={true}>
+  <ImportStructure src="../assets/assemblies/import_storage_pipe.snbt" />
+  <IsometricCamera yaw="195" pitch="30" />
+</GameScene>
+
+<GameScene zoom="6" interactive={true}>
+  <ImportStructure src="../assets/assemblies/interface_storage_pipe.snbt" />
+  <IsometricCamera yaw="195" pitch="30" />
 </GameScene>
 
 這個[裝置](../ae2-mechanics/devices.md)運用的機制，和[管線子網路](../example-setups/pipe-subnet.md)裡儲存匯流排那一套相同，

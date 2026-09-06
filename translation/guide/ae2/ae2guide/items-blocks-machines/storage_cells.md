@@ -60,6 +60,12 @@ item_ids:
 
 單元清空後，手持該單元潛行右鍵，就能把儲存元件從外殼裡取出來。
 
+<Row>
+    <Recipe id="upgrade/item_storage_cell_1k_to_4k" />
+
+    把儲存單元和更高階的儲存元件一起放進合成格，就能升級到更高階。裡面的東西會保留，低階的元件則會退還給你。
+</Row>
+
 ## 類型數不同時的實際容量
 
 [類型的預付成本](../ae2-mechanics/bytes-and-types.md)相當可觀：只用 1 個類型的單元，總容量是用滿 63 個類型時的兩倍。
@@ -223,13 +229,11 @@ item_ids:
   </Row>
 </Column>
 
-# 創造模式物品與流體單元
+# 創造模式儲存單元
 
 <Row>
-  <ItemImage id="creative_item_cell" scale="2" />
-
-  <ItemImage id="creative_fluid_cell" scale="2" />
+  <ItemImage id="creative_storage_cell" scale="2" />
 </Row>
 
-創造模式的物品與流體單元**並不提供無限儲存空間**。
+創造模式單元**並不提供無限儲存空間**。
 它們的作用，是成為你替它[分區設定](cell_workbench.md)的那個物品或流體的無限來源與無限去處。
