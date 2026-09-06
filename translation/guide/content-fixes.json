@@ -25,5 +25,29 @@
     "changes": [
       "加註福魯伊克斯已改由 Thermal 結晶器製作，本頁的福魯伊克斯樣板不適用"
     ]
+  },
+  "ae2/ae2guide/items-blocks-machines/wrench.md": {
+    "reason": "kubejs/server_scripts/item_nerfs.js 以「沒有耐久、瞬間破壞」為由移除了 ae2:certus_quartz_wrench 與 ae2:nether_quartz_wrench 的配方，也沒有補上替代配方。AE2 讀的是 Forge 的 tools/wrench 標籤，所以改用其他模組的扳手仍可操作。",
+    "changes": [
+      "加註兩把扳手在本模組包無法合成，需改用其他模組的扳手"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/sky_dust.md": {
+    "reason": "kubejs/server_scripts/tier3.js 移除了隕石粉原本的壓印機配方，改為機械動力粉碎輪（50% 機率）；tier4.js 另外加了 Thermal 粉碎機的配方。",
+    "changes": [
+      "改寫取得方式，原文的壓印機說法在本模組包不成立"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/fluix_pearl.md": {
+    "reason": "kubejs/server_scripts/tier4.js 移除了福魯伊克斯珍珠的合成配方，改為 Thermal 壓製機搭配冷凝球模具、以 3 個福魯伊克斯粉壓製，與終界珍珠無關。",
+    "changes": [
+      "改寫敘述，原文的「裹上福魯伊克斯的終界珍珠」在本模組包不成立"
+    ]
+  },
+  "ae2/ae2guide/items-blocks-machines/singularities.md": {
+    "reason": "kubejs/server_scripts/tier5.js 移除了量子纏結奇點的配方，改為 Mekanism 合成機：2 個奇點 ＋ kubejs:quantum_string。",
+    "changes": [
+      "加註改由 Mekanism 合成機製作，原文用爆炸觸發的敘述已不適用"
+    ]
   }
 }

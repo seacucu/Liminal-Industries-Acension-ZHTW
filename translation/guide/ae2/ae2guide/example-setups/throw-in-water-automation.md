@@ -13,6 +13,8 @@ navigation:
 這可以用 <ItemLink id="formation_plane" />、<ItemLink id="annihilation_plane" /> 加上一些配套設施來自動化
 （說穿了就是兩條改造過的[管線子網路](pipe-subnet.md)）。
 
+**本翻譯包修正**：本頁的兩個樣板中，**福魯伊克斯那一個在本模組包已經無效**，因為 LIA 把它改成用 <ItemLink id="thermal:machine_crystallizer" /> 製作了。石英芽床那一個仍然有效，丟進水裡照樣做得出來。
+
 這套設施要搭配[充能器自動化](charger-automation.md)一起用，由後者提供 <ItemLink id="charged_certus_quartz_crystal" />。
 
 <GameScene zoom="6" interactive={true}>

@@ -14,7 +14,9 @@ item_ids:
 
 <ItemImage id="fluix_pearl" scale="4" />
 
-一顆裹上 <ItemLink id="fluix_crystal" /> 的終界珍珠，用於製作多種 AE2 元件。
+用於製作多種 AE2 元件。
+
+**本翻譯包修正**：原文說它是「一顆裹上福魯伊克斯的終界珍珠」，但 LIA 移除了那條合成配方，改用 Thermal 的壓製機搭配冷凝球模具，以 3 個 <ItemLink id="fluix_dust" /> 壓製而成，與終界珍珠無關。
 
 ## 配方
 

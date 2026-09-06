@@ -26,8 +26,8 @@ item_ids:
 要在兩座[量子網路橋接](quantum_bridge.md)之間建立連線就得靠它，而它永遠成對產出。
 要建立連線，把成對的量子纏結奇點各放一顆到兩端橋接的 <ItemLink id="quantum_link" /> 裡。
 
-它的製作方式是讓 <ItemLink id="minecraft:ender_pearl" /> 或 <ItemLink id="ender_dust" />\
-與 <ItemLink id="singularity" /> 發生反應。任何爆炸力道都足以觸發。
+**本翻譯包修正**：原文說是讓 <ItemLink id="minecraft:ender_pearl" /> 或 <ItemLink id="ender_dust" />\
+與 <ItemLink id="singularity" /> 發生反應、用爆炸觸發，但 LIA 移除了那條配方，改用 **Mekanism 的合成機**：2 個奇點 ＋ 量子絲 → 量子纏結奇點。以下關於爆炸的敘述在本模組包已不適用。
 
 <RecipeFor id="quantum_entangled_singularity" />
 

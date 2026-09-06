@@ -67,7 +67,12 @@ navigation:
 
 ## 順帶一提福魯伊克斯
 
-另一種你會需要的材料是福魯伊克斯，做生長加速器時你已經碰過它了。作法是把充能賽特斯石英、紅石與地獄石英丟進水裡。至於怎麼自動化，「留給讀者當作習題」。
+另一種你會需要的材料是福魯伊克斯，做生長加速器時你已經碰過它了。
+
+**本翻譯包修正**：原文說把充能賽特斯石英、紅石與地獄石英丟進水裡，但 LIA 已移除那條配方，改用 <ItemLink id="thermal:machine_crystallizer" /> 製作：
+
+*   水 2000 mB ＋ <ItemLink id="charged_certus_quartz_crystal" /> ＋ <ItemLink id="sky_dust" />
+    → <ItemLink id="fluix_crystal" />
 
 如果你還沒做 <ItemLink id="charger" />，那也得補上，因為 <ItemLink id="charged_certus_quartz_crystal" /> 得靠它才生得出來。
 
@@ -89,7 +94,7 @@ navigation:
 
 為了方便用漏斗自動化（順便少牽幾條管線），壓印機可以用 <ItemLink id="certus_quartz_wrench" /> 轉向。
 
-先把三種處理器各做幾片備著，下一步要拿來組一套最基本的 ME 系統。至於處理器怎麼自動化生產，一樣「留給讀者當作習題」。
+先把三種處理器各做幾片備著，下一步要拿來組一套最基本的 ME 系統。至於處理器怎麼自動化生產，一樣「[留給讀者當作習題](example-setups/processor-automation.md)」。
 
 ## 物質能源技術：ME 網路與儲存
 
@@ -109,7 +114,7 @@ ME 和 Minecraft 裡其他儲存系統差別極大，剛開始可能得換個腦
 <ItemLink id="chest" /> 在單元一放進去時就會顯示裡面的內容，你可以像用 <ItemLink id="minecraft:chest" /> 那樣存取物品，
 差別只在於東西實際上是存在儲存單元裡，而不是 <ItemLink id="chest" /> 本身。
 
-<ItemLink id="chest" /> 是認識 ME 概念的好起點，但要真正發揮威力，你得建起一套 [ME 網路](ae2-mechanics/me-network-connections.md)。
+<ItemLink id="chest" /> 的適用場合相當侷限，用途也有限。要真正發揮 AE2 的威力，你得建起一套 [ME 網路](ae2-mechanics/me-network-connections.md)。
 
 ## 你的第一套 ME 系統
 
