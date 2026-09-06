@@ -5,7 +5,9 @@
 
   1. 錨點 <&x> 集合相同（錨點決定配方圖、多方塊預覽插在哪一段）
   2. 錨點名都存在於該條目的 json 設定裡
-  3. 連結 <link;目標;文字> 的目標集合相同（中文語序不同，出現順序可以不同）
+  3. 連結 <link;目標;文字> 的目標集合相同（中文語序不同，出現順序可以不同），
+     刻意改掉的目標要記在 translation/manual/link-fixes.json；
+     另外檢查每個目標是否真的有對應條目，上游指錯的連結在遊戲裡是 Invalid link
   4. <keybind;...> 原樣保留；<config;...> 的型別與設定路徑不變
      （<config;b;路徑;甲;乙> 後面兩段是顯示文字，本來就該翻譯）
   5. §r 的數量相同，且英文用過的顏色碼譯文都還在；% 不轉義（手冊正文不是語系檔，寫 %% 會原樣顯示）
@@ -25,6 +27,13 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EN = os.path.join(ROOT, "_workspace", "build", "manual")
 MINE = os.path.join(ROOT, "translation", "manual")
+LINK_FIXES = os.path.join(MINE, "link-fixes.json")
+# 手冊樹只有一個，bare 目標由 ManualUtils.getLocationForManual 補上手冊的預設
+# 命名空間，也就是 IEManualInstance 的 immersiveengineering
+DEFAULT_NS = "immersiveengineering"
+# 少數條目由程式在執行期建出來，沒有對應的 txt 檔，連到它們並不算死連結。
+# shader_list 是 IEManual 依已解鎖的外觀動態產生的清單頁（ie.manual.entry.shaderList.*）。
+CODE_ENTRIES = {"immersiveengineering:shader_list"}
 
 TOKEN = re.compile(r"<[^>]*>")
 ANCHOR = re.compile(r"^<&(.+)>$")
@@ -34,6 +43,18 @@ COLOR = re.compile(r"§(.)")
 
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from verify_translation import SIMPLIFIED  # noqa: E402
+
+
+def load_link_fixes():
+    if not os.path.exists(LINK_FIXES):
+        return {}
+    return {k: {a: b["to"] for a, b in v.items()}
+            for k, v in json.load(open(LINK_FIXES, encoding="utf-8")).items()
+            if not k.startswith("_")}
+
+
+def resolve(target):
+    return target if ":" in target else f"{DEFAULT_NS}:{target}"
 
 
 def parse(text):
@@ -57,7 +78,7 @@ def parse(text):
     return anchors, links, other
 
 
-def check(ns, entry, en_text, tw_text, meta):
+def check(ns, entry, en_text, tw_text, meta, fixes, known):
     bad = []
     ea, el, eo = parse(en_text)
     ta, tl, to = parse(tw_text)
@@ -71,9 +92,17 @@ def check(ns, entry, en_text, tw_text, meta):
             bad.append(f"錨點不在 {entry}.json 的元素清單裡：{stray}")
 
     # 中文語序常與英文不同，連結在句中的先後可以變，但整篇連到哪些條目不能變
-    if sorted(t for t, _ in el) != sorted(t for t, _ in tl):
-        bad.append(f"連結目標不符：英文 {sorted(t for t, _ in el)}、"
-                   f"譯文 {sorted(t for t, _ in tl)}")
+    expected = sorted(fixes.get(t, t) for t, _ in el)
+    if expected != sorted(t for t, _ in tl):
+        bad.append(f"連結目標不符：英文 {expected}、譯文 {sorted(t for t, _ in tl)}")
+
+    # 指向不存在的條目時，遊戲內那個連結會變成點了顯示 Invalid link 的死連結。
+    # this 是手冊自己的關鍵字，代表當前條目。
+    dead = sorted({t for t, _ in tl
+                   if t != "this" and resolve(t) not in known | CODE_ENTRIES})
+    if dead:
+        bad.append(f"連結指向不存在的條目：{dead}"
+                   f"（上游本來就錯的話，記進 {os.path.basename(LINK_FIXES)}）")
     for target, label in tl:
         # link 的第二段可省略（顯示文字＝目標本身），但寫了就不能是空的
         if label is not None and label.strip() == "" and ";" in f"<link;{target};{label}>":
@@ -122,6 +151,16 @@ def main():
         print("請先執行 scripts/extract_manual.py", file=sys.stderr)
         return 1
 
+    fixes = load_link_fixes()
+    known = set()
+    for ns in sorted(os.listdir(EN)):
+        en_dir = os.path.join(EN, ns, "en_us")
+        for dirpath, _, files in os.walk(en_dir):
+            for f in files:
+                if f.endswith(".txt"):
+                    rel = os.path.relpath(os.path.join(dirpath, f), en_dir)
+                    known.add(f"{ns}:{rel[:-4]}".replace(os.sep, "/"))
+
     total = fails = missing = 0
     for ns in sorted(os.listdir(EN)):
         en_dir = os.path.join(EN, ns, "en_us")
@@ -141,7 +180,8 @@ def main():
                     continue
                 en_text = open(os.path.join(dirpath, f), encoding="utf-8").read()
                 tw_text = open(mine, encoding="utf-8").read()
-                bad = check(ns, entry, en_text, tw_text, meta.get(entry, {}))
+                bad = check(ns, entry, en_text, tw_text, meta.get(entry, {}),
+                            fixes.get(f"{ns}/{rel}", {}), known)
                 if bad:
                     fails += 1
                     print(f"✗ {ns}/{entry}")

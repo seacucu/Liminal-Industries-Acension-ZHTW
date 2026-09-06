@@ -8,6 +8,6 @@ Velocitas Eradico
 要切換彈體，潛行並滾動滑鼠滾輪，或是使用快捷鍵 §l<keybind;key.immersiveengineering.chemthrowerSwitch>§r，前提是你已在選項中設定好。
 
 由於內部蓄電量偏低，建議搭配<link;powerpack;蓄電池背包>使用。
-和其他沉浸工程的工具一樣，磁軌炮可以在<link;workbench;工程師作業台>上改造，也能用<link;shader;外觀>來自訂外觀。<np>
+和《沉浸工程》其他工具一樣，磁軌炮可以在<link;workbench;工程師作業台>上改造，也能用<link;shader;外觀>來自訂外觀。<np>
 <&speed>§2進階散熱片§r能緩解充能過程中累積的熱量，大幅縮短磁軌炮的充能時間。<np>
 <&scope>§2精準瞄準鏡§r讓你能用磁軌炮拉近視野。按 §l<keybind;key.immersiveengineering.railgunZoom>§r 使用瞄準鏡，滾動滑鼠滾輪可以切換倍率。
