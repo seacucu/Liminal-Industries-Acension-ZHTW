@@ -158,7 +158,9 @@ def main():
                     for b in bad:
                         print(f"    {b}")
 
-    print(f"\n頁面 {total}、已譯 {total - missing}、未譯 {missing}、有問題 {fails}")
+    print()
+    print(f"頁面 {total}、已譯 {total - missing}、未譯 {missing}、"
+          f"刻意改寫 {len(fixed)}、有問題 {fails}")
     return 1 if fails else 0
 
 
