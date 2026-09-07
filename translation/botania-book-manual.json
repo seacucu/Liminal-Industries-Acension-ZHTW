@@ -47,5 +47,10 @@
   "botania.page.manaBlaster2": "$(l:mana/lens)$(item)魔力透鏡$(0)$(/l)可以搭配脈衝槍使用。要裝上去，把兩者放進工作台合成即可；要取下透鏡，把$(item)魔力脈衝槍$(0)再放回合成格就行。$(p)持有者身上有$(thing)挖掘加速$(0)效果時，脈衝槍的冷卻時間會縮短。",
   "botania.page.elfMessage3": "$(o)很可惜，你建立的這條連結太脆弱，沒辦法讓生物通過，看來這是我們兩界相距過遠的必然結果。真是遺憾，我們本來很想親自見見交易的對象。不過也有好的一面：這條連結讓我們得以調整兩個世界之間的時間同步，所以至少從你的角度看，書才會這麼快就回到你手上。",
   "botania.page.terrasteel3": "製作$(item)泰拉鋼$(0)（板子底下是$(l:basics/pure_daisy)$(item)活石$(0)$(/l)）",
-  "botania.page.mIntro2": "想開始掌握$(thing)魔力$(0)，先學會用$(l:generating_flowers/endoflame)$(item)火紅蓮$(0)$(/l)或$(l:generating_flowers/hydroangeas)$(item)水繡球$(0)$(/l)、$(l:mana/spreader)$(item)魔力發射器$(0)$(/l)和$(l:mana/pool)$(item)魔力池$(0)$(/l)。$(p)這幾樣構成了魔力生產的基礎設施，細節請看本書的$(thing)功能類植物$(0)與$(thing)自然裝置$(0)兩章。"
+  "botania.page.mIntro2": "想開始掌握$(thing)魔力$(0)，先學會用$(l:generating_flowers/endoflame)$(item)火紅蓮$(0)$(/l)或$(l:generating_flowers/hydroangeas)$(item)水繡球$(0)$(/l)、$(l:mana/spreader)$(item)魔力發射器$(0)$(/l)和$(l:mana/pool)$(item)魔力池$(0)$(/l)。$(p)這幾樣構成了魔力生產的基礎設施，細節請看本書的$(thing)功能類植物$(0)與$(thing)自然裝置$(0)兩章。",
+  "_6_數字與符號夾雜": "這幾頁的既有譯文把 25x 25、D,C,B 這種半形符號與數字混在中文裡，自動處理的規則要求標點兩側是中文才動，碰到「巨集包住的英文字母」就判不出來。dandelifeon3 的三條規則原譯還把第一條寫反了，編號也誤植成 42)。",
+  "botania.page.dandelifeon2": "花朵 25×25 作用範圍內的每一格都算一個$(thing)細胞$(0)。細胞分成存活與死亡兩種狀態：該格若是$(item)細胞方塊$(0)（往下看）就算存活，是別的東西就算死亡。$(p)一個細胞的$(thing)鄰居$(0)，指的是它周圍那八個細胞。",
+  "botania.page.dandelifeon3": "遊戲每前進一步，所有細胞會同時發生下列變化：$(p)$(thing)1)$(0) 存活的細胞，鄰居剛好有 2 或 3 個存活時，這一步繼續存活。$(p)$(thing)2)$(0) 存活但不符合第 1 條的細胞，變成死亡。$(p)$(thing)3)$(0) 死亡的細胞，鄰居剛好有三個存活時，會復活。",
+  "botania.page.terraPick1": "工具裡儲存的$(thing)魔力$(0)量決定了它的$(thing)階位$(0)。階位由低到高依序是$(thing)D$(0)、$(thing)C$(0)、$(thing)B$(0)、$(thing)A$(0)、$(thing)S$(0)、$(thing)SS$(0)，$(thing)D$(0)最低，$(thing)SS$(0)最高。$(p)升一階所需的$(thing)魔力$(0)量會隨著階位指數成長。以最開始的$(thing)D$(0)升$(thing)C$(0)來說，泰拉粉碎者只要在$(l:mana/pool)$(item)魔力池$(0)$(/l)裡待個幾秒就夠了。",
+  "botania.page.gardenOfGlass1": "$(2)硝子花園$(0)是$(thing)植物魔法$(0)的空島模式。它比較適合對這個模組已經有些經驗的玩家，不過就算你是新手，我們也非常歡迎你來試試。$(p)$(thing)植物魔法$(0)大部分的機制和在地面上時一樣，只是為了配合空島玩法做了一些調整，調整內容列在接下來幾頁。"
 }

@@ -39,6 +39,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG = os.path.join(ROOT, "translation", "lang", "botania.json")
 TERMS = os.path.join(ROOT, "translation", "botania-book-terms.json")
 MANUAL = os.path.join(ROOT, "translation", "botania-book-manual.json")
+KEEP = os.path.join(ROOT, "translation", "keep-as-source.json")
 NAMES = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
 REPORT = os.path.join(ROOT, "_workspace", "build", "botania", "book-changes.json")
 MODS = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
@@ -125,6 +126,7 @@ DRIFT = [
     ("浮冰", "冰磚", None),
     ("中毒", "劇毒", None),
     ("木板", "木材", None),
+    ("MOD", "模組", None),          # 全書只有四處，一律用中文
 ]
 
 
@@ -275,36 +277,59 @@ def fix_hyphen(cells):
     return cells, n
 
 
-def fix_latin_spacing(cells):
-    """中文與夾在其中的外文詞之間補一個空白。
+def fix_western_spacing(cells):
+    """中文與夾在其中的西文詞、數字之間補一個空白。
 
-    只處理含小寫字母的拉丁詞（Baubles、Kickstarter、ClariS），與
-    verify_translation 的判定同一條線。TNT、RF、MOD 這種全大寫縮寫不動。
+    拉丁字母只處理含小寫的詞（Baubles、Kickstarter、ClariS），與
+    verify_translation 判定「夾在中文裡的拉丁字詞」同一條線；TNT、RF、SS
+    這種全大寫縮寫不動。數字則一律補，書裡本來就是「約 30 秒」與
+    「每秒2次」兩種寫法並存。
     """
     out, i, n = [], 0, 0
     while i < len(cells):
-        if not cells[i][0].isascii() or not cells[i][0].isalpha():
+        c = cells[i][0]
+        if not c.isascii() or not (c.isalpha() or c.isdigit()):
             out.append(cells[i])
             i += 1
             continue
+        digits = c.isdigit()
         j = i
-        while j < len(cells) and cells[j][0].isascii() and cells[j][0].isalpha():
+        while j < len(cells) and cells[j][0].isascii() and (
+                cells[j][0].isdigit() if digits else cells[j][0].isalpha()):
             j += 1
-        word = "".join(c[0] for c in cells[i:j])
-        prev = out[-1][0] if out else None
-        nxt = cells[j][0] if j < len(cells) else None
-        if any(c.islower() for c in word):
-            if is_cjk(prev):
-                out.append([" ", cells[i][1]])
+        word = "".join(x[0] for x in cells[i:j])
+        if digits or any(x.islower() for x in word):
+            # 空白要掛在鄰居那一段。掛進西文那一段的話，
+            # $(thing)15$(0)種 會變成 $(thing) 15 $(0)種，空白跑進上色裡。
+            if out and is_cjk(out[-1][0]):
+                out.append([" ", out[-1][1]])
                 n += 1
             out.extend(cells[i:j])
-            if is_cjk(nxt):
-                out.append([" ", cells[j - 1][1]])
+            if j < len(cells) and is_cjk(cells[j][0]):
+                out.append([" ", cells[j][1]])
                 n += 1
         else:
             out.extend(cells[i:j])
         i = j
     return out, n
+
+
+def fix_dimensions(cells):
+    """25x25 這種尺寸寫法改成全形乘號。"""
+    n = 0
+    for i, cell in enumerate(cells):
+        if cell[0] not in "xX" or not (0 < i < len(cells) - 1):
+            continue
+        if not (cells[i - 1][0].isdigit() and cells[i + 1][0].isdigit()):
+            continue
+        left = i - 1
+        while left > 0 and cells[left - 1][0].isdigit():
+            left -= 1
+        if "".join(x[0] for x in cells[left:i]) == "0":
+            continue                    # 0x1a4 是十六進位，不是 0×1a4
+        cell[0] = "×"
+        n += 1
+    return cells, n
 
 
 def fix_spaces(cells):
@@ -324,6 +349,9 @@ def fix_spaces(cells):
             n += 1
             continue
         if prev is None or nxt is None or (cjkish(prev) and cjkish(nxt)):
+            n += 1
+            continue
+        if is_cjkp(prev) or is_cjkp(nxt):     # 全形標點自帶留白
             n += 1
             continue
         out.append(cell)
@@ -350,7 +378,8 @@ def typography(s, _depth=0):
     cells, counts["半形句讀"] = fix_punct(cells)
     cells, counts["連字號"] = fix_hyphen(cells)
     cells, counts["硬換行空格"] = fix_spaces(cells)
-    cells, counts["中外文留白"] = fix_latin_spacing(cells)
+    cells, counts["尺寸乘號"] = fix_dimensions(cells)
+    cells, counts["中外文留白"] = fix_western_spacing(cells)
     out = from_cells(parts, cells)
     if out != s and _depth < 4:
         again, more = typography(out, _depth + 1)
@@ -672,8 +701,18 @@ def main():
     if stale_manual:
         sys.exit(f"botania-book-manual.json 有不存在的鍵：{stale_manual}")
 
+    # keep-as-source 登記的是刻意保留原文的條目（梗、代碼、外語引用），
+    # 連排版都不要動，否則 0x1a4 會被當成尺寸寫法改掉。
+    keep = {x for x in json.load(open(KEEP, encoding="utf-8"))
+            if not x.startswith("_")}
+
     for k in keys:
         before = lang.get(k, tw.get(k, ""))
+        if k in keep:
+            totals["保留原文"] = totals.get("保留原文", 0) + 1
+            if before:
+                lang[k] = before
+            continue
         if k in manual:
             after = manual[k]
             if after != before:
