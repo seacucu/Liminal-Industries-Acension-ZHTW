@@ -11,6 +11,7 @@ import re
 import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LANG = os.path.join(ROOT, "translation", "lang", "botania.json")
 CHANGES = os.path.join(ROOT, "_workspace", "build", "botania", "book-changes.json")
 OUT = os.path.join(ROOT, "_workspace", "reference", "botania-book-review.html")
 MODS = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
@@ -50,7 +51,8 @@ TEMPLATE = """<!DOCTYPE html>
   .chip.active{{border-color:var(--accent);color:var(--text);background:#1a2436}}
   .row{{background:var(--card);border:1px solid var(--border);border-radius:10px;
        padding:.85rem 1rem;margin-bottom:.7rem}}
-  .key{{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;color:var(--accent)}}
+  .spot{{font-size:.95rem;font-weight:600}}
+  .key{{font-family:ui-monospace,Consolas,monospace;font-size:.75rem;color:var(--muted)}}
   .tag{{font-size:.72rem;color:var(--muted);border:1px solid var(--border);
        border-radius:999px;padding:.05rem .5rem;margin-left:.4rem}}
   .en{{color:var(--muted);font-size:.85rem;margin:.4rem 0}}
@@ -62,7 +64,8 @@ TEMPLATE = """<!DOCTYPE html>
 <body>
 <header>
   <h1>植物魔法辭典內文查驗</h1>
-  <div class="meta">botania_book.py 改寫過的每一條，附 Botania 英文原文對照。</div>
+  <div class="meta">botania_book.py 改寫過的每一條，附書中位置與 Botania 英文原文對照。
+  人工重譯的排在最前面，那些是整段重寫的，最需要進遊戲確認沒有被書頁裁掉。</div>
 </header>
 <main>
   <div class="summary">{cards}</div>
@@ -95,6 +98,37 @@ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{{
 """
 
 
+def locate(z, lang):
+    """鍵 → 這條字在書裡的哪一章、哪一個條目、第幾頁。
+
+    辭典的 book.json 設了 i18n:true，條目檔裡放的是語系鍵，所以直接對得起來。
+    有了位置才有辦法拿著清單進遊戲翻，不然只有一堆 botania.page.xxx。
+    """
+    # 分類的檔名（generating_flowers）和它的語系鍵（generationFlowers）對不起來，
+    # 所以先讀分類檔把兩者接上，不要自己猜。
+    cats = {}
+    for name in z.namelist():
+        if "/lexicon/en_us/categories/" in name and name.endswith(".json"):
+            data = json.loads(z.read(name).decode("utf-8"))
+            cats[name.split("/")[-1][:-5]] = lang.get(data["name"], data["name"])
+
+    where = {}
+    for name in z.namelist():
+        if "/lexicon/en_us/entries/" not in name or not name.endswith(".json"):
+            continue
+        entry = json.loads(z.read(name).decode("utf-8"))
+        cat = entry.get("category", "").split(":")[-1]
+        cat_zh = cats.get(cat, cat)
+        entry_zh = lang.get(entry["name"], entry["name"])
+        where[entry["name"]] = (cat_zh, entry_zh, None)
+        for i, page in enumerate(entry.get("pages", []), 1):
+            for field in ("text", "title", "caption"):
+                key = page.get(field)
+                if isinstance(key, str) and key.startswith("botania."):
+                    where.setdefault(key, (cat_zh, entry_zh, i))
+    return where
+
+
 def esc(s):
     s = html.escape(s or "")
     return re.sub(r"(\$\([^)]*\))", r"<code>\1</code>", s)
@@ -103,20 +137,30 @@ def esc(s):
 def main():
     data = json.load(open(CHANGES, encoding="utf-8"))
     changes = data["改寫"]
+    lang = json.load(open(LANG, encoding="utf-8"))
     jar = next(j for j in sorted(os.listdir(MODS)) if j.startswith("Botania"))
     with zipfile.ZipFile(os.path.join(MODS, jar)) as z:
         en = json.loads(z.read("assets/botania/lang/en_us.json").decode("utf-8"))
+        where = locate(z, lang)
+
+    # 人工重譯的排最前面：那些是整段重寫的，字數變了，最可能被書頁裁掉
+    def order(item):
+        k, v = item
+        return (0 if v.get("手動") else 1, where.get(k, ("", "", 0))[:2], k)
 
     rows, manual, linked = [], 0, 0
-    for k, v in sorted(changes.items()):
+    for k, v in sorted(changes.items(), key=order):
         is_manual = "1" if v.get("手動") else "0"
         manual += v.get("手動") is True
         has_link = "1" if "$(l:" in v["後"] and "$(l:" not in v["前"] else "0"
         linked += has_link == "1"
         tag = '<span class="tag">人工重譯</span>' if is_manual == "1" else ""
+        cat, entry, page = where.get(k, ("？", "書外的字串", None))
+        spot = f"{cat} › {entry}" + (f" › 第 {page} 頁" if page else "")
         rows.append(
             f'<div class="row" data-manual="{is_manual}" data-link="{has_link}">'
-            f'<div><span class="key">{html.escape(k)}</span>{tag}</div>'
+            f'<div><span class="spot">{html.escape(spot)}</span>{tag}</div>'
+            f'<div><span class="key">{html.escape(k)}</span></div>'
             f'<div class="en">EN　{esc(en.get(k, ""))}</div>'
             f'<div class="old">舊　{esc(v["前"])}</div>'
             f'<div class="new">新　{esc(v["後"])}</div>'
