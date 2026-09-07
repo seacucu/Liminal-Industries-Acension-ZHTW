@@ -410,7 +410,10 @@ def main(argv):
     for k in same[:5]:
         print(f"        {k} = {tr[k]}")
 
-    empty = [k for k, v in tr.items() if not v.strip()]
+    # 英文本來就是空字串的鍵（例如只放插圖的書頁）不算空值，
+    # 條件是它已經寫進 keep-as-source.json 並附了理由。
+    empty = [k for k, v in tr.items()
+             if not v.strip() and not (k in keep and not en.get(k, "x").strip())]
     check("無空值", not empty, f"{len(empty)} 條")
     # 尾隨空白有時是照原文刻意保留的（例如 lychee 的 §a✔ 結果符號），
     # 這類已登記在 keep-as-source，不再重複告警。

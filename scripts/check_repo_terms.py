@@ -28,11 +28,12 @@ SKIP_PREFIX = ("source" + os.sep, os.path.join("_workspace", "build") + os.sep)
 CITES_BAD_TERMS = {
     os.path.join("scripts", "botania_compose.py"),      # TERM_FIXES 對照表
     os.path.join("scripts", "botania_substitute.py"),   # SUBS 對照表
-    os.path.join("scripts", "botania_book.py"),         # DRIFT 對照表
     os.path.join("scripts", "build_cn_terms.py"),       # 黑名單產生器與其說明
     os.path.join("scripts", "verify_translation.py"),   # 人工補充的 CN_TERMS
     os.path.join("scripts", "check_repo_terms.py"),     # 本檔
     os.path.join("translation", "cn-term-exceptions.json"),
+    # 命名修正的說明會引用被換掉的舊寫法
+    os.path.join("translation", "botania-book-terms.json"),
     # 逐條列出改寫前後的查驗頁，「前」那一欄本來就是錯的寫法
     os.path.join("_workspace", "reference", "botania-book-review.html"),
     os.path.join("_workspace", "glossary.md"),
