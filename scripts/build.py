@@ -45,7 +45,7 @@ LICENSE = os.path.join(ROOT, "LICENSE")
 DIST = os.path.join(ROOT, "_workspace", "build", "dist")
 
 PACK_FORMAT = 15          # MC 1.20.1
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 def pack_mcmeta(pack_version):
