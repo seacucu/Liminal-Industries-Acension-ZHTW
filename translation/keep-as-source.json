@@ -1078,5 +1078,11 @@
   "datapack.create_central_kitchen.corn_delight": "資料包名稱由模組名組成，保留原文",
   "datapack.create_central_kitchen.ends_delight": "資料包名稱由模組名組成，保留原文",
   "datapack.create_central_kitchen.overweight_farming": "資料包名稱由模組名組成，保留原文",
-  "gui.mantle.fluid.format": "純格式字串（%s / %s mb %s），無文字可譯"
+  "gui.mantle.fluid.format": "純格式字串（%s / %s mb %s），無文字可譯",
+  "botania.page.blazeBlock1": "十六進位的 0x1a4 就是梗本身，zh_cn 也保留原文",
+  "botania.page.cosmeticBaubles16": "網路用語梗（Nudisto…），zh_cn 亦保留原文",
+  "botania.page.cosmeticBaubles18": "網路用語梗（Lurk moar），zh_cn 亦保留原文",
+  "botania.page.brewery10b": "書頁笑點，官方 zh_cn 刻意改寫成日文（気持ちいい），沿用",
+  "botania.page.elfGear12": "同上，zh_cn 用的是日文曲名「十六夜のフォルトゥーナ」",
+  "botania.page.missileRod1": "同上，zh_cn 用的是日文梗「死ね死ね…」"
 }
