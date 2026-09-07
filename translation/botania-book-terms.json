@@ -1,9 +1,5 @@
 {
-  "_說明": "辭典內文的連結錨點與上色詞，凡是查不到品名對照的都列在這裡。左欄英文取自 Botania en_us 的 $(l:)／$(item)／$(thing) 內層文字，右欄用本包現行譯名。botania_book.py 會拿右欄的詞去譯文裡找，找不到就列進未解出清單，不會靜默略過。",
-  "_覆寫說明": "刻意蓋掉品名表的詞放這裡，並寫明理由。沒有理由就不要放，botania_book.py 會擋下未申報的不一致。",
-  "_覆寫": {
-    "Elementium": "源質鋼"
-  },
+  "_說明": "本包對 Botania 術語的決定，是全專案的最高優先。模組自帶的 zh_tw 品質很差，術語常常隨手翻，所以這裡寫什麼就是什麼：botania_book.py 會拿它去改品名、改生物名，並把辭典內文裡的舊寫法一併換掉，不會反過來被模組的譯名擋下。模組包自己改過名的條目（translation/renames.json）不在此列，那是 distribute_renames 的地盤。",
   "Mana": "魔力",
   "Mana Burst": "魔力脈衝",
   "Mana Loss": "魔力損耗",
@@ -16,7 +12,7 @@
   "Dragonstone": "龍石",
   "Alfglass": "精靈玻璃",
   "Elven Quartz": "精靈石英",
-  "Pixie Dust": "精靈塵",
+  "Pixie Dust": "妖精之塵",
   "Livingwood": "活木",
   "Livingrock": "活石",
   "Dreamwood": "夢之木",
@@ -53,5 +49,9 @@
   "Chat Message": "聊天訊息",
   "request": "請求",
   "redstone pulse": "紅石脈衝",
-  "otherworldly essence": "異界精華"
+  "otherworldly essence": "異界精華",
+  "_命名原則": "Elf／Elven／Alf- 一律「精靈」，指的是精靈國度那一族。Pixie 與 Fairy 是另一種生物，改用「妖精」，才不會和精靈石英、精靈玻璃那一系列的精靈材料混在一起；Great Fairy Ring 是薩爾達的哏，用「大妖精」保住。",
+  "Elementium": "源質鋼",
+  "Pixie": "妖精",
+  "Great Fairy Ring": "大妖精指環"
 }

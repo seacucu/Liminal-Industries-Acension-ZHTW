@@ -18,7 +18,8 @@
 輸出：併回 translation/lang/botania.json，書本鍵全數收進本包
 
 人工資料：
-  translation/botania-book-terms.json   英文詞 → 中文詞（連結錨點與上色詞）
+  translation/botania-book-terms.json   本包對 Botania 術語的決定（最高優先，
+                                        會回頭改品名與生物名）
   translation/botania-book-manual.json  逐條覆寫的譯文（重譯、梗、破折號改寫）
 
 改寫過的每一條都會寫進 _workspace/build/botania/book-changes.json 供查驗。
@@ -40,6 +41,7 @@ LANG = os.path.join(ROOT, "translation", "lang", "botania.json")
 TERMS = os.path.join(ROOT, "translation", "botania-book-terms.json")
 MANUAL = os.path.join(ROOT, "translation", "botania-book-manual.json")
 KEEP = os.path.join(ROOT, "translation", "keep-as-source.json")
+RENAMES = os.path.join(ROOT, "translation", "renames.json")
 NAMES = os.path.join(ROOT, "_workspace", "build", "botania", "names.json")
 REPORT = os.path.join(ROOT, "_workspace", "build", "botania", "book-changes.json")
 MODS = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
@@ -127,6 +129,9 @@ DRIFT = [
     ("中毒", "劇毒", None),
     ("木板", "木材", None),
     ("MOD", "模組", None),          # 全書只有四處，一律用中文
+    # 這兩條的「精靈」英文是 Pixie，不是 Elf，只能逐鍵換
+    ("精靈", "妖精", "botania.tagline.pixieRing"),
+    ("精靈之舞", "妖精之舞", "botania.tagline.gaiaRitualHardmode"),
 ]
 
 
@@ -395,13 +400,16 @@ SPAN = re.compile(r"\$\(l:([^)]*)\)(.*?)\$\(/l\)|\$\((item|thing)\)(.*?)\$\(0\)"
 DOUBLE_P = re.compile(r"(?:\$\(p\)){2,}")
 
 
-def build_drift(key):
+def build_drift(key, extra=()):
     """組出這個鍵適用的舊譯名對照，以及一次掃完的比對式。
 
     改名的目標詞自己也放進對照表映射回自己，長詞優先比對，
     「煉金催化 → 煉金催化器」才不會把已經正確的「煉金催化器」接成「器器」。
     """
     table = {}
+    for old, new in extra:
+        table[old] = new
+        table.setdefault(new, new)
     for old, new, scope in DRIFT:
         if scope and not key.startswith(scope):
             continue
@@ -414,8 +422,8 @@ def build_drift(key):
     return table, re.compile(pattern)
 
 
-def apply_drift(key, text):
-    table, pattern = build_drift(key)
+def apply_drift(key, text, extra=()):
+    table, pattern = build_drift(key, extra)
     if not table:
         return text, 0
     n = 0
@@ -586,12 +594,12 @@ def spans_of(s):
     return out
 
 
-def build_term_map(names, lang, vanilla_en, vanilla_tw, extra, override):
+def build_term_map(names, lang, vanilla_en, vanilla_tw, terms):
     """英文詞 → 中文詞。
 
-    順序刻意讓品名贏過人工補充：補充檔只負責填品名表沒有的詞（Mana、
-    章節名這種）。真的要蓋掉品名，得寫進補充檔的「_覆寫」區塊，
-    免得手寫的詞悄悄和物品欄裡的名字打架。
+    順序刻意讓 botania-book-terms.json 贏過一切：模組自帶的 zh_tw 品質很差，
+    術語常常是隨手翻的，沒有理由讓它壓過本包想好的譯名。品名表與原版語系檔
+    只負責填這份人工決定沒有涵蓋到的詞。
     """
     m = {}
     for key, d in names.items():
@@ -605,14 +613,34 @@ def build_term_map(names, lang, vanilla_en, vanilla_tw, extra, override):
         if zh and key.startswith(("block.minecraft.", "item.minecraft.",
                                   "entity.minecraft.")):
             m.setdefault(e, zh)
-    clash = [t for t, zh in extra.items() if t in m and m[t] != zh]
-    if clash:
-        sys.exit("botania-book-terms.json 這幾個詞和現行品名不一致，"
-                 "確定要用自己的寫法就移到「_覆寫」區塊："
-                 + "、".join(f"{t}（品名是 {m[t]}）" for t in clash))
-    m.update(extra)
-    m.update(override)
+    m.update(terms)
     return m
+
+
+def apply_term_names(lang, names, en, tw, terms, modpack_renames):
+    """把人工決定的譯名套回品名，並回報書裡要跟著換掉的舊寫法。
+
+    決定一次就好：改了 Pixie Dust 的譯名，物品欄、生物名與辭典內文要一起變，
+    不然玩家在 JEI 看到的和書上寫的又是兩個名字。模組包自己改過名的條目不碰，
+    那是 distribute_renames 的地盤。
+    """
+    english = {k: d["en"] for k, d in names.items()}
+    for key, value in en.items():           # names.json 只收方塊與物品
+        if key.startswith("entity.botania.") and key not in english:
+            english[key] = value
+
+    renamed, drift = {}, []
+    for key, word in sorted(english.items()):
+        zh = terms.get(word)
+        if not zh or key in modpack_renames:
+            continue
+        old = lang.get(key, tw.get(key))
+        if not old or old == zh:
+            continue
+        lang[key] = zh
+        renamed[key] = (old, zh)
+        drift.append((old, zh))
+    return renamed, drift
 
 
 def resolve(term, term_map):
@@ -680,9 +708,8 @@ def main():
     lang = json.load(open(LANG, encoding="utf-8"))
     names = json.load(open(NAMES, encoding="utf-8"))
     # 兩份人工資料裡以底線開頭的鍵是給人看的說明，不是資料
-    raw_terms = json.load(open(TERMS, encoding="utf-8"))
-    override_terms = raw_terms.get("_覆寫", {})
-    extra_terms = {k: v for k, v in raw_terms.items() if not k.startswith("_")}
+    terms = {k: v for k, v in json.load(open(TERMS, encoding="utf-8")).items()
+             if not k.startswith("_")}
     manual = {k: v for k, v in json.load(open(MANUAL, encoding="utf-8")).items()
               if not k.startswith("_")}
     vdir = os.path.join(ROOT, "_workspace", "build", "verify")
@@ -691,8 +718,10 @@ def main():
     vanilla_tw = json.load(open(os.path.join(vdir, "vanilla_zh_tw.json"),
                                 encoding="utf-8"))
 
-    term_map = build_term_map(names, lang, vanilla_en, vanilla_tw,
-                              extra_terms, override_terms)
+    modpack_renames = set(json.load(open(RENAMES, encoding="utf-8")))
+    renamed, name_drift = apply_term_names(lang, names, en, tw, terms,
+                                           modpack_renames)
+    term_map = build_term_map(names, lang, vanilla_en, vanilla_tw, terms)
 
     keys = [k for k in en if k.startswith(BOOK_PREFIXES)]
     totals = {}
@@ -701,14 +730,15 @@ def main():
     if stale_manual:
         sys.exit(f"botania-book-manual.json 有不存在的鍵：{stale_manual}")
 
-    # keep-as-source 登記的是刻意保留原文的條目（梗、代碼、外語引用），
-    # 連排版都不要動，否則 0x1a4 會被當成尺寸寫法改掉。
+    # keep-as-source 登記的條目裡，只有「一字不差就是英文原文」的那些要連排版
+    # 都不動（0x1a4 會被當成尺寸寫法改掉）。其餘多半是本包自己寫的中文譯文，
+    # 登記在那裡是為了別的檢查，照樣要做標點正規化。
     keep = {x for x in json.load(open(KEEP, encoding="utf-8"))
             if not x.startswith("_")}
 
     for k in keys:
         before = lang.get(k, tw.get(k, ""))
-        if k in keep:
+        if k in keep and before == en.get(k):
             totals["保留原文"] = totals.get("保留原文", 0) + 1
             if before:
                 lang[k] = before
@@ -730,7 +760,7 @@ def main():
         text = serialize(flatten(text))
         text, n = collapse_double_p(text)
         totals["多餘的分段"] = totals.get("多餘的分段", 0) + n
-        text, n = apply_drift(k, text)
+        text, n = apply_drift(k, text, name_drift)
         totals["舊譯名"] = totals.get("舊譯名", 0) + n
         for bad, good in SUBS:
             if bad in text:
@@ -774,6 +804,10 @@ def main():
               open(REPORT, "w", encoding="utf-8"),
               ensure_ascii=False, indent=2)
 
+    if renamed:
+        print(f"  依術語表改名 {len(renamed)} 條：")
+        for key, (old, new) in sorted(renamed.items()):
+            print(f"    {old} → {new}　（{key}）")
     print(f"  書本鍵 {len(keys)} 條，改寫 {len(changes)} 條")
     for name, n in sorted(totals.items(), key=lambda x: -x[1]):
         print(f"    {name}：{n}")
