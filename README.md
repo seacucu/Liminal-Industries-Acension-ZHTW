@@ -2,7 +2,7 @@
 
 [![授權](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange)](LICENSE)
 
-Minecraft 模組包 **Liminal Industries Acension**（LIA）的繁體中文翻譯包，共 9,551 條。
+Minecraft 模組包 **Liminal Industries Acension**（LIA）的繁體中文翻譯包，共 9,552 條。
 任務書、物品與方塊名稱、模組指南書皆已翻譯，包含沉浸工程的工程師手冊、應用能源 2 的指南與植物魔法辭典。
 
 | 適用 LIA 版本 | 1.19（CurseForge projectID 1389281）|
