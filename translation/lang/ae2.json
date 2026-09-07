@@ -18,6 +18,7 @@
   "gui.tooltips.ae2.ShowAll": "顯示全部",
   "gui.tooltips.ae2.ShowFluidsOnly": "只顯示流體",
   "gui.tooltips.ae2.ShowItemsOnly": "只顯示物品",
+  "item.ae2.guide": "應用能源 2 指南",
   "item.ae2.wrapped_generic_stack": "封裝通用堆疊",
   "theoneprobe.ae2.stored_energy": "%1$d / %2$d"
 }

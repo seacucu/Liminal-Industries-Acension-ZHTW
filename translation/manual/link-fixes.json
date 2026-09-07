@@ -1,0 +1,9 @@
+{
+  "_comment": "手冊譯文刻意改掉的連結目標。verify_manual.py 預設要求譯文的連結目標與英文原文完全相同，唯一的例外是上游本來就指錯的連結：照抄只會在遊戲裡得到一個點了顯示 Invalid link 的死連結。每一條都要寫明原目標為何無效。",
+  "engineered_schematics/es.txt": {
+    "large_constructions": {
+      "to": "multiblocks",
+      "reason": "EngineeredSchematics 1.2.3 的 en_us 與 zh_cn 都寫 large_constructions，但整個手冊樹裡沒有這個條目。ManualUtils.getLocationForManual 會補上手冊的預設命名空間，也就是 immersiveengineering:large_constructions，同樣不存在，遊戲內顯示 Invalid link。原文要連的是「multiblock machines」，對應 IE 的 multiblocks（多方塊構造），故改指該條目。"
+    }
+  }
+}

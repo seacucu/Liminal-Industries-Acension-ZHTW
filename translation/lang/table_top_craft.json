@@ -253,7 +253,7 @@
   "gui.table_top_craft.piece_figure.piece_settings": "棋子模型設定",
   "gui.table_top_craft.piece_figure.toggle_rotation": "切換棋子旋轉",
   "gui.table_top_craft.sliders.saturation": "飽和度：",
-  "itemGroup.table_top_craft.tab": "Table Top Craft",
+  "itemGroup.table_top_craft.tab": "桌遊工藝",
   "message.table_top_craft.chess.invalidFEN": "輸入的 FEN 無效，棋盤已重設為初始局面！",
   "tooltip.table_top_craft.chess.piece_type.classic": "經典棋子",
   "tooltip.table_top_craft.chess.piece_type.pandoras_creatures": "潘朵拉生物棋子",

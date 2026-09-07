@@ -2,13 +2,13 @@
 
 [![授權](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange)](LICENSE)
 
-Minecraft 模組包 **Liminal Industries Acension**（LIA）的繁體中文翻譯包，共 8,571 條。
-任務書、物品與方塊名稱、模組指南書皆已翻譯。
+Minecraft 模組包 **Liminal Industries Acension**（LIA）的繁體中文翻譯包，共 8,579 條。
+任務書、物品與方塊名稱、模組指南書皆已翻譯，包含沉浸工程的工程師手冊與應用能源 2 的指南。
 
 | 適用 LIA 版本 | 1.19（CurseForge projectID 1389281）|
 |---|---|
 | Minecraft / 載入器 | 1.20.1 / Forge 47.4.13 |
-| 翻譯包版本 | v1.1.0 |
+| 翻譯包版本 | v1.2.0 |
 
 ## 安裝
 
@@ -44,7 +44,6 @@ FTB Quests 的任務檔由伺服器提供，只裝客戶端補丁的話任務書
 ## 未翻譯的部分
 
 設定與選項介面（FancyMenu 的標題畫面編輯器、各模組的 config 畫面等）維持英文。
-AE2 的 GuideME 指南頁面不走語系檔，無法翻譯。
 
 ## 致謝
 

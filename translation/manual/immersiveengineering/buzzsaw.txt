@@ -1,0 +1,12 @@
+伐木機械鋸
+我們不去烏鴉嶺
+<&recipes>這把大型的可攜式圓鋸，是為了迅速清掉擋在你完美廠房前的樹木與雜草而設計的。
+先在<link;workbench;工程師作業台;start>上替它裝好圓鋸片，再灌入<link;refinery;生質柴油;diesel>或其他燃料，從小樺樹到巨大的叢林樹都能一路鋸穿。
+
+和某些工具一樣，伐木機械鋸也能在<link;workbench;工程師作業台>上改造。這些強化模組會影響內部油箱容量與鋸片耐久。
+<np>
+<&rockcutter_recipe>把一般鋸片換成§2碎岩鋸片§r，伐木機械鋸就能從地上乾淨地切下整塊石頭，效果類似§2絲綢之觸§r。不過這種鑲鑽的鋸片沒辦法拿來鋸木頭或伐木了。<np>
+<&grinding_recipe>§2研磨盤§r是把細鋁粉懸浮在<link;plastic;酚醛樹脂>裡做成的。它耐久度不高，但切割金屬方塊時快得驚人，碰到其他材質卻很容易碎裂。此外，它也能像§2斧頭§r一樣刮掉銅方塊上的氧化層與蠟，或是把原木剝皮。<np>
+<&tank_recipe>§2大容量儲罐§r讓伐木機械鋸的流體容量增加 2000 mb。<np>
+<&lube_recipe>§2進階潤滑系統§r會在鋸片上額外上油，減緩耐久度的消耗。<np>
+<&quiver_recipe>把§2鋸片箱§r裝在伐木機械鋸側邊，就能多帶兩片圓鋸片。要在存放的鋸片之間切換，可以<config;b;tools.chemthrower.scroll;潛行並滾動滑鼠滾輪，或是透過;透過>快捷鍵 §l<keybind;key.immersiveengineering.chemthrowerSwitch>§r，前提是你已在選項中設定好。

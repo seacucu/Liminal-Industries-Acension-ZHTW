@@ -24,6 +24,18 @@ import zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANG_DIR = os.path.join(ROOT, "translation", "lang")
 PATCHOULI = os.path.join(ROOT, "translation", "patchouli")
+MANUAL = os.path.join(ROOT, "translation", "manual")
+GUIDE = os.path.join(ROOT, "translation", "guide")
+GUIDE_HIDDEN = os.path.join(ROOT, "_workspace", "build", "guide-hidden")
+
+# GuideME 的語系目錄名稱要有底線：_zh_tw，不是 zh_tw。少了底線，LangUtil 不會把它
+# 認成語系，那批頁面就變成預設語系底下的新頁面，於是側邊欄每一條都多出一個中文的
+# 孤兒節點，連結與 navigation.parent 也全部指到帶目錄前綴的錯誤 ID。
+#
+# 認成語系之後頁面 ID 會剝掉語系目錄，所以連結、parent 與 <ImportStructure src>
+# 的相對寫法都與英文原文完全相同，不需要任何改寫。模組翻譯包的
+# assets/extendedae/ae2guide/_zh_tw 與 _en_us 兩份逐行對照即為此。
+LANG_DIR_NAME = "_zh_tw"
 PACK_ICON = os.path.join(ROOT, "translation", "pack", "pack.png")
 BOOKS = os.path.join(ROOT, "_workspace", "build", "books")
 SKELETON = os.path.join(ROOT, "_workspace", "build", "skeleton", "config", "ftbquests", "quests", "chapters")
@@ -33,7 +45,7 @@ LICENSE = os.path.join(ROOT, "LICENSE")
 DIST = os.path.join(ROOT, "_workspace", "build", "dist")
 
 PACK_FORMAT = 15          # MC 1.20.1
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 def pack_mcmeta(pack_version):
@@ -73,6 +85,9 @@ def build_resourcepack(out_path, pack_version):
     langs = sorted(f for f in os.listdir(LANG_DIR) if f.endswith(".json"))
     total = 0
     books = 0
+    manual = 0
+    guide = 0
+    hidden = 0
     with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
         add_bytes(z, "pack.mcmeta", pack_mcmeta(pack_version))
         if os.path.exists(PACK_ICON):
@@ -92,7 +107,36 @@ def build_resourcepack(out_path, pack_version):
                 rel = os.path.relpath(full, BOOKS).replace("\\", "/")
                 add_file(z, rel, full)
                 books += 1
-    return len(langs), total, books
+        # BluSunrize 手冊：正文一條目一個 txt，模組找不到當前語系就退回 en_us
+        for dirpath, _, files in sorted(os.walk(MANUAL)):
+            for f in sorted(files):
+                if not f.endswith(".txt"):
+                    continue
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, MANUAL).replace("\\", "/")
+                ns, entry = rel.split("/", 1)
+                add_file(z, f"assets/{ns}/manual/zh_tw/{entry}", full)
+                manual += 1
+        # GuideME（AE2 指南）：內容根目錄下的第一層若是語系代碼就視為該語系的頁面，
+        # 來源排成 translation/guide/<命名空間>/<內容根目錄>/<頁面路徑>
+        for dirpath, _, files in sorted(os.walk(GUIDE)):
+            for f in sorted(files):
+                if not f.endswith(".md"):
+                    continue
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, GUIDE).replace("\\", "/")
+                ns, folder, page = rel.split("/", 2)
+                add_file(z, f"assets/{ns}/{folder}/{LANG_DIR_NAME}/{page}", full)
+                guide += 1
+        # 模組沒裝、頁面卻被模組翻譯包帶進 AE2 指南的那些條目，以同路徑覆蓋成
+        # 沒有 frontmatter 的版本，讓它們不進側邊欄。詳見 hide_absent_guides.py
+        for dirpath, _, files in sorted(os.walk(GUIDE_HIDDEN)):
+            for f in sorted(files):
+                full = os.path.join(dirpath, f)
+                rel = os.path.relpath(full, GUIDE_HIDDEN).replace("\\", "/")
+                add_file(z, rel, full)
+                hidden += 1
+    return len(langs), total, books, manual, guide, hidden
 
 
 def build_client(out_path, rp_path, pack_version):
@@ -173,9 +217,11 @@ def main():
     os.makedirs(DIST)
 
     rp = os.path.join(DIST, "LIA-zhTW.zip")
-    ns_count, entry_count, book_count = build_resourcepack(rp, pack_version)
+    (ns_count, entry_count, book_count, manual_count,
+     guide_count, hidden_count) = build_resourcepack(rp, pack_version)
     print(f"資源包        {os.path.basename(rp):<38}"
           f"{ns_count} 個命名空間 / {entry_count} 條 / 書本 {book_count} 檔 / "
+          f"手冊 {manual_count} 篇 / 指南 {guide_count} 頁 / 隱藏 {hidden_count} 頁 / "
           f"{os.path.getsize(rp)//1024} KB")
 
     client = os.path.join(DIST, f"LIA-zhTW-Patch-v{VERSION}.zip")

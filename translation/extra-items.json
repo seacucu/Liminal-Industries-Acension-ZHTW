@@ -9,6 +9,13 @@
   "block.thermal.machine_insolator": "植物增殖機",
   "block.thermal.machine_press": "壓製機",
   "block.thermal.machine_bottler": "裝瓶機",
+  "block.thermal.machine_pulverizer": "粉碎機",
+  "block.thermal.machine_sawmill": "鋸木機",
+  "block.thermal.machine_furnace": "紅石熔爐",
+  "block.thermal.machine_centrifuge": "離心分離機",
+  "block.thermal.machine_crucible": "岩漿熔爐",
+  "block.thermal.machine_brewer": "煉金注魔器",
+  "block.thermal.machine_crafter": "序列製造機",
   "block.thermal.device_rock_gen": "造岩機",
   "item.thermal.redstone_mushroom_spores": "紅石蘑菇孢子",
   "item.thermal.deep_aquachow": "深海魚飼料",
@@ -18,5 +25,7 @@
   "_eidolon_comment": "Eidolon Repraised 無繁中",
   "block.eidolon.crucible": "坩堝",
   "_es_comment": "engineered_schematics 無繁中。英文與 Create 的 Schematic Table 同名，故中文亦同為藍圖桌",
-  "block.engineered_schematics.schematic_table_block": "藍圖桌"
+  "block.engineered_schematics.schematic_table_block": "藍圖桌",
+  "_ae2_guide_comment": "MTP 把 item.ae2.guide 譯為「指南」，在物品欄與 JEI 裡和其他模組的指南書分不出來，故覆蓋為含模組名的版本。",
+  "item.ae2.guide": "應用能源 2 指南"
 }

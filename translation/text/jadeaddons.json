@@ -1,10 +1,10 @@
 {
   "_comment": "Jade Addons 為各模組提供的方塊資訊 18 條。模組名保留原文；RF 為能量單位縮寫。",
-  "jade.modName.jadeaddons.create": "Create",
-  "jade.modName.jadeaddons.deepresonance": "Deep Resonance",
+  "jade.modName.jadeaddons.create": "機械動力",
+  "jade.modName.jadeaddons.deepresonance": "深度共鳴",
   "jade.modName.jadeaddons.lootr": "Lootr",
   "jade.modName.jadeaddons.mcjtylib": "McJtyLib",
-  "jade.modName.jadeaddons.tconstruct": "Tinkers' Construct",
+  "jade.modName.jadeaddons.tconstruct": "匠魂",
   "jadeaddons.create.backtank_air": "空氣：%s/%s",
   "jadeaddons.deepresonance.collectors": "收集器：%s",
   "jadeaddons.deepresonance.crystalPower": "能量：%s%%（%s RF/t）",

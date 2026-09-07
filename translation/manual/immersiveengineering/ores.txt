@@ -1,0 +1,12 @@
+礦石
+挖呀挖呀挖
+<&alu>§l鋁土礦§r生成於 <config;i;ores.bauxite.min_y> 到 <config;i;ores.bauxite.max_y> 層之間，需要石鎬以上才能採收。
+原礦熔煉後得到鋁錠，是高壓設施不可或缺的材料。
+<&lead>§l鉛礦§r生成於 <config;i;ores.lead.min_y> 到 <config;i;ores.lead.max_y> 層之間，需要鐵鎬以上才能採收。
+原礦熔煉後得到鉛錠，用來製作早期的蓄電池。
+<&silver>§l銀礦§r生成於 <config;i;ores.silver.min_y> 到 <config;i;ores.silver.max_y> 層之間，需要鐵鎬以上才能採收。
+原礦熔煉後得到銀錠，與金合成琥珀金，導電效率好上許多。
+<&nickel>§l鎳礦§r生成於 <config;i;ores.nickel.min_y> 到 <config;i;ores.nickel.max_y> 層之間，其中 <config;i;ores.deep_nickel.max_y> 層以下更為密集。需要鐵鎬以上才能採收。
+原礦熔煉後得到鎳錠，與銅合成康銅，那是一種耐熱的導體，用來搭建<link;thermoelectric;熱傳導發電機;start>。
+<&uranium>§l鈾礦§r生成於 <config;i;ores.uranium.min_y> 到 <config;i;ores.uranium.max_y> 層之間，需要鐵鎬以上才能採收。
+原礦熔煉後得到鈾錠，不過這種金屬目前用途還不多。鈾方塊可以當作<link;thermoelectric;熱傳導發電機;start>的熱源，其餘用途留待日後開發。

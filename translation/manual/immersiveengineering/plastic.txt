@@ -1,0 +1,12 @@
+樹脂與工程塑膠
+真是太塑了！
+<&resin>酚醛樹脂是一種黏稠的流體，可以塑形成堅韌的塑膠，也就是所謂的工程塑膠。這種了不起的新材料剛硬、不燃且不導電，是電機工程中極佳的絕緣材。
+再加上可塑性高，量產起來遠比木材或陶瓷可靠。<np>
+<&acetaldehyde>不過它的生產流程比較繁瑣，仰賴只有在<link;refinery;§o§n精煉廠§r>裡才辦得到的複雜化學反應。<br>
+首先，把植物<link;fermenter;發酵;start>得到的乙醇氧化成乙醛。作法是以§2銀板§r作為催化劑，把精煉廠的其中一個儲槽裝滿乙醇，另一個儲槽保持空著。
+產出的乙醛接著送進§o第二座§r精煉廠，與<link;cokeoven;雜酚油>結合成§2酚醛樹脂§r。這道反應不需要催化劑。<np>
+<&duroplast_sheet>工程塑膠製品的做法，是在<link;bottling_machine;§o§n灌裝§o§n機§r>中把樹脂灌進對應的<link;metal_press;模具;mold_recipes>。機器能在模具內施加足夠的熱與壓力，讓樹脂硬化。<br>
+產出的板材用於製作<link;components;進階電子元件;elec_components>與<link;components;電路底板;pcb>，在其中擔任絕緣材。<np>
+<&duroplast_block>工程塑膠實心方塊可以拿來蓋房子或做裝飾，雖然不是每個人都欣賞它的顏色。更重要的是，合成<link;wiring;導線接線器與繼電器;connector_recipes>時它可以取代§2陶土§r，大幅省下黏土的用量！<np>
+<&fiberboard>纖維板是把<link;sawmill;鋸屑;sawdust>壓實、再混入樹脂做成的緻密方塊。它的性質與木材相同，在大多數配方中都能取代木材。把原本會被丟掉的廢料再利用，實在是再好不過！
+<&empty_shell> 樹脂也能用來製作<link;bullets;左輪彈藥;empty>用的空彈筒，讓它們更便宜、更容易量產。
