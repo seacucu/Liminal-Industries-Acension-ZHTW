@@ -8,7 +8,7 @@ Minecraft 模組包 **Liminal Industries Acension**（LIA）的繁體中文翻�
 | 適用 LIA 版本 | 1.19（CurseForge projectID 1389281）|
 |---|---|
 | Minecraft / 載入器 | 1.20.1 / Forge 47.4.13 |
-| 翻譯包版本 | v1.2.0 |
+| 翻譯包版本 | v1.3.0 |
 
 ## 安裝
 
