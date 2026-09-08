@@ -46,7 +46,7 @@ TERM_FIXES = [
     (r"Lavender",    "薰香",   "薰衣草", None),   # Lavender 是薰衣草，不是薰香
     (None,           "籐",     "藤",     None),   # 原版 vines = 藤蔓，統一用「藤」
     (r"Spark Augment", "火花升級", "火花增幅", None),  # 與術語表的 Augment=增幅 對齊
-    (None,           "橙色",   "橘色",   None),   # 原版 orange = 橘色
+    (None,           "橘色",   "橙色",   None),   # 原版 orange_dye = 橙色染料
 ]
 
 # 名稱層級的標點正規化：繁中名稱用全形標點
@@ -98,7 +98,7 @@ SUFFIX = [
 COLORS = {
     "Black": "黑色", "Blue": "藍色", "Brown": "棕色", "Cyan": "青色",
     "Gray": "灰色", "Green": "綠色", "Light Blue": "淺藍色", "Light Gray": "淺灰色",
-    "Lime": "淺綠色", "Magenta": "洋紅色", "Orange": "橘色", "Pink": "粉紅色",
+    "Lime": "淺綠色", "Magenta": "洋紅色", "Orange": "橙色", "Pink": "粉紅色",
     "Purple": "紫色", "Red": "紅色", "White": "白色", "Yellow": "黃色",
     "Rainbow": "彩虹",
 }

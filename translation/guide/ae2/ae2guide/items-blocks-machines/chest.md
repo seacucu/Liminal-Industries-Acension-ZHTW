@@ -53,7 +53,7 @@ ME 儲物箱的設定和 <ItemLink id="terminal" /> 或 <ItemLink id="crafting_t
 | :----- | :------------------------------------------------------------------------------- |
 | 綠色  | 空的                                                                            |
 | 藍色   | 有東西                                                                |
-| 橘色 | [類型](../ae2-mechanics/bytes-and-types.md)已滿，無法再加入新類型     |
+| 橙色 | [類型](../ae2-mechanics/bytes-and-types.md)已滿，無法再加入新類型     |
 | 紅色    | [位元組](../ae2-mechanics/bytes-and-types.md)已滿，無法再放入物品 |
 | 黑色  | 沒有電力，或驅動器沒有分到[頻道](../ae2-mechanics/channels.md)                 |
 

@@ -54,7 +54,6 @@
   "Elementium": "源質鋼",
   "Pixie": "妖精",
   "Great Fairy Ring": "大妖精指環",
-  "Blaze Mesh": "烈焰網",
   "Rod of the Shifting Crust": "移殼法杖",
   "Worldshaper's Sextant": "塑界者六分儀",
   "Resolute Ivy": "堅毅之藤",
@@ -73,5 +72,5 @@
   "Crafting Pattern #7: 2x3": "合成模板 #7：2×3",
   "Crafting Pattern #8: 3x2": "合成模板 #8：3×2",
   "Crafting Pattern #9: Donut": "合成模板 #9：圈形",
-  "_命名修正": "這一批是重譯辭典時發現的品名錯誤或不一致，一併在這裡改掉：Blaze Mesh 是網不是燈；Rod of the Shifting Crust 原作「移殼桿」與其他法杖不一致；Worldshaper's 兩件道具原本一個「塑界者」一個「蓋世」；Lavender 是薰衣草不是薰香（在 botania_compose 修）；Manastorm Charge 少了「彈」會和魔力風暴中心撞名；The Fruit of Grisaia 是《灰色的果實》的哏；Planestrider 取的是旅法師（Planeswalker）的雙關，「平原旅帶」把哏丟了。"
+  "_命名修正": "這一批是重譯辭典時發現的品名錯誤或不一致，一併在這裡改掉：Rod of the Shifting Crust 原作「移殼桿」與其他法杖不一致；Worldshaper's 兩件道具原本一個「塑界者」一個「蓋世」；Lavender 是薰衣草不是薰香（在 botania_compose 修）；Manastorm Charge 少了「彈」會和魔力風暴中心撞名；The Fruit of Grisaia 是《灰色的果實》的哏；Planestrider 取的是旅法師（Planeswalker）的雙關，「平原旅帶」把哏丟了。"
 }

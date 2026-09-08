@@ -76,8 +76,8 @@ navigation:
 1.  <ItemLink id="pattern_provider" /> 把材料推進側面那個位於綠色子網路上的 <ItemLink id="interface" />。
 2.  介面（預設設定為什麼都不存）試著把內容推進[網路倉儲](../ae2-mechanics/import-export-storage.md)。
 3.  綠色子網路上唯一的倉儲是 <ItemLink id="formation_plane" />，於是它把收到的物品丟進水裡。
-4.  橘色子網路上的 <ItemLink id="annihilation_plane" /> 試著把剛丟下去的物品撿起來，但撿不動，
-    因為樣板供應器頂上那個 <ItemLink id="storage_bus" />（橘色子網路上唯一的倉儲）只接受合成的產物。
+4.  橙色子網路上的 <ItemLink id="annihilation_plane" /> 試著把剛丟下去的物品撿起來，但撿不動，
+    因為樣板供應器頂上那個 <ItemLink id="storage_bus" />（橙色子網路上唯一的倉儲）只接受合成的產物。
 5.  物品在世界中完成它的轉換。
 6.  現在破壞面板撿得動面前的物品了，因為儲存匯流排允許存放它們。
 7.  儲存匯流排把產物存進樣板供應器，也就送回了網路。

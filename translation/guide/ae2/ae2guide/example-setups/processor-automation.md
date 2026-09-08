@@ -178,7 +178,7 @@ navigation:
 ## 運作原理
 
 1. <ItemLink id="pattern_provider" /> 把材料推進木桶。
-2. 第一條[管線子網路](pipe-subnet.md)（橘色）把矽、紅石粉，以及對應處理器所需的材料
+2. 第一條[管線子網路](pipe-subnet.md)（橙色）把矽、紅石粉，以及對應處理器所需的材料
    （金錠、賽特斯石英水晶或鑽石）從木桶裡拉出來，送進對應的 <ItemLink id="inscriber" />。
 3. 前四台 <ItemLink id="inscriber" /> 做出 <ItemLink id="printed_silicon" />，以及 <ItemLink id="printed_logic_processor" />、
    <ItemLink id="printed_calculation_processor" /> 或 <ItemLink id="printed_engineering_processor" />。
