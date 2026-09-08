@@ -1,6 +1,8 @@
-"""產生辭典內文改寫的查驗頁（自包含 HTML，可搜尋／篩選）。
+"""產生辭典重譯的查驗頁（自包含 HTML，可搜尋／篩選）。
 
 資料來自 botania_book.py 寫出的 book-changes.json，所以要先跑過那支。
+一列一條，左邊英文原文、右邊本包譯文，附上這條字在書裡的位置，
+拿著它就能一頁一頁翻進遊戲對。
 輸出：_workspace/reference/botania-book-review.html（工作區，不進版控）
 """
 
@@ -22,7 +24,7 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>植物魔法辭典內文查驗</title>
+<title>植物魔法辭典重譯查驗</title>
 <style>
   :root {{
     --bg:#0f1115; --card:#171a21; --border:#2a2f3a; --text:#e6e8ec;
@@ -55,25 +57,24 @@ TEMPLATE = """<!DOCTYPE html>
   .key{{font-family:ui-monospace,Consolas,monospace;font-size:.75rem;color:var(--muted)}}
   .tag{{font-size:.72rem;color:var(--muted);border:1px solid var(--border);
        border-radius:999px;padding:.05rem .5rem;margin-left:.4rem}}
-  .en{{color:var(--muted);font-size:.85rem;margin:.4rem 0}}
-  .old{{color:#a9707a;font-size:.9rem}}
-  .new{{color:var(--green);font-size:.95rem}}
+  .en{{color:var(--muted);font-size:.88rem;margin:.45rem 0 .2rem}}
+  .zh{{color:var(--green);font-size:.98rem}}
+  .rename{{color:var(--yellow);font-size:.9rem}}
   code{{background:#0b0d11;border-radius:4px;padding:0 .2rem;font-size:.85em;color:var(--yellow)}}
 </style>
 </head>
 <body>
 <header>
-  <h1>植物魔法辭典內文查驗</h1>
-  <div class="meta">botania_book.py 改寫過的每一條，附書中位置與 Botania 英文原文對照。
-  人工重譯的排在最前面，那些是整段重寫的，最需要進遊戲確認沒有被書頁裁掉。</div>
+  <h1>植物魔法辭典重譯查驗</h1>
+  <div class="meta">整本辭典照 Botania 英文原文重寫。左邊是原文，右邊是本包譯文，
+  上方標出這條字在書裡的位置。連結與上色的位置也是照原文重建的，進遊戲時一併看有沒有跑版。</div>
 </header>
 <main>
   <div class="summary">{cards}</div>
   <div class="controls">
-    <input type="search" id="q" placeholder="搜尋鍵名或內文…">
+    <input type="search" id="q" placeholder="搜尋鍵名、章節、原文或譯文…">
     <span class="chip active" data-f="all">全部</span>
-    <span class="chip" data-f="manual">人工重譯</span>
-    <span class="chip" data-f="link">補回連結</span>
+    <span class="chip" data-f="rename">品名改動</span>
   </div>
   <div id="list">{rows}</div>
 </main>
@@ -122,8 +123,7 @@ def locate(z, lang):
         entry_zh = lang.get(entry["name"], entry["name"])
         where[entry["name"]] = (cat_zh, entry_zh, None)
         for i, page in enumerate(entry.get("pages", []), 1):
-            for field in ("text", "title", "caption"):
-                key = page.get(field)
+            for key in page.values():
                 if isinstance(key, str) and key.startswith("botania."):
                     where.setdefault(key, (cat_zh, entry_zh, i))
     return where
@@ -137,42 +137,40 @@ def esc(s):
 def main():
     data = json.load(open(CHANGES, encoding="utf-8"))
     changes = data["改寫"]
+    renamed = data.get("改名", {})
     lang = json.load(open(LANG, encoding="utf-8"))
     jar = next(j for j in sorted(os.listdir(MODS)) if j.startswith("Botania"))
     with zipfile.ZipFile(os.path.join(MODS, jar)) as z:
         en = json.loads(z.read("assets/botania/lang/en_us.json").decode("utf-8"))
         where = locate(z, lang)
 
-    # 人工重譯的排最前面：那些是整段重寫的，字數變了，最可能被書頁裁掉
-    def order(item):
-        k, v = item
-        return (0 if v.get("手動") else 1, where.get(k, ("", "", 0))[:2], k)
-
-    rows, manual, linked = [], 0, 0
-    for k, v in sorted(changes.items(), key=order):
-        is_manual = "1" if v.get("手動") else "0"
-        manual += v.get("手動") is True
-        has_link = "1" if "$(l:" in v["後"] and "$(l:" not in v["前"] else "0"
-        linked += has_link == "1"
-        tag = '<span class="tag">人工重譯</span>' if is_manual == "1" else ""
-        cat, entry, page = where.get(k, ("？", "書外的字串", None))
+    chapters = sorted({v.get("章", "") for v in changes.values()})
+    rows = []
+    for key, v in sorted(changes.items(),
+                         key=lambda kv: (where.get(kv[0], ("", "", 0))[:2], kv[0])):
+        cat, entry, page = where.get(key, ("？", "書外的字串", None))
         spot = f"{cat} › {entry}" + (f" › 第 {page} 頁" if page else "")
         rows.append(
-            f'<div class="row" data-manual="{is_manual}" data-link="{has_link}">'
-            f'<div><span class="spot">{html.escape(spot)}</span>{tag}</div>'
-            f'<div><span class="key">{html.escape(k)}</span></div>'
-            f'<div class="en">EN　{esc(en.get(k, ""))}</div>'
-            f'<div class="old">舊　{esc(v["前"])}</div>'
-            f'<div class="new">新　{esc(v["後"])}</div>'
-            f"</div>")
+            f'<div class="row" data-ch="{html.escape(v.get("章", ""))}">'
+            f'<div><span class="spot">{html.escape(spot)}</span>'
+            f'<span class="tag">{html.escape(v.get("章", ""))}</span></div>'
+            f'<div><span class="key">{html.escape(key)}</span></div>'
+            f'<div class="en">EN　{esc(v.get("英文") or en.get(key, ""))}</div>'
+            f'<div class="zh">中　{esc(v["譯文"])}</div>'
+            "</div>")
+
+    for key, (old, new) in sorted(renamed.items()):
+        rows.append(
+            f'<div class="row" data-rename="1">'
+            f'<div><span class="spot">品名改動</span></div>'
+            f'<div><span class="key">{html.escape(key)}</span></div>'
+            f'<div class="rename">{html.escape(old)} → {html.escape(new)}</div>'
+            "</div>")
 
     cards = "".join(
         f'<div class="card"><div class="num">{n}</div><div class="label">{lab}</div></div>'
-        for n, lab in [(len(changes), "改寫的條目"), (manual, "人工重譯"),
-                       (linked, "補回連結的頁"),
-                       (len(data["未解出的詞"]), "未解出的詞"),
-                       (len(data["分段對不上"]), "分段對不上")])
-
+        for n, lab in [(len(changes), "重譯的條目"), (len(chapters), "章節"),
+                       (len(renamed), "跟著改的品名")])
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, "w", encoding="utf-8").write(
         TEMPLATE.format(cards=cards, rows="".join(rows)))

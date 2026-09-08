@@ -1,9 +1,11 @@
-"""檢查植物魔法辭典內文的結構，把 botania_book.py 該修好的事再驗一次。
+"""檢查植物魔法辭典內文的結構。
 
-分兩種：不通過就算失敗的硬檢查，以及只列出來供人判斷的落差報告。
-硬檢查針對「畫出來一定不對」的問題（巨集沒收好、連結指向不存在的條目），
-落差報告針對「和英文比起來少了東西」的問題，那多半是譯文照舊版英文寫的，
-要人工重譯，不該讓建置失敗。
+辭典是照英文原文重寫的（translation/botania/），巨集的位置也是照原文擺的，
+所以這裡驗的是「有沒有手滑寫壞」：巨集沒收好、連結指向不存在的條目、
+中文之間殘留半形空白之類，不通過就讓建置失敗。
+
+另外列出與英文的落差（連結或上色數量對不上）供人判斷。那多半是中文句構
+併掉了某個詞，未必是錯，但值得回頭看一眼，所以不算失敗。
 """
 
 import json
@@ -19,7 +21,7 @@ MODS = os.path.join(os.environ["APPDATA"], "PrismLauncher", "instances",
 
 BOOK_PREFIXES = ("botania.page.", "botania.entry.", "botania.tagline.",
                  "botania.category.", "botania.challenge.", "botania.subtitle.",
-                 "botania.landing")
+                 "botania.landing", "botania.brew.", "botaniamisc.challenges")
 
 MACRO = re.compile(r"\$\([^)]*\)")
 CJK = "㐀-鿿"
@@ -78,7 +80,9 @@ def main():
     check("連結都指得到條目", not dead, f"{len(dead)} 條")
     show(dead)
 
-    double_p = [(k, "有連續的 $(p)") for k in keys if "$(p)$(p)" in tr[k]]
+    # 英文原本就有連著兩個 $(p) 的頁（welcome6 用它空一行），照抄不算錯
+    double_p = [(k, "有連續的 $(p)") for k in keys
+                if "$(p)$(p)" in tr[k] and "$(p)$(p)" not in en.get(k, "")]
     check("沒有空段落", not double_p, f"{len(double_p)} 條")
     show(double_p)
 
@@ -111,8 +115,8 @@ def main():
     show(lost_link, 12)
     print(f"  [INFO] 上色比英文少三處以上的頁：{len(lost_colour)} 條")
     show(lost_colour, 12)
-    print("         這兩類多半是譯文照舊版英文寫的，需要重譯整頁，"
-          "處理方式是寫進 translation/botania-book-manual.json。")
+    print("         這兩類是中文句構把某個詞併掉了，回頭看一眼 "
+          "translation/botania/ 對應章節的那一條即可。")
 
     print("\n" + ("全部通過。" if not failures else f"失敗 {len(failures)} 項：{failures}"))
     sys.exit(1 if failures else 0)

@@ -60,5 +60,5 @@ navigation:
 
 1.  綠色子網路上的 <ItemLink id="import_bus" /> 把第一個木桶裡的方塊輸入到[網路倉儲](../ae2-mechanics/import-export-storage.md)。
 2.  綠色子網路上唯一的倉儲是 <ItemLink id="formation_plane" />，於是方塊被放置出來。
-3.  橘色子網路上的 <ItemLink id="annihilation_plane" /> 把方塊打掉，過程中套用幸運。
-4.  橘色子網路上的 <ItemLink id="storage_bus" /> 把打掉的產物存進第二個木桶。
+3.  橙色子網路上的 <ItemLink id="annihilation_plane" /> 把方塊打掉，過程中套用幸運。
+4.  橙色子網路上的 <ItemLink id="storage_bus" /> 把打掉的產物存進第二個木桶。
